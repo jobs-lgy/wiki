@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>准备开发环境 | JavaChen Wiki</title>
+    <meta name="description" content="JavaChen Wiki">
+    <link rel="icon" href="/wiki/img/logo.ico">
+  <meta http-quiv="pragma" cotent="no-cache">
+  <meta http-quiv="pragma" cotent="no-cache,must-revalidate">
+  <meta http-quiv="expires" cotent="0">
+    
+    <link rel="preload" href="/wiki/assets/css/0.styles.bdf32acf.css" as="style"><link rel="preload" href="/wiki/assets/js/app.dd178f5a.js" as="script"><link rel="preload" href="/wiki/assets/js/2.9f273a62.js" as="script"><link rel="preload" href="/wiki/assets/js/55.5f207671.js" as="script"><link rel="prefetch" href="/wiki/assets/js/10.e389070d.js"><link rel="prefetch" href="/wiki/assets/js/11.19e9f97f.js"><link rel="prefetch" href="/wiki/assets/js/12.f95e0459.js"><link rel="prefetch" href="/wiki/assets/js/13.127730fd.js"><link rel="prefetch" href="/wiki/assets/js/14.34eed2f7.js"><link rel="prefetch" href="/wiki/assets/js/15.a8cf4000.js"><link rel="prefetch" href="/wiki/assets/js/16.6346731c.js"><link rel="prefetch" href="/wiki/assets/js/17.143af375.js"><link rel="prefetch" href="/wiki/assets/js/18.7d95703a.js"><link rel="prefetch" href="/wiki/assets/js/19.8726bd0b.js"><link rel="prefetch" href="/wiki/assets/js/20.2914a04f.js"><link rel="prefetch" href="/wiki/assets/js/21.ebd751e0.js"><link rel="prefetch" href="/wiki/assets/js/22.f6801be0.js"><link rel="prefetch" href="/wiki/assets/js/23.87ecfe73.js"><link rel="prefetch" href="/wiki/assets/js/24.cabcaf93.js"><link rel="prefetch" href="/wiki/assets/js/25.306828f5.js"><link rel="prefetch" href="/wiki/assets/js/26.59450304.js"><link rel="prefetch" href="/wiki/assets/js/27.44fddb85.js"><link rel="prefetch" href="/wiki/assets/js/28.4e15bea1.js"><link rel="prefetch" href="/wiki/assets/js/29.bed7cbfd.js"><link rel="prefetch" href="/wiki/assets/js/3.28138f41.js"><link rel="prefetch" href="/wiki/assets/js/30.36a67cca.js"><link rel="prefetch" href="/wiki/assets/js/31.dde8666e.js"><link rel="prefetch" href="/wiki/assets/js/32.148ea73a.js"><link rel="prefetch" href="/wiki/assets/js/33.61c937cc.js"><link rel="prefetch" href="/wiki/assets/js/34.eb7c4b0c.js"><link rel="prefetch" href="/wiki/assets/js/35.abb4ce3d.js"><link rel="prefetch" href="/wiki/assets/js/36.f03d0378.js"><link rel="prefetch" href="/wiki/assets/js/37.84491176.js"><link rel="prefetch" href="/wiki/assets/js/38.2a06b872.js"><link rel="prefetch" href="/wiki/assets/js/39.63965d3b.js"><link rel="prefetch" href="/wiki/assets/js/4.c0af9872.js"><link rel="prefetch" href="/wiki/assets/js/40.bf2e354a.js"><link rel="prefetch" href="/wiki/assets/js/41.bed53451.js"><link rel="prefetch" href="/wiki/assets/js/42.34d4f2f5.js"><link rel="prefetch" href="/wiki/assets/js/43.867c0e23.js"><link rel="prefetch" href="/wiki/assets/js/44.0201a314.js"><link rel="prefetch" href="/wiki/assets/js/45.d6f1a311.js"><link rel="prefetch" href="/wiki/assets/js/46.419d44e4.js"><link rel="prefetch" href="/wiki/assets/js/47.a3f8b595.js"><link rel="prefetch" href="/wiki/assets/js/48.574cc219.js"><link rel="prefetch" href="/wiki/assets/js/49.224dd6c4.js"><link rel="prefetch" href="/wiki/assets/js/5.c521f8b1.js"><link rel="prefetch" href="/wiki/assets/js/50.c8825040.js"><link rel="prefetch" href="/wiki/assets/js/51.2dab614a.js"><link rel="prefetch" href="/wiki/assets/js/52.8382a180.js"><link rel="prefetch" href="/wiki/assets/js/53.bfab18a9.js"><link rel="prefetch" href="/wiki/assets/js/54.87a1d37c.js"><link rel="prefetch" href="/wiki/assets/js/56.f0e8e082.js"><link rel="prefetch" href="/wiki/assets/js/57.c868e5c9.js"><link rel="prefetch" href="/wiki/assets/js/6.6a737c5b.js"><link rel="prefetch" href="/wiki/assets/js/7.48bba6b4.js"><link rel="prefetch" href="/wiki/assets/js/8.26532964.js"><link rel="prefetch" href="/wiki/assets/js/9.3c4a4032.js">
+    <link rel="stylesheet" href="/wiki/assets/css/0.styles.bdf32acf.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/wiki/" class="home-link router-link-active"><!----> <span class="site-name">JavaChen Wiki</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/wiki/" class="nav-link">主页</a></div><div class="nav-item"><a href="/wiki/docker/" class="nav-link">Docker</a></div><div class="nav-item"><a href="/wiki/elasticsearch/" class="nav-link">Elasticsearch</a></div><div class="nav-item"><a href="/wiki/hadoop/" class="nav-link">Hadoop</a></div><div class="nav-item"><a href="/wiki/interview/" class="nav-link">Interview</a></div><div class="nav-item"><a href="/wiki/rabbitMQ/" class="nav-link">RabbitMQ</a></div><div class="nav-item"><a href="/wiki/redis/" class="nav-link">Redis</a></div><div class="nav-item"><a href="/wiki/spring-cloud-cshop/" class="nav-link router-link-active">Spring-cloud-cshop</a></div><div class="nav-item"><a href="/wiki/about.html" class="nav-link">关于</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/wiki/" class="nav-link">主页</a></div><div class="nav-item"><a href="/wiki/docker/" class="nav-link">Docker</a></div><div class="nav-item"><a href="/wiki/elasticsearch/" class="nav-link">Elasticsearch</a></div><div class="nav-item"><a href="/wiki/hadoop/" class="nav-link">Hadoop</a></div><div class="nav-item"><a href="/wiki/interview/" class="nav-link">Interview</a></div><div class="nav-item"><a href="/wiki/rabbitMQ/" class="nav-link">RabbitMQ</a></div><div class="nav-item"><a href="/wiki/redis/" class="nav-link">Redis</a></div><div class="nav-item"><a href="/wiki/spring-cloud-cshop/" class="nav-link router-link-active">Spring-cloud-cshop</a></div><div class="nav-item"><a href="/wiki/about.html" class="nav-link">关于</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Spring-cloud-cshop</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/wiki/spring-cloud-cshop/" class="sidebar-link">项目简介</a></li><li><a href="/wiki/spring-cloud-cshop/cshop-1-技术架构.html" class="sidebar-link">技术架构</a></li><li><a href="/wiki/spring-cloud-cshop/cshop-2-安装软件.html" class="sidebar-link">安装软件</a></li><li><a href="/wiki/spring-cloud-cshop/cshop-3-准备开发环境.html" class="active sidebar-link">准备开发环境</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/wiki/spring-cloud-cshop/cshop-3-准备开发环境.html#项目结构" class="sidebar-link">项目结构</a></li><li class="sidebar-sub-header"><a href="/wiki/spring-cloud-cshop/cshop-3-准备开发环境.html#创建服务注册与发现" class="sidebar-link">创建服务注册与发现</a></li><li class="sidebar-sub-header"><a href="/wiki/spring-cloud-cshop/cshop-3-准备开发环境.html#创建分布式配置中心" class="sidebar-link">创建分布式配置中心</a></li><li class="sidebar-sub-header"><a href="/wiki/spring-cloud-cshop/cshop-3-准备开发环境.html#创建分布式链路追踪" class="sidebar-link">创建分布式链路追踪</a></li><li class="sidebar-sub-header"><a href="/wiki/spring-cloud-cshop/cshop-3-准备开发环境.html#创建分布式服务监控" class="sidebar-link">创建分布式服务监控</a></li><li class="sidebar-sub-header"><a href="/wiki/spring-cloud-cshop/cshop-3-准备开发环境.html#创建分布式路由网关" class="sidebar-link">创建分布式路由网关</a></li><li class="sidebar-sub-header"><a href="/wiki/spring-cloud-cshop/cshop-3-准备开发环境.html#部署服务到容器" class="sidebar-link">部署服务到容器</a></li><li class="sidebar-sub-header"><a href="/wiki/spring-cloud-cshop/cshop-3-准备开发环境.html#gitlab持续集成" class="sidebar-link">Gitlab持续集成</a></li><li class="sidebar-sub-header"><a href="/wiki/spring-cloud-cshop/cshop-3-准备开发环境.html#jenkins持续交付" class="sidebar-link">Jenkins持续交付</a></li></ul></li><li><a href="/wiki/spring-cloud-cshop/cshop-4-功能模块.html" class="sidebar-link">功能模块</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="准备开发环境"><a href="#准备开发环境" aria-hidden="true" class="header-anchor">#</a> 准备开发环境</h1> <h2 id="项目结构"><a href="#项目结构" aria-hidden="true" class="header-anchor">#</a> 项目结构</h2> <div class="language-bash extra-class"><pre class="language-bash"><code>cshop
+	cshop-basic
+	cshop-common
+	
+</code></pre></div><p>主pom.mxl：</p> <div class="language-xml extra-class"><pre class="language-xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>project</span> <span class="token attr-name"><span class="token namespace">xmlns:</span>xsi</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>http://www.w3.org/2001/XMLSchema-instance<span class="token punctuation">&quot;</span></span> <span class="token attr-name">xmlns</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>http://maven.apache.org/POM/4.0.0<span class="token punctuation">&quot;</span></span>
+         <span class="token attr-name"><span class="token namespace">xsi:</span>schemaLocation</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>modelVersion</span><span class="token punctuation">&gt;</span></span>4.0.0<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>modelVersion</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>com.javachen.parent<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>cshop<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">&gt;</span></span>1.0.0-SNAPSHOT<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>packaging</span><span class="token punctuation">&gt;</span></span>pom<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>packaging</span><span class="token punctuation">&gt;</span></span>
+
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">&gt;</span></span>cshop<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>description</span><span class="token punctuation">&gt;</span></span>Demo project for Spring Boot<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>description</span><span class="token punctuation">&gt;</span></span>
+
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>properties</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>maven.compiler.source</span><span class="token punctuation">&gt;</span></span>1.8<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>maven.compiler.source</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>maven.compiler.target</span><span class="token punctuation">&gt;</span></span>1.8<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>maven.compiler.target</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>java.version</span><span class="token punctuation">&gt;</span></span>1.8<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>java.version</span><span class="token punctuation">&gt;</span></span>
+
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>druid.version</span><span class="token punctuation">&gt;</span></span>1.1.18<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>druid.version</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>zipkin.version</span><span class="token punctuation">&gt;</span></span>2.10.1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>zipkin.version</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>docker.registry</span><span class="token punctuation">&gt;</span></span>192.168.56.100:5000<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>docker.registry</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>spring-boot.version</span><span class="token punctuation">&gt;</span></span>2.1.6.RELEASE<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>spring-boot.version</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>spring-boot-admin.version</span><span class="token punctuation">&gt;</span></span>2.1.6<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>spring-boot-admin.version</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>spring-cloud.version</span><span class="token punctuation">&gt;</span></span>Greenwich.RELEASE<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>spring-cloud.version</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>properties</span><span class="token punctuation">&gt;</span></span>
+
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>modules</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>module</span><span class="token punctuation">&gt;</span></span>cshop-basic<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>module</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>module</span><span class="token punctuation">&gt;</span></span>cshop-common<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>module</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>modules</span><span class="token punctuation">&gt;</span></span>
+
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependencies</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>org.projectlombok<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>lombok<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>optional</span><span class="token punctuation">&gt;</span></span>true<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>optional</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">&gt;</span></span>
+
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>org.springframework.boot<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>spring-boot-starter-test<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>scope</span><span class="token punctuation">&gt;</span></span>test<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>scope</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependencies</span><span class="token punctuation">&gt;</span></span>
+    <span class="token comment">&lt;!-- 管理依赖 --&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependencyManagement</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependencies</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>org.springframework.cloud<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>spring-cloud-dependencies<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">&gt;</span></span>${spring-cloud.version}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>type</span><span class="token punctuation">&gt;</span></span>pom<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>type</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>scope</span><span class="token punctuation">&gt;</span></span>import<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>scope</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">&gt;</span></span>
+
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>org.springframework.boot<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>spring-boot-dependencies<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">&gt;</span></span>${spring-boot.version}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>type</span><span class="token punctuation">&gt;</span></span>pom<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>type</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>scope</span><span class="token punctuation">&gt;</span></span>import<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>scope</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">&gt;</span></span>
+
+            <span class="token comment">&lt;!-- Spring Boot Admin Begin --&gt;</span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>de.codecentric<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>spring-boot-admin-starter-server<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">&gt;</span></span>${spring-boot-admin.version}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>de.codecentric<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>spring-boot-admin-starter-client<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">&gt;</span></span>${spring-boot-admin.version}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">&gt;</span></span>
+            <span class="token comment">&lt;!-- Spring Boot Admin End --&gt;</span>
+
+            <span class="token comment">&lt;!-- ZipKin Begin --&gt;</span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>io.zipkin.java<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>zipkin<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">&gt;</span></span>${zipkin.version}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>io.zipkin.java<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>zipkin-server<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">&gt;</span></span>${zipkin.version}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>io.zipkin.java<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>zipkin-autoconfigure-ui<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">&gt;</span></span>${zipkin.version}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">&gt;</span></span>
+            <span class="token comment">&lt;!-- ZipKin End --&gt;</span>
+
+            <span class="token comment">&lt;!-- Swagger spring boot Start--&gt;</span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>com.spring4all<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>swagger-spring-boot-starter<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">&gt;</span></span>1.9.0.RELEASE<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">&gt;</span></span>
+            <span class="token comment">&lt;!-- Swagger spring boot End --&gt;</span>
+
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>com.alibaba<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>druid<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">&gt;</span></span>${druid.version}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">&gt;</span></span>
+
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>com.alibaba<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>druid-spring-boot-starter<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">&gt;</span></span>${druid.version}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">&gt;</span></span>
+
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>io.jsonwebtoken<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>jjwt<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">&gt;</span></span>0.9.1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">&gt;</span></span>
+
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>com.google.guava<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>guava<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">&gt;</span></span>23.0<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">&gt;</span></span>
+
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>com.aliyun<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>aliyun-java-sdk-core<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">&gt;</span></span>3.3.1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>com.aliyun<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>aliyun-java-sdk-dysmsapi<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">&gt;</span></span>1.0.0<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">&gt;</span></span>
+
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>com.github.wxpay<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>wxpay-sdk<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">&gt;</span></span>0.0.3<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependencies</span><span class="token punctuation">&gt;</span></span>
+
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependencyManagement</span><span class="token punctuation">&gt;</span></span>
+
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>build</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>plugins</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>plugin</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>com.spotify<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>dockerfile-maven-plugin<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">&gt;</span></span>1.4.10<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>configuration</span><span class="token punctuation">&gt;</span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dockerfile</span><span class="token punctuation">&gt;</span></span>${project.basedir}/Dockerfile<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dockerfile</span><span class="token punctuation">&gt;</span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>repository</span><span class="token punctuation">&gt;</span></span>${docker.registry}/${project.artifactId}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>repository</span><span class="token punctuation">&gt;</span></span>
+<span class="token comment">&lt;!--                    &lt;tag&gt;${project.version}&lt;/tag&gt;  不指定tag，默认为latest--&gt;</span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>buildArgs</span><span class="token punctuation">&gt;</span></span>
+                      	<span class="token comment">&lt;!--提供参数向Dockerfile传递--&gt;</span>
+                        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>JAR_FILE</span><span class="token punctuation">&gt;</span></span>target/${project.build.finalName}.jar<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>JAR_FILE</span><span class="token punctuation">&gt;</span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>buildArgs</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>configuration</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>plugin</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>plugins</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>build</span><span class="token punctuation">&gt;</span></span>
+
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>distributionManagement</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>repository</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>id</span><span class="token punctuation">&gt;</span></span>nexus-releases<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>id</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">&gt;</span></span>Nexus Release Repository<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>url</span><span class="token punctuation">&gt;</span></span>http://192.168.56.100:4070/repository/nexus-releases/<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>url</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>repository</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>distributionManagement</span><span class="token punctuation">&gt;</span></span>
+
+
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>repositories</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>repository</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>id</span><span class="token punctuation">&gt;</span></span>nexus-releases<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>id</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">&gt;</span></span>Nexus Repository<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>url</span><span class="token punctuation">&gt;</span></span>http://192.168.56.100:4070/repository/nexus-releases/<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>url</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>snapshots</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>enabled</span><span class="token punctuation">&gt;</span></span>true<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>enabled</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>snapshots</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>releases</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>enabled</span><span class="token punctuation">&gt;</span></span>true<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>enabled</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>releases</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>repository</span><span class="token punctuation">&gt;</span></span>
+
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>repository</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>id</span><span class="token punctuation">&gt;</span></span>aliyun-repos<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>id</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">&gt;</span></span>Aliyun Repository<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>url</span><span class="token punctuation">&gt;</span></span>http://maven.aliyun.com/nexus/content/groups/public<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>url</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>releases</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>enabled</span><span class="token punctuation">&gt;</span></span>true<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>enabled</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>releases</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>snapshots</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>enabled</span><span class="token punctuation">&gt;</span></span>false<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>enabled</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>snapshots</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>repository</span><span class="token punctuation">&gt;</span></span>
+
+        <span class="token comment">&lt;!-- 注意： 这里必须要添加， 否者各种依赖有问题 --&gt;</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>repository</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>id</span><span class="token punctuation">&gt;</span></span>spring-milestones<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>id</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">&gt;</span></span>Spring Milestones<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>url</span><span class="token punctuation">&gt;</span></span>https://repo.spring.io/libs-milestone<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>url</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>snapshots</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>enabled</span><span class="token punctuation">&gt;</span></span>false<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>enabled</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>snapshots</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>repository</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>repositories</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>project</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><p>1、使用依赖管理来引入SpringBoot和SpringCloud，SpringBoot为2.1.3.RELEASE，SpringCloud版本为Greenwich.RELEASE</p> <p>2、父工程模块groupid为com.javachen.parent，子模块为com.javachen.cshop。</p> <h2 id="创建服务注册与发现"><a href="#创建服务注册与发现" aria-hidden="true" class="header-anchor">#</a> 创建服务注册与发现</h2> <p>创建cshop-basic/cshop-register模块，修改pom.xml：</p> <div class="language-xml extra-class"><pre class="language-xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>project</span> <span class="token attr-name"><span class="token namespace">xmlns:</span>xsi</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>http://www.w3.org/2001/XMLSchema-instance<span class="token punctuation">&quot;</span></span> <span class="token attr-name">xmlns</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>http://maven.apache.org/POM/4.0.0<span class="token punctuation">&quot;</span></span>
+         <span class="token attr-name"><span class="token namespace">xsi:</span>schemaLocation</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>modelVersion</span><span class="token punctuation">&gt;</span></span>4.0.0<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>modelVersion</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>parent</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>com.javachen.cshop<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>cshop-basic<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">&gt;</span></span>1.0.0-SNAPSHOT<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>parent</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>cshop-register<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependencies</span><span class="token punctuation">&gt;</span></span>
+        <span class="token comment">&lt;!-- Spring Boot Begin --&gt;</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>org.springframework.boot<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>spring-boot-autoconfigure<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>org.springframework.boot<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>spring-boot-starter-actuator<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">&gt;</span></span>
+        <span class="token comment">&lt;!-- Spring Boot End --&gt;</span>
+
+        <span class="token comment">&lt;!-- Spring Cloud Begin --&gt;</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>org.springframework.cloud<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>spring-cloud-starter-netflix-eureka-server<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">&gt;</span></span>
+        <span class="token comment">&lt;!-- Spring Cloud End --&gt;</span>
+
+        <span class="token comment">&lt;!-- Spring Boot Admin Begin --&gt;</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>de.codecentric<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>spring-boot-admin-starter-client<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">&gt;</span></span>
+        <span class="token comment">&lt;!-- Spring Boot Admin End --&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependencies</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>project</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><p>配置文件application.yml：</p> <div class="language-yml extra-class"><pre class="language-yml"><code><span class="token key atrule">server</span><span class="token punctuation">:</span>
+  <span class="token key atrule">port</span><span class="token punctuation">:</span> <span class="token number">8761</span>
+
+<span class="token key atrule">spring</span><span class="token punctuation">:</span>
+  <span class="token key atrule">application</span><span class="token punctuation">:</span>
+    <span class="token key atrule">name</span><span class="token punctuation">:</span> cshop<span class="token punctuation">-</span>registry
+  <span class="token key atrule">cloud</span><span class="token punctuation">:</span>
+    <span class="token key atrule">inetutils</span><span class="token punctuation">:</span>
+      <span class="token key atrule">ignoredInterfaces</span><span class="token punctuation">:</span>  <span class="token comment">#禁用网卡</span>
+        <span class="token punctuation">-</span> docker0
+        <span class="token punctuation">-</span> veth*
+        <span class="token punctuation">-</span> en0
+        <span class="token punctuation">-</span> br*
+
+<span class="token key atrule">eureka</span><span class="token punctuation">:</span>
+  <span class="token key atrule">client</span><span class="token punctuation">:</span>
+    <span class="token key atrule">registerWithEureka</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+    <span class="token key atrule">fetchRegistry</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+    <span class="token key atrule">service-url</span><span class="token punctuation">:</span>
+      <span class="token key atrule">defaultZone</span><span class="token punctuation">:</span> http<span class="token punctuation">:</span>//127.0.0.1<span class="token punctuation">:</span>8761/eureka/
+    <span class="token key atrule">registry-fetch-interval-seconds</span><span class="token punctuation">:</span> <span class="token number">5</span>
+  <span class="token key atrule">instance</span><span class="token punctuation">:</span>
+    <span class="token key atrule">hostname</span><span class="token punctuation">:</span> $<span class="token punctuation">{</span>spring.application.name<span class="token punctuation">}</span>
+    <span class="token key atrule">instance-id</span><span class="token punctuation">:</span> $<span class="token punctuation">{</span>spring.application.name<span class="token punctuation">}</span><span class="token punctuation">:</span>$<span class="token punctuation">{</span>server.port<span class="token punctuation">}</span>
+    <span class="token key atrule">lease-renewal-interval-in-seconds</span><span class="token punctuation">:</span> <span class="token number">5 </span><span class="token comment">#每隔5秒剔除一次失效的服务，默认30秒</span>
+    <span class="token key atrule">lease-expiration-duration-in-seconds</span><span class="token punctuation">:</span> <span class="token number">10 </span><span class="token comment"># 10秒不发送就过期，默认90秒</span>
+    <span class="token key atrule">enable-self-preservation</span><span class="token punctuation">:</span> <span class="token boolean important">false </span><span class="token comment">#关闭自我保护</span>
+
+
+<span class="token key atrule">management</span><span class="token punctuation">:</span>
+  <span class="token key atrule">endpoint</span><span class="token punctuation">:</span>
+    <span class="token key atrule">health</span><span class="token punctuation">:</span>
+      <span class="token key atrule">show-details</span><span class="token punctuation">:</span> always
+  <span class="token key atrule">endpoints</span><span class="token punctuation">:</span>
+    <span class="token key atrule">web</span><span class="token punctuation">:</span>
+      <span class="token key atrule">exposure</span><span class="token punctuation">:</span>
+        <span class="token key atrule">include</span><span class="token punctuation">:</span> health<span class="token punctuation">,</span>info
+</code></pre></div><p>启动类：</p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token annotation punctuation">@SpringBootApplication</span>
+<span class="token annotation punctuation">@EnableEurekaServer</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">AppRegister</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">SpringApplication</span><span class="token punctuation">.</span><span class="token function">run</span><span class="token punctuation">(</span><span class="token class-name">AppRegister</span><span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">,</span> args<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="创建分布式配置中心"><a href="#创建分布式配置中心" aria-hidden="true" class="header-anchor">#</a> 创建分布式配置中心</h2> <h3 id="cshop-config"><a href="#cshop-config" aria-hidden="true" class="header-anchor">#</a> cshop-config</h3> <p>创建cshop-basic/cshop-config模块，修改pom.xml：</p> <div class="language-xml extra-class"><pre class="language-xml"><code><span class="token prolog">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>project</span> <span class="token attr-name">xmlns</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>http://maven.apache.org/POM/4.0.0<span class="token punctuation">&quot;</span></span>
+         <span class="token attr-name"><span class="token namespace">xmlns:</span>xsi</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>http://www.w3.org/2001/XMLSchema-instance<span class="token punctuation">&quot;</span></span>
+         <span class="token attr-name"><span class="token namespace">xsi:</span>schemaLocation</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>parent</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>cshop-basic<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>com.javachen.cshop<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">&gt;</span></span>1.0.0-SNAPSHOT<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>parent</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>modelVersion</span><span class="token punctuation">&gt;</span></span>4.0.0<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>modelVersion</span><span class="token punctuation">&gt;</span></span>
+
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>com.javachen.cshop<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>cshop-config<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependencies</span><span class="token punctuation">&gt;</span></span>
+        <span class="token comment">&lt;!-- Spring Boot Begin --&gt;</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>org.springframework.boot<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>spring-boot-starter-web<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>org.springframework.boot<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>spring-boot-starter-actuator<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">&gt;</span></span>
+        <span class="token comment">&lt;!-- Spring Boot End --&gt;</span>
+
+        <span class="token comment">&lt;!-- Spring Cloud Begin --&gt;</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>org.springframework.cloud<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>spring-cloud-config-server<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>org.springframework.cloud<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>spring-cloud-starter-netflix-eureka-client<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">&gt;</span></span>
+        <span class="token comment">&lt;!-- Spring Cloud End --&gt;</span>
+
+        <span class="token comment">&lt;!-- Spring Boot Admin Begin --&gt;</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>de.codecentric<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>spring-boot-admin-starter-client<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">&gt;</span></span>
+        <span class="token comment">&lt;!-- Spring Boot Admin End --&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependencies</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>project</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><p>bootstrap.yml</p> <div class="language-yml extra-class"><pre class="language-yml"><code><span class="token key atrule">server</span><span class="token punctuation">:</span>
+  <span class="token key atrule">port</span><span class="token punctuation">:</span> <span class="token number">7000</span>
+
+<span class="token key atrule">spring</span><span class="token punctuation">:</span>
+  <span class="token key atrule">application</span><span class="token punctuation">:</span>
+    <span class="token key atrule">name</span><span class="token punctuation">:</span> cshop<span class="token punctuation">-</span>config
+  <span class="token key atrule">boot</span><span class="token punctuation">:</span>
+    <span class="token key atrule">admin</span><span class="token punctuation">:</span>
+      <span class="token key atrule">client</span><span class="token punctuation">:</span>
+        <span class="token key atrule">url</span><span class="token punctuation">:</span> http<span class="token punctuation">:</span>//127.0.0.1<span class="token punctuation">:</span><span class="token number">7010</span>
+  <span class="token key atrule">cloud</span><span class="token punctuation">:</span>
+    <span class="token key atrule">config</span><span class="token punctuation">:</span>
+      <span class="token key atrule">label</span><span class="token punctuation">:</span> master
+      <span class="token key atrule">server</span><span class="token punctuation">:</span>
+        <span class="token key atrule">git</span><span class="token punctuation">:</span> <span class="token comment">#必须是个干净的仓库</span>
+          <span class="token key atrule">uri</span><span class="token punctuation">:</span> https<span class="token punctuation">:</span>//github.com/javachen/cshop<span class="token punctuation">-</span>config.git
+          <span class="token key atrule">search-paths</span><span class="token punctuation">:</span> configs
+    <span class="token key atrule">inetutils</span><span class="token punctuation">:</span>
+      <span class="token key atrule">ignoredInterfaces</span><span class="token punctuation">:</span>  <span class="token comment">#禁用网卡</span>
+        <span class="token punctuation">-</span> docker0
+        <span class="token punctuation">-</span> veth*
+        <span class="token punctuation">-</span> en0
+        <span class="token punctuation">-</span> br*
+
+<span class="token key atrule">encrypt</span><span class="token punctuation">:</span>
+  <span class="token key atrule">key</span><span class="token punctuation">:</span> cshop
+
+<span class="token key atrule">eureka</span><span class="token punctuation">:</span>
+  <span class="token key atrule">client</span><span class="token punctuation">:</span>
+    <span class="token key atrule">service-url</span><span class="token punctuation">:</span>
+      <span class="token key atrule">defaultZone</span><span class="token punctuation">:</span> http<span class="token punctuation">:</span>//127.0.0.1<span class="token punctuation">:</span>8761/eureka
+    <span class="token key atrule">registry-fetch-interval-seconds</span><span class="token punctuation">:</span> <span class="token number">5</span>
+    <span class="token key atrule">enabled</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+  <span class="token key atrule">instance</span><span class="token punctuation">:</span>
+    <span class="token key atrule">prefer-ip-address</span><span class="token punctuation">:</span> <span class="token boolean important">true </span><span class="token comment">#当你获取host时，返回的不是主机名，而是ip</span>
+    <span class="token key atrule">instance-id</span><span class="token punctuation">:</span> $<span class="token punctuation">{</span>spring.application.name<span class="token punctuation">}</span><span class="token punctuation">:</span>$<span class="token punctuation">{</span>server.port<span class="token punctuation">}</span>
+    <span class="token key atrule">leaseRenewalIntervalInSeconds</span><span class="token punctuation">:</span> <span class="token number">10</span>
+    <span class="token key atrule">health-check-url-path</span><span class="token punctuation">:</span> /actuator/health
+    <span class="token key atrule">metadata-map</span><span class="token punctuation">:</span>
+      <span class="token key atrule">startup</span><span class="token punctuation">:</span> $<span class="token punctuation">{</span>random.int<span class="token punctuation">}</span>    <span class="token comment">#needed to trigger info and endpoint update after restart</span>
+
+<span class="token key atrule">management</span><span class="token punctuation">:</span>
+  <span class="token key atrule">endpoint</span><span class="token punctuation">:</span>
+    <span class="token key atrule">health</span><span class="token punctuation">:</span>
+      <span class="token key atrule">show-details</span><span class="token punctuation">:</span> always
+  <span class="token key atrule">endpoints</span><span class="token punctuation">:</span>
+    <span class="token key atrule">web</span><span class="token punctuation">:</span>
+      <span class="token key atrule">exposure</span><span class="token punctuation">:</span>
+        <span class="token key atrule">include</span><span class="token punctuation">:</span> health<span class="token punctuation">,</span>info
+
+
+</code></pre></div><p>这里创建了一个Git仓库用于保存配置：https://github.com/javachen/cshop-config.git</p> <p>下载下来之后，进入cshop-config，查看目录结构：</p> <div class="language- extra-class"><pre class="language-text"><code>⇒  tree
+.
+├── README.md
+└── configs
+    ├── cshop-gateway-dev.yml
+    ├── cshop-gateway-prod.yml
+    ├── cshop-monitor-dev.yml
+    └── cshop-monitor-prod.yml
+</code></pre></div><p>可以在cshop目录下创建一个软连接到 cshop-config 目录，方便我们在idea中修改配置文件：</p> <div class="language- extra-class"><pre class="language-text"><code> ln -s ../cshop-config/configs configs
+</code></pre></div><p>可以浏览器查看配置文件：</p> <p>http://127.0.0.1:7000/chsop-monitor/dev</p> <p>http://127.0.0.1:7000/chsop-monitor/dev/master</p> <p>http://127.0.0.1:7000/master/cshop-monitor-dev.yml</p> <h3 id="本地构建"><a href="#本地构建" aria-hidden="true" class="header-anchor">#</a> 本地构建</h3> <p>打包并构建docker镜像：</p> <div class="language- extra-class"><pre class="language-text"><code>DOCKER_HOST=tcp://192.168.56.100:2375 mvn clean package dockerfile:build -Dmaven.test.skip=true
+</code></pre></div><p>然后重新运行新容器。</p> <h3 id="gitlab-ci构建"><a href="#gitlab-ci构建" aria-hidden="true" class="header-anchor">#</a> Gitlab CI构建</h3> <p>提交代码，就会自动构建。</p> <h3 id="对称加密"><a href="#对称加密" aria-hidden="true" class="header-anchor">#</a> 对称加密</h3> <p>对称加密即通信双方用同一密钥(key)对文本进行加密和解密。它有两种加密方式：</p> <ul><li>Stream Cipher。对文本进行逐字节或逐字的进行加密。</li> <li>Block Cipher。取一定长度(block size)的字节加密成一个单元，长度不够或者不成block size倍数的用占位符填充。</li></ul> <p>对称加密是较为简单的一种方式，只要双方都拥有同一key就可以完成文本的加密和解密。不过对称加密的缺点是无法认证来源，即如果Alice和Bob正在通信，Alice使用key把加密后的文本传递给Bob，但是中途被Eve截取到了密文，然后Eve把密文转发给Bob，让Bob误以为Eve就是Alice，然后就会造成数据泄露。</p> <p>config server提供了加密与解密的接口，分别是/encrypt与/decrypt。</p> <p>config server的加解密功能依赖Java Cryptography Extension(JCE)
+Java8 JCE下载地址：http://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html
+下载JCE并解压，将其中的jar包覆盖到JDK/jre/lib/security目录中。</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">unzip</span> jce_policy-8.zip
+
+<span class="token comment"># 我是mac系统</span>
+<span class="token function">cp</span> UnlimitedJCEPolicyJDK8/*.jar /Library/Java/JavaVirtualMachines/jdk1.8.0_202.jdk/Contents/Home/jre/lib/security
+</code></pre></div><p>修改配置文件bootstrap.yml，配置对称加密的密钥</p> <div class="language- extra-class"><pre class="language-text"><code>encrypt:
+  key: cshop
+</code></pre></div><p>运行项目，验证加解密。</p> <p>可以查看接口是否运行正常：http://127.0.0.1:7000/encrypt/status</p> <p>对密码 123456 加密：</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 对密码 123456 加密</span>
+$ <span class="token function">curl</span> http://127.0.0.1:7000/encrypt -d 123456
+
+c212b94e6da6cf27eb3235f2bfc7a51cf7ca06d9ef15119f667fff60b850a242
+</code></pre></div><p>对密码 123456 解密：</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">curl</span> http://127.0.0.1:7000/decrypt \
+  -d c212b94e6da6cf27eb3235f2bfc7a51cf7ca06d9ef15119f667fff60b850a242
+</code></pre></div><p>在git仓库添加配置文件cshop-user-service-dev.yml，设置密码为加密的密文，比如数据库密码：</p> <div class="language-yml extra-class"><pre class="language-yml"><code><span class="token key atrule">datasource</span><span class="token punctuation">:</span>
+  <span class="token key atrule">type</span><span class="token punctuation">:</span> com.alibaba.druid.pool.DruidDataSource
+  <span class="token key atrule">druid</span><span class="token punctuation">:</span>
+    <span class="token key atrule">url</span><span class="token punctuation">:</span> jdbc<span class="token punctuation">:</span>mysql<span class="token punctuation">:</span>//192.168.56.100<span class="token punctuation">:</span>3306/user<span class="token punctuation">?</span>useUnicode=true<span class="token important">&amp;characterEncoding</span>=UTF<span class="token punctuation">-</span>8<span class="token important">&amp;useSSL</span>=false
+    <span class="token key atrule">username</span><span class="token punctuation">:</span> root
+    <span class="token key atrule">password</span><span class="token punctuation">:</span> <span class="token string">'{cipher}c212b94e6da6cf27eb3235f2bfc7a51cf7ca06d9ef15119f667fff60b850a242'</span>
+</code></pre></div><blockquote><p>注意：使用yml文件时，加密的密文必须放到两个单引号里面，而使用 <code>.properties</code> 文件进行配置时，被加密的值不能包含在引号中，否则这个值不会被解密。</p></blockquote> <p>访问地址：http://127.0.0.1:7000/master/cshop-user-service-dev.yml，得到密钥原文</p> <h3 id="非对称加解密"><a href="#非对称加解密" aria-hidden="true" class="header-anchor">#</a> 非对称加解密</h3> <p>上文我们使用了对称加解密的方式来确保配置文件的安全性，如果使用非对称加解密的方式，我们的安全性将会得到进一步的提高。使用非对称加密的话需要我们先生成密钥对，生成密钥对可以直接使用jdk中自带的keytool工具，方式如下：</p> <div class="language-bash extra-class"><pre class="language-bash"><code>keytool -genkeypair -alias cshop-config -keyalg RSA -keystore cshop-config.keystore
+</code></pre></div><p>按提示操作，输入用户名和密码111111。</p> <p>执行成功之后，会在命令执行目录下生成一个名为cshop-config.keystore的文件，将该文件拷贝到cshop-config的src/main/resources目录下，然后bootstrap.yml做如下配置：</p> <div class="language-yml extra-class"><pre class="language-yml"><code>encrypt
+  key<span class="token punctuation">-</span>store
+    <span class="token key atrule">location</span><span class="token punctuation">:</span> cshop<span class="token punctuation">-</span>config.keystore
+    <span class="token key atrule">alias</span><span class="token punctuation">:</span> cshop<span class="token punctuation">-</span>config
+    <span class="token key atrule">password</span><span class="token punctuation">:</span> <span class="token number">111111</span>
+    <span class="token key atrule">secret</span><span class="token punctuation">:</span> <span class="token number">111111</span>
+</code></pre></div><h3 id="配置信息手动刷新"><a href="#配置信息手动刷新" aria-hidden="true" class="header-anchor">#</a> 配置信息手动刷新</h3> <p>很多场景下，需要在运行期间动态调整配置。如果配置发生了修改，微服务要如何实现配置
+的刷新呢？</p> <p>客户端需要添加spring-boot-starter-actuator依赖，spring-boot-starter-actuator提供了/refresh端点，用于配置的刷新。</p> <p>在类上添加注解@RefreshScope，添加这个注解的类会在配置更改时得到特殊的
+处理。</p> <h3 id="配置信息自动刷新"><a href="#配置信息自动刷新" aria-hidden="true" class="header-anchor">#</a> 配置信息自动刷新</h3> <p>前文讨论了使用/refresh端点手动刷新配置，但如果所有微服务节点的配置都需要手动去刷新，工作量可想而知。不仅如此，随着系统的不断扩张，会越来越难以维护。因此，实现配置的自动刷新是很有必要的，Spring Cloud Bus就可以实现配置的自动刷新。
+Spring Cloud Bus使用轻量级的消息代理(例如 RabbitMQ、 Kafka等)连接分布式系统的节点，这样就可以广播传播状态的更改(例如配置的更新)或者其他的管理指令。可将Spring Cloud Bus想象成一个分布式的Spring Boot Actuator。</p> <p>服务端cshop-config和客户端都添加依赖：</p> <div class="language-xml extra-class"><pre class="language-xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>org.springframework.cloud<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>spring-cloud-starter-bus-amqp<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><p>服务端cshop-config和客户端的配置文件增加rabbitmq的配置：</p> <div class="language-yml extra-class"><pre class="language-yml"><code><span class="token key atrule">spring</span><span class="token punctuation">:</span>
+  <span class="token key atrule">rabbitmq</span><span class="token punctuation">:</span>
+    <span class="token key atrule">username</span><span class="token punctuation">:</span> cshop
+    <span class="token key atrule">password</span><span class="token punctuation">:</span> cshop
+    <span class="token key atrule">host</span><span class="token punctuation">:</span> 192.168.56.100
+    <span class="token key atrule">port</span><span class="token punctuation">:</span> <span class="token number">5672</span>
+</code></pre></div><p>修改git仓库里的配置文件，然后用post方式请求地址:http://localhost:7000/bus/refresh，如果返回成功，则config的所有客户端的配置都会动态刷新。</p> <h3 id="安全认证"><a href="#安全认证" aria-hidden="true" class="header-anchor">#</a> 安全认证</h3> <h2 id="创建分布式链路追踪"><a href="#创建分布式链路追踪" aria-hidden="true" class="header-anchor">#</a> 创建分布式链路追踪</h2> <p>docker启动：</p> <div class="language-bash extra-class"><pre class="language-bash"><code>docker run -d --name<span class="token operator">=</span>zipkin -p 9411:9411 openzipkin/zipkin
+</code></pre></div><p>或者java启动：</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">curl</span> -sSL https://zipkin.io/quickstart.sh <span class="token operator">|</span> <span class="token function">bash</span> -s
+java -jar zipkin.jar
+</code></pre></div><p>从源代码编译启动：</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># get the latest source</span>
+<span class="token function">git</span> clone https://github.com/openzipkin/zipkin
+<span class="token function">cd</span> zipkin
+<span class="token comment"># Build the server and also make its dependencies</span>
+./mvnw -DskipTests --also-make -pl zipkin-server clean <span class="token function">install</span>
+<span class="token comment"># Run the server</span>
+java -jar ./zipkin-server/target/zipkin-server-*exec.jar
+</code></pre></div><p>开放端口：</p> <div class="language- extra-class"><pre class="language-text"><code>firewall-cmd --zone=public --add-port=9411/tcp --permanent
+</code></pre></div><p>访问 http://192.168.56.100:9411/zipkin/</p> <h3 id="微服务整合zipkin"><a href="#微服务整合zipkin" aria-hidden="true" class="header-anchor">#</a> 微服务整合Zipkin</h3> <p>cshop-user-service添加主要依赖：</p> <div class="language-xml extra-class"><pre class="language-xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>org.springframework.cloud<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>spring-cloud-starter-sleuth<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>org.springframework.cloud<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>spring-cloud-sleuth-zipkin<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><p>在配置文件中新增如下内容</p> <div class="language-yml extra-class"><pre class="language-yml"><code><span class="token key atrule">spring</span><span class="token punctuation">:</span>
+	<span class="token key atrule">zipkin</span><span class="token punctuation">:</span>
+    <span class="token key atrule">base-url</span><span class="token punctuation">:</span> http<span class="token punctuation">:</span>//192.168.56.100<span class="token punctuation">:</span><span class="token number">9411</span>
+  <span class="token key atrule">sleuth</span><span class="token punctuation">:</span>
+    <span class="token key atrule">sampler</span><span class="token punctuation">:</span>
+      <span class="token key atrule">probability</span><span class="token punctuation">:</span> <span class="token number">1</span>
+</code></pre></div><p>spring.zipkin.base-url：指定Zipkin的地址。
+spring.sleuth.sampler.probability：指定需采样的请求的百分比，默认值是0.1，即 10%。这是因为在分布式系统中，数据量可能会非常大，因此采样非常重要。但是我们示例数据少最好配置为1全采样。</p> <h3 id="用elasticsearch存储zipkin的数据"><a href="#用elasticsearch存储zipkin的数据" aria-hidden="true" class="header-anchor">#</a> 用Elasticsearch存储Zipkin的数据</h3> <p>需要修改 zipkin server端。</p> <h2 id="创建分布式服务监控"><a href="#创建分布式服务监控" aria-hidden="true" class="header-anchor">#</a> 创建分布式服务监控</h2> <p>创建cshop-basic/cshop-monitor模块，修改pom.xml：</p> <div class="language-xml extra-class"><pre class="language-xml"><code><span class="token prolog">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>project</span> <span class="token attr-name">xmlns</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>http://maven.apache.org/POM/4.0.0<span class="token punctuation">&quot;</span></span>
+         <span class="token attr-name"><span class="token namespace">xmlns:</span>xsi</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>http://www.w3.org/2001/XMLSchema-instance<span class="token punctuation">&quot;</span></span>
+         <span class="token attr-name"><span class="token namespace">xsi:</span>schemaLocation</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>parent</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>cshop-basic<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>com.javachen.cshop<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">&gt;</span></span>1.0.0-SNAPSHOT<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>parent</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>modelVersion</span><span class="token punctuation">&gt;</span></span>4.0.0<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>modelVersion</span><span class="token punctuation">&gt;</span></span>
+
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>com.javachen.cshop<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>cshop-monitor<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependencies</span><span class="token punctuation">&gt;</span></span>
+        <span class="token comment">&lt;!-- Spring Boot Begin --&gt;</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>org.springframework.boot<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>spring-boot-starter-web<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>org.springframework.boot<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>spring-boot-starter-actuator<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">&gt;</span></span>
+        <span class="token comment">&lt;!-- Spring Boot End --&gt;</span>
+
+        <span class="token comment">&lt;!-- Spring Cloud Begin --&gt;</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>org.springframework.cloud<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>spring-cloud-starter-config<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>org.springframework.cloud<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>spring-cloud-starter-netflix-eureka-client<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">&gt;</span></span>
+        <span class="token comment">&lt;!-- Spring Cloud End --&gt;</span>
+
+        <span class="token comment">&lt;!-- Spring Boot Admin Begin --&gt;</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>de.codecentric<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>spring-boot-admin-starter-server<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">&gt;</span></span>
+        <span class="token comment">&lt;!-- Spring Boot Admin End --&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependencies</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>project</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><p>bootstrap.yml</p> <div class="language-yml extra-class"><pre class="language-yml"><code><span class="token key atrule">spring</span><span class="token punctuation">:</span>
+  <span class="token key atrule">application</span><span class="token punctuation">:</span>
+    <span class="token key atrule">name</span><span class="token punctuation">:</span> cshop<span class="token punctuation">-</span>monitor
+  <span class="token key atrule">cloud</span><span class="token punctuation">:</span>
+    <span class="token key atrule">config</span><span class="token punctuation">:</span>
+      <span class="token key atrule">uri</span><span class="token punctuation">:</span> http<span class="token punctuation">:</span>//127.0.0.1<span class="token punctuation">:</span><span class="token number">7000</span>
+      <span class="token key atrule">profile</span><span class="token punctuation">:</span> dev
+      <span class="token key atrule">label</span><span class="token punctuation">:</span> master
+      <span class="token key atrule">name</span><span class="token punctuation">:</span> $<span class="token punctuation">{</span>spring.application.name<span class="token punctuation">}</span>
+</code></pre></div><p>在configs目录下创建配置文件 cshop-monitor-dev.yml：</p> <div class="language-yml extra-class"><pre class="language-yml"><code><span class="token key atrule">server</span><span class="token punctuation">:</span>
+  <span class="token key atrule">port</span><span class="token punctuation">:</span> <span class="token number">7010</span>
+
+<span class="token key atrule">spring</span><span class="token punctuation">:</span>
+  <span class="token key atrule">application</span><span class="token punctuation">:</span>
+    <span class="token key atrule">name</span><span class="token punctuation">:</span> cshop<span class="token punctuation">-</span>monitor
+  <span class="token key atrule">cloud</span><span class="token punctuation">:</span>
+    <span class="token key atrule">inetutils</span><span class="token punctuation">:</span>
+      <span class="token key atrule">ignoredInterfaces</span><span class="token punctuation">:</span>  <span class="token comment">#禁用网卡</span>
+        <span class="token punctuation">-</span> docker0
+        <span class="token punctuation">-</span> veth*
+        <span class="token punctuation">-</span> en0
+        <span class="token punctuation">-</span> br*
+  <span class="token key atrule">mail</span><span class="token punctuation">:</span>
+    <span class="token key atrule">host</span><span class="token punctuation">:</span> smtp.163.com
+    <span class="token key atrule">username</span><span class="token punctuation">:</span> junezchen@163.com
+    <span class="token key atrule">password</span><span class="token punctuation">:</span> <span class="token string">'{cipher}13c403a643824a1c2607ebb60960a4a8367832a199cd4d1af882976861195ef2'</span>
+    <span class="token key atrule">properties</span><span class="token punctuation">:</span>
+      <span class="token key atrule">mail.debug</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+      <span class="token key atrule">mail.smtp.auth</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+  <span class="token key atrule">boot</span><span class="token punctuation">:</span>
+    <span class="token key atrule">admin</span><span class="token punctuation">:</span>
+      <span class="token key atrule">notify</span><span class="token punctuation">:</span>
+        <span class="token key atrule">mail</span><span class="token punctuation">:</span>
+          <span class="token key atrule">to</span><span class="token punctuation">:</span> 342803737@qq.com
+          <span class="token key atrule">from</span><span class="token punctuation">:</span> junezcloud@163.com
+      <span class="token key atrule">routes</span><span class="token punctuation">:</span>
+        <span class="token key atrule">endpoints</span><span class="token punctuation">:</span> env<span class="token punctuation">,</span>metrics<span class="token punctuation">,</span>dump<span class="token punctuation">,</span>jolokia<span class="token punctuation">,</span>info<span class="token punctuation">,</span>configprops<span class="token punctuation">,</span>trace<span class="token punctuation">,</span>logfile<span class="token punctuation">,</span>refresh<span class="token punctuation">,</span>flyway<span class="token punctuation">,</span>liquibase<span class="token punctuation">,</span>heapdump<span class="token punctuation">,</span>loggers<span class="token punctuation">,</span>auditevents<span class="token punctuation">,</span>hystrix.stream
+
+<span class="token key atrule">eureka</span><span class="token punctuation">:</span>
+  <span class="token key atrule">client</span><span class="token punctuation">:</span>
+    <span class="token key atrule">service-url</span><span class="token punctuation">:</span>
+      <span class="token key atrule">defaultZone</span><span class="token punctuation">:</span> http<span class="token punctuation">:</span>//127.0.0.1<span class="token punctuation">:</span>8761/eureka
+    <span class="token key atrule">registry-fetch-interval-seconds</span><span class="token punctuation">:</span> <span class="token number">5</span>
+  <span class="token key atrule">instance</span><span class="token punctuation">:</span>
+    <span class="token key atrule">prefer-ip-address</span><span class="token punctuation">:</span> <span class="token boolean important">true </span><span class="token comment">#当你获取host时，返回的不是主机名，而是ip</span>
+    <span class="token key atrule">instance-id</span><span class="token punctuation">:</span> $<span class="token punctuation">{</span>spring.application.name<span class="token punctuation">}</span><span class="token punctuation">:</span>$<span class="token punctuation">{</span>server.port<span class="token punctuation">}</span>
+    <span class="token key atrule">leaseRenewalIntervalInSeconds</span><span class="token punctuation">:</span> <span class="token number">10</span>
+    <span class="token key atrule">health-check-url-path</span><span class="token punctuation">:</span> /actuator/health
+    <span class="token key atrule">metadata-map</span><span class="token punctuation">:</span>
+      <span class="token key atrule">startup</span><span class="token punctuation">:</span> $<span class="token punctuation">{</span>random.int<span class="token punctuation">}</span> <span class="token comment">#needed to trigger info and endpoint update after restart</span>
+</code></pre></div><p>启动类AppMonitor：</p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token annotation punctuation">@EnableAdminServer</span>
+<span class="token annotation punctuation">@EnableDiscoveryClient</span>
+<span class="token annotation punctuation">@SpringBootApplication</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">AppMonitor</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">SpringApplication</span><span class="token punctuation">.</span><span class="token function">run</span><span class="token punctuation">(</span><span class="token class-name">AppMonitor</span><span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">,</span> args<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>异常:</p> <div class="language- extra-class"><pre class="language-text"><code>java.lang.IllegalStateException: Calling [asyncError()] is not valid for a request with Async state [MUST_DISPATCH]
+</code></pre></div><h3 id="监控邮件发送"><a href="#监控邮件发送" aria-hidden="true" class="header-anchor">#</a> 监控邮件发送</h3> <p>添加依赖：</p> <div class="language-xml extra-class"><pre class="language-xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>org.springframework.boot<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>spring-boot-starter-mail<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><p>cshop-monitor-dev.yml添加相关参数，参考上面配置。</p> <h2 id="创建分布式路由网关"><a href="#创建分布式路由网关" aria-hidden="true" class="header-anchor">#</a> 创建分布式路由网关</h2> <p>创建cshop-basic/cshop-monitor模块，修改pom.xml：</p> <div class="language-xml extra-class"><pre class="language-xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>project</span> <span class="token attr-name"><span class="token namespace">xmlns:</span>xsi</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>http://www.w3.org/2001/XMLSchema-instance<span class="token punctuation">&quot;</span></span> <span class="token attr-name">xmlns</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>http://maven.apache.org/POM/4.0.0<span class="token punctuation">&quot;</span></span>
+         <span class="token attr-name"><span class="token namespace">xsi:</span>schemaLocation</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>modelVersion</span><span class="token punctuation">&gt;</span></span>4.0.0<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>modelVersion</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>parent</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>com.javachen.cshop<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>cshop-basic<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">&gt;</span></span>1.0.0-SNAPSHOT<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>parent</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>cshop-gateway<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependencies</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>com.javachen.cshop<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>cshop-common<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">&gt;</span></span>${project.version}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">&gt;</span></span>
+
+        <span class="token comment">&lt;!-- Spring Boot Begin --&gt;</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>org.springframework.boot<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>spring-boot-starter-web<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>org.springframework.boot<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>spring-boot-starter-actuator<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">&gt;</span></span>
+        <span class="token comment">&lt;!-- Spring Boot End --&gt;</span>
+
+        <span class="token comment">&lt;!-- Spring Cloud Begin --&gt;</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>org.springframework.cloud<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>spring-cloud-starter-openfeign<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">&gt;</span></span>
+
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>org.springframework.cloud<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>spring-cloud-starter-netflix-zuul<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>org.springframework.cloud<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>spring-cloud-starter-config<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>org.springframework.cloud<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>spring-cloud-starter-netflix-eureka-client<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">&gt;</span></span>
+        <span class="token comment">&lt;!-- Spring Cloud End --&gt;</span>
+
+        <span class="token comment">&lt;!-- Spring Boot Admin Begin --&gt;</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>de.codecentric<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>spring-boot-admin-starter-server<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">&gt;</span></span>
+        <span class="token comment">&lt;!-- Spring Boot Admin End --&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependencies</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>project</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><p><strong>创建启动类：</strong></p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token annotation punctuation">@SpringBootApplication</span>
+<span class="token annotation punctuation">@EnableDiscoveryClient</span>
+<span class="token annotation punctuation">@EnableZuulProxy</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">AppGateWay</span> <span class="token punctuation">{</span>
+	<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token class-name">SpringApplication</span><span class="token punctuation">.</span><span class="token function">run</span><span class="token punctuation">(</span><span class="token class-name">AppGateWay</span><span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">,</span> args<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p><strong>相关配置</strong>：</p> <div class="language-properties extra-class"><pre class="language-properties"><code><span class="token attr-name">server</span><span class="token punctuation">:</span>
+<span class="token attr-name">  port</span><span class="token punctuation">:</span> <span class="token attr-value">7777</span>
+
+<span class="token attr-name">spring</span><span class="token punctuation">:</span>
+<span class="token attr-name">  application</span><span class="token punctuation">:</span>
+<span class="token attr-name">    name</span><span class="token punctuation">:</span> <span class="token attr-value">cshop-gateway</span>
+<span class="token attr-name">  cloud</span><span class="token punctuation">:</span>
+<span class="token attr-name">    inetutils</span><span class="token punctuation">:</span>
+<span class="token attr-name">      ignoredInterfaces</span><span class="token punctuation">:</span>  <span class="token attr-value">#禁用网卡</span>
+<span class="token attr-name">        -</span> <span class="token attr-value">docker0</span>
+<span class="token attr-name">        -</span> <span class="token attr-value">veth*</span>
+<span class="token attr-name">        -</span> <span class="token attr-value">en0</span>
+<span class="token attr-name">eureka</span><span class="token punctuation">:</span>
+<span class="token attr-name">  client</span><span class="token punctuation">:</span>
+<span class="token attr-name">    service-url</span><span class="token punctuation">:</span>
+<span class="token attr-name">      defaultZone</span><span class="token punctuation">:</span> <span class="token attr-value">http://127.0.0.1:8761/eureka</span>
+<span class="token attr-name">    registry-fetch-interval-seconds</span><span class="token punctuation">:</span> <span class="token attr-value">5</span>
+<span class="token attr-name">  instance</span><span class="token punctuation">:</span>
+<span class="token attr-name">    prefer-ip-address</span><span class="token punctuation">:</span> <span class="token attr-value">true #当你获取host时，返回的不是主机名，而是ip</span>
+<span class="token attr-name">    instance-id</span><span class="token punctuation">:</span> <span class="token attr-value">${spring.application.name}:${server.port}</span>
+<span class="token attr-name">    leaseRenewalIntervalInSeconds</span><span class="token punctuation">:</span> <span class="token attr-value">10</span>
+<span class="token attr-name">    health-check-url-path</span><span class="token punctuation">:</span> <span class="token attr-value">/actuator/health</span>
+<span class="token attr-name">    metadata-map</span><span class="token punctuation">:</span>
+<span class="token attr-name">      startup</span><span class="token punctuation">:</span> <span class="token attr-value">${random.int}    #needed to trigger info and endpoint update after restart</span>
+
+<span class="token attr-name">zuul</span><span class="token punctuation">:</span>
+<span class="token attr-name">  prefix</span><span class="token punctuation">:</span> <span class="token attr-value">/api # 添加路由前缀</span>
+<span class="token attr-name">  retryable</span><span class="token punctuation">:</span> <span class="token attr-value">true</span>
+<span class="token attr-name">  routes</span><span class="token punctuation">:</span>
+<span class="token attr-name">    cshop-item-service</span><span class="token punctuation">:</span> <span class="token attr-value">/cshop/** # 将商品微服务映射到/cshop/**</span>
+<span class="token attr-name">    cshop-user-service</span><span class="token punctuation">:</span> <span class="token attr-value">/user/**</span>
+<span class="token attr-name">    cshop-auth-service</span><span class="token punctuation">:</span> <span class="token attr-value">/auth/**</span>
+<span class="token attr-name">    cshop-order-service</span><span class="token punctuation">:</span> <span class="token attr-value">/order/**</span>
+<span class="token attr-name">    cshop-cart-service</span><span class="token punctuation">:</span> <span class="token attr-value">/cart/**</span>
+<span class="token comment">  #  ignored-services:</span>
+<span class="token comment">  #    - cshop-upload-service # 忽略upload-service服务</span>
+<span class="token attr-name">  add-host-header</span><span class="token punctuation">:</span> <span class="token attr-value">true #携带请求本身的head头信息</span>
+<span class="token attr-name">  sensitive-headers</span><span class="token punctuation">:</span> <span class="token attr-value">#匹配禁止使用的头信息，这里设置为null，否则set-cookie无效</span>
+
+<span class="token attr-name">ribbon</span><span class="token punctuation">:</span>
+<span class="token attr-name">  ConnectTimeout</span><span class="token punctuation">:</span> <span class="token attr-value">4000 # 连接超时时间(ms)</span>
+<span class="token attr-name">  ReadTimeout</span><span class="token punctuation">:</span> <span class="token attr-value">2000 # 通信超时时间(ms)</span>
+<span class="token attr-name">  OkToRetryOnAllOperations</span><span class="token punctuation">:</span> <span class="token attr-value">true # 是否对所有操作重试</span>
+<span class="token attr-name">  MaxAutoRetriesNextServer</span><span class="token punctuation">:</span> <span class="token attr-value">1 # 同一服务不同实例的重试次数</span>
+<span class="token attr-name">  MaxAutoRetries</span><span class="token punctuation">:</span> <span class="token attr-value">1 # 同一实例的重试次数</span>
+
+<span class="token attr-name">hystrix</span><span class="token punctuation">:</span>
+<span class="token attr-name">  command</span><span class="token punctuation">:</span>
+<span class="token attr-name">    default</span><span class="token punctuation">:</span>
+<span class="token attr-name">      circuitBreaker</span><span class="token punctuation">:</span>
+<span class="token attr-name">        requestVolumeThreshold</span><span class="token punctuation">:</span> <span class="token attr-value">5 #一个rolling window内最小的熔断请求数，默认超过20自动熔断</span>
+<span class="token attr-name">        sleepWindowInMilliseconds</span><span class="token punctuation">:</span> <span class="token attr-value">10000 #触发短路的时间值，默认超过5000毫秒后会关闭circuit。</span>
+<span class="token attr-name">      execution</span><span class="token punctuation">:</span>
+<span class="token attr-name">        isolation</span><span class="token punctuation">:</span>
+<span class="token attr-name">          thread</span><span class="token punctuation">:</span>
+<span class="token attr-name">            timeoutInMillisecond</span><span class="token punctuation">:</span> <span class="token attr-value">10000 # 命令执行超时时 间，默认1000ms</span>
+
+<span class="token attr-name">cshop</span><span class="token punctuation">:</span>
+<span class="token attr-name">  worker</span><span class="token punctuation">:</span>
+<span class="token attr-name">    workerId</span><span class="token punctuation">:</span> <span class="token attr-value">1</span>
+<span class="token attr-name">    dataCenterId</span><span class="token punctuation">:</span> <span class="token attr-value">1</span>
+<span class="token attr-name">  jwt</span><span class="token punctuation">:</span>
+<span class="token attr-name">    cookieName</span><span class="token punctuation">:</span> <span class="token attr-value">CS_TOKEN</span>
+<span class="token attr-name">    publicKeyPath</span><span class="token punctuation">:</span> <span class="token attr-value">/Users/june/share/rsa.pub # 公钥地址</span>
+
+<span class="token attr-name">  filter</span><span class="token punctuation">:</span>
+<span class="token attr-name">    allowPaths</span><span class="token punctuation">:</span>
+      /api/auth
+      /api/search
+      /api/user/account
+      /api/cshop
+      /api/order
+</code></pre></div><h2 id="部署服务到容器"><a href="#部署服务到容器" aria-hidden="true" class="header-anchor">#</a> 部署服务到容器</h2> <p>部署之前，先修改eureka服务端的注册ip为容器的。</p> <h3 id="docker桥接网络"><a href="#docker桥接网络" aria-hidden="true" class="header-anchor">#</a> Docker桥接网络</h3> <p>创建一个spring-cloud专用网络：</p> <div class="language-bash extra-class"><pre class="language-bash"><code>docker network create spring-cloud
+</code></pre></div><p>查看网络：</p> <div class="language- extra-class"><pre class="language-text"><code>docker network ls
+</code></pre></div><p>删除网络：</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 要删除network, 需要先把服务容器先停掉</span>
+docker stop <span class="token variable"><span class="token variable">$(</span>docker <span class="token function">ps</span> <span class="token operator">|</span> <span class="token function">grep</span> <span class="token function">service</span> <span class="token operator">|</span> <span class="token function">awk</span> <span class="token string">'{print <span class="token variable">$3</span>}'</span><span class="token variable">)</span></span> 
+<span class="token comment"># 根据networkId 批量删除旧服务的network</span>
+docker network <span class="token function">rm</span> <span class="token variable"><span class="token variable">$(</span>docker network <span class="token function">ls</span> <span class="token operator">|</span> <span class="token function">grep</span> <span class="token function">service</span> <span class="token operator">|</span> <span class="token function">awk</span> <span class="token string">'{print <span class="token variable">$1</span>}'</span><span class="token variable">)</span></span>
+</code></pre></div><p>手动创建network配置:</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 创建自定义的network, 配置mtu, 网段，driver选择bridge, 名为service_network</span>
+docker network create --driver<span class="token operator">=</span>bridge \
+  --subnet<span class="token operator">=</span>xxx.xx.0.0/16 \
+  --opt com.docker.network.driver.mtu<span class="token operator">=</span>1450 \
+  service_network
+</code></pre></div><p>参考：</p> <p>https://www.jianshu.com/p/5e70331afdab</p> <p>https://www.liangzl.com/get-article-detail-38273.html</p> <h3 id="集成docker"><a href="#集成docker" aria-hidden="true" class="header-anchor">#</a> 集成Docker</h3> <p>cshop-register目录下创建Dockerfile：</p> <div class="language-dockerfile extra-class"><pre class="language-text"><code>FROM java:8
+
+ARG JAR_FILE
+ADD ${JAR_FILE} /app.jar
+
+ENTRYPOINT [ &quot;java&quot;, &quot;-Djava.security.egd=file:/dev/./urandom&quot;, &quot;-jar&quot;, &quot;/app.jar&quot;, &quot;--spring.profiles.active=prod&quot;]
+
+EXPOSE 8761
+</code></pre></div><ul><li>VOLUME 指定了临时文件目录为/tmp。其效果是在主机 /var/lib/docker 目录下创建了一个临时文件，并链接到容器的/tmp。改步骤是可选的，如果涉及到文件系统的应用就很有必要了。/tmp目录用来持久化到 Docker 数据文件夹，因为 Spring Boot 使用的内嵌 Tomcat 容器默认使用/tmp作为工作目录</li> <li>项目的 jar 文件作为 “app.jar” 添加到容器的</li> <li>ENTRYPOINT 执行项目 app.jar。为了缩短 Tomcat 启动时间，添加一个系统属性指向 “/dev/urandom” 作为 Entropy Source</li> <li><strong>spring.profiles.active=prod 指定运行的profile是prod</strong></li></ul> <p>执行过程：</p> <p>1、先打包</p> <div class="language-bash extra-class"><pre class="language-bash"><code>mvn clean package -Dmaven.test.skip<span class="token operator">=</span>true
+</code></pre></div><ul><li>构建时，不执行测试</li></ul> <p>2、测试jar在本地启动是否报错</p> <div class="language-bash extra-class"><pre class="language-bash"><code> java -jar target/cshop-register.jar 
+</code></pre></div><p>3、docker打包</p> <p>以下命令在安装有docker的机器上运行：</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment">#这里不指定tag</span>
+docker build -t 192.168.56.100:5000/cshop-register <span class="token keyword">.</span>
+</code></pre></div><p>执行docker build命令，docker就会根据Dockerfile里你定义好的命令进行构建新的镜像。</p> <ul><li>-t ：代表要构建的镜像的tag，tag前面加上了docker私有镜像的地址，后面没有加版本号</li> <li>. ：代表当前目录，也就是Dockerfile所在的目录。</li></ul> <p>4、上传镜像到私有仓库</p> <div class="language- extra-class"><pre class="language-text"><code>docker push 192.168.56.100:5000/cshop-register
+</code></pre></div><p>5、运行容器</p> <p>以下命令在安装有docker的机器上运行：</p> <div class="language-bash extra-class"><pre class="language-bash"><code>docker run -d -p 8761:8761 --name<span class="token operator">=</span>cshop-register  192.168.56.100:5000/cshop-register
+</code></pre></div><h3 id="集成docker的maven插件"><a href="#集成docker的maven插件" aria-hidden="true" class="header-anchor">#</a> 集成Docker的Maven插件</h3> <p>pom.xml添加：项目的根路径下的pom.xml文件：</p> <div class="language-xml extra-class"><pre class="language-xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>build</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>plugins</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>plugin</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>org.springframework.boot<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>spring-boot-maven-plugin<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>executions</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>execution</span><span class="token punctuation">&gt;</span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>goals</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>goal</span><span class="token punctuation">&gt;</span></span>repackage<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>goal</span><span class="token punctuation">&gt;</span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>goals</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>execution</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>executions</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>plugin</span><span class="token punctuation">&gt;</span></span>
+
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>plugin</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>com.spotify<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>dockerfile-maven-plugin<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">&gt;</span></span>1.4.10<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>configuration</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dockerfile</span><span class="token punctuation">&gt;</span></span>${project.basedir}/Dockerfile<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dockerfile</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>repository</span><span class="token punctuation">&gt;</span></span>${docker.registry}/${project.artifactId}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>repository</span><span class="token punctuation">&gt;</span></span>
+        <span class="token comment">&lt;!--&lt;tag&gt;${project.version}&lt;/tag&gt;--&gt;</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>buildArgs</span><span class="token punctuation">&gt;</span></span>
+          <span class="token comment">&lt;!--提供参数向Dockerfile传递--&gt;</span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>JAR_FILE</span><span class="token punctuation">&gt;</span></span>target/${project.build.finalName}.jar<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>JAR_FILE</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>buildArgs</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>configuration</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>plugin</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>plugins</span><span class="token punctuation">&gt;</span></span>
+&lt;/build
+</code></pre></div><ul><li>${docker.registry} 为docker私有镜像的地址，在项目根路径有定义该变量值，我这里是 192.168.56.100:5000</li> <li><code>&lt;dockerfile&gt;</code> 指定dockerfile路径</li> <li><code>&lt;repository&gt;</code> 指定docker repository为 192.168.56.100:5000/cshop-register</li> <li><code>&lt;tag&gt;</code> 指定标签为版本号，默认为latest，这里注释掉</li></ul> <p>maven打包：</p> <div class="language-bash extra-class"><pre class="language-bash"><code>DOCKER_HOST<span class="token operator">=</span>tcp://192.168.56.100:2375 mvn clean package dockerfile:build  -Dmaven.test.skip<span class="token operator">=</span>true
+</code></pre></div><blockquote><p>注意：这里要设置 DOCKER_HOST=tcp://192.168.56.100:2375，否则会报错</p></blockquote> <p>可以看到运行日志：</p> <div class="language- extra-class"><pre class="language-text"><code>[INFO] Image will be built as 192.168.56.100:5000/cshop-config:latest
+[INFO]
+[INFO] Step 1/5 : FROM java:8
+[INFO] Trying to pull repository docker.io/library/java ...
+[INFO] Pulling from docker.io/library/java
+[INFO] Digest: sha256:c1ff613e8ba25833d2e1940da0940c3824f03f802c449f3d1815a66b7f8c0e9d
+[INFO] Status: Image is up to date for docker.io/java:8
+[INFO]  ---&gt; d23bdf5b1b1b
+[INFO] Step 2/5 : ARG JAR_FILE
+[INFO]  ---&gt; Running in 3c9f895b4793
+[INFO]  ---&gt; 79bd872a76ec
+[INFO] Removing intermediate container 3c9f895b4793
+[INFO] Step 3/5 : ADD ${JAR_FILE} /app.jar
+[INFO]  ---&gt; 4518a2e73397
+[INFO] Removing intermediate container 0b0dcb1e43c3
+[INFO] Step 4/5 : ENTRYPOINT java -Djava.security.egd=file:/dev/./urandom -jar /app.jar --spring.profiles.active=prod
+[INFO]  ---&gt; Running in bbb23b24fb93
+[INFO]  ---&gt; ccd0dd89306a
+[INFO] Removing intermediate container bbb23b24fb93
+[INFO] Step 5/5 : EXPOSE 7000
+[INFO]  ---&gt; Running in 6996230c259d
+[INFO]  ---&gt; 6476202586b1
+[INFO] Removing intermediate container 6996230c259d
+[INFO] Successfully built 6476202586b1
+[INFO]
+[INFO] Detected build of image with id 6476202586b1
+[INFO] Building jar: /Users/june/workspace/project/黑马乐优商城/代码/gitlab/cshop/cshop-basic/cshop-config/target/cshop-config-1.0.0-SNAPSHOT-docker-info.jar
+[INFO] Successfully built 192.168.56.100:5000/cshop-config:latest
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 48.549s
+[INFO] Finished at: Tue Jul 23 16:16:53 CST 2019
+[INFO] Final Memory: 50M/475
+</code></pre></div><p>在192.168.56.100节点上查看我们打包上传的镜像：</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ docker images
+REPOSITORY                           TAG                 IMAGE ID            CREATED             SIZE
+192.168.56.100:5000/cshop-register   latest      018790d7e0fa        2 minutes ago       690 MB
+</code></pre></div><p>运行容器：</p> <div class="language-bash extra-class"><pre class="language-bash"><code>docker run -d -p 8761:8761 --name<span class="token operator">=</span>cshop-register --net spring-cloud 192.168.56.100:5000/cshop-register
+</code></pre></div><p>访问浏览器 http://192.168.56.100/8761</p> <h2 id="gitlab持续集成"><a href="#gitlab持续集成" aria-hidden="true" class="header-anchor">#</a> Gitlab持续集成</h2> <h3 id="cshop-register"><a href="#cshop-register" aria-hidden="true" class="header-anchor">#</a> cshop-register</h3> <p>在cshop-register下创建 .gitlab-ci.yml，基于Docker的方式：</p> <div class="language-yml extra-class"><pre class="language-yml"><code><span class="token key atrule">stages</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span> build
+  <span class="token punctuation">-</span> push
+  <span class="token punctuation">-</span> run
+  <span class="token punctuation">-</span> clean
+
+<span class="token key atrule">build</span><span class="token punctuation">:</span>
+  <span class="token key atrule">stage</span><span class="token punctuation">:</span> build
+  <span class="token key atrule">script</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> mvn clean package <span class="token punctuation">-</span>Dmaven.test.skip=true
+    <span class="token punctuation">-</span> docker build <span class="token punctuation">-</span>t 192.168.56.100<span class="token punctuation">:</span>5000/cshop<span class="token punctuation">-</span>register .
+
+<span class="token key atrule">push</span><span class="token punctuation">:</span>
+  <span class="token key atrule">stage</span><span class="token punctuation">:</span> push
+  <span class="token key atrule">script</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> docker push 192.168.56.100<span class="token punctuation">:</span>5000/cshop<span class="token punctuation">-</span>register
+
+<span class="token key atrule">run</span><span class="token punctuation">:</span>
+  <span class="token key atrule">stage</span><span class="token punctuation">:</span> run
+  <span class="token key atrule">script</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> docker<span class="token punctuation">-</span>compose down
+    <span class="token punctuation">-</span> docker<span class="token punctuation">-</span>compose up <span class="token punctuation">-</span>d
+
+<span class="token key atrule">clean</span><span class="token punctuation">:</span>
+  <span class="token key atrule">stage</span><span class="token punctuation">:</span> clean
+  <span class="token key atrule">script</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> docker rmi $(docker images <span class="token punctuation">-</span>q <span class="token punctuation">-</span>f dangling=true)
+</code></pre></div><p>基于Docker的Maven插件方式：</p> <div class="language-yml extra-class"><pre class="language-yml"><code><span class="token key atrule">stages</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span> build
+  <span class="token punctuation">-</span> run
+  <span class="token punctuation">-</span> clean
+
+<span class="token key atrule">variables</span><span class="token punctuation">:</span>
+  <span class="token key atrule">DOCKER_HOST</span><span class="token punctuation">:</span> tcp<span class="token punctuation">:</span>//192.168.56.100<span class="token punctuation">:</span><span class="token number">2375</span>
+
+<span class="token key atrule">build</span><span class="token punctuation">:</span>
+  <span class="token key atrule">stage</span><span class="token punctuation">:</span> build
+  <span class="token key atrule">script</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> mvn clean package dockerfile<span class="token punctuation">:</span>build <span class="token punctuation">-</span>Dmaven.test.skip=true
+
+<span class="token key atrule">run</span><span class="token punctuation">:</span>
+  <span class="token key atrule">stage</span><span class="token punctuation">:</span> run
+  <span class="token key atrule">script</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> docker<span class="token punctuation">-</span>compose down
+    <span class="token punctuation">-</span> docker<span class="token punctuation">-</span>compose up <span class="token punctuation">-</span>d
+
+<span class="token key atrule">clean</span><span class="token punctuation">:</span>
+  <span class="token key atrule">stage</span><span class="token punctuation">:</span> clean
+  <span class="token key atrule">script</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> docker rmi $(docker images <span class="token punctuation">-</span>q <span class="token punctuation">-</span>f dangling=true)
+</code></pre></div><p>这里用了docker-compose来安装，需要创建docker-compose.yml文件：</p> <div class="language-yml extra-class"><pre class="language-yml"><code><span class="token key atrule">version</span><span class="token punctuation">:</span> <span class="token string">'3.1'</span>
+<span class="token key atrule">services</span><span class="token punctuation">:</span>
+  <span class="token key atrule">cshop-register</span><span class="token punctuation">:</span>
+    <span class="token key atrule">restart</span><span class="token punctuation">:</span> always
+    <span class="token key atrule">image</span><span class="token punctuation">:</span> 192.168.56.100<span class="token punctuation">:</span>5000/cshop<span class="token punctuation">-</span>register
+    <span class="token key atrule">container_name</span><span class="token punctuation">:</span> cshop<span class="token punctuation">-</span>register
+    <span class="token key atrule">ports</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> 8761<span class="token punctuation">:</span><span class="token number">8761</span>
+    <span class="token key atrule">networks</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> cloud
+
+<span class="token key atrule">networks</span><span class="token punctuation">:</span>
+  <span class="token key atrule">cloud</span><span class="token punctuation">:</span>
+    <span class="token key atrule">external</span><span class="token punctuation">:</span>
+      <span class="token key atrule">name</span><span class="token punctuation">:</span> spring<span class="token punctuation">-</span>cloud
+</code></pre></div><p>其他几个模块：cshop-config、cshop-monitor，都按照这个方式部署到虚拟机环境中，这样就不用在本机启动这些服务了。</p> <p>需要说明的是cshop-monitor依赖cshop-config，所以必须等cshop-config运行成功之后，在运行cshop-monitor：</p> <p>以下是 cshop-monitor 的Dockerfile文件：</p> <div class="language-dockerfile extra-class"><pre class="language-text"><code>FROM java:8
+
+VOLUME /tmp
+ADD target/cshop-monitor.jar app.jar
+
+ENV DOCKERIZE_VERSION v0.6.1
+RUN wget https://github.com/jwilder/dockerize/releases/download/$DOCKERIZE_VERSION/dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz \
+    &amp;&amp; tar -C /usr/local/bin -xzvf dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz \
+    &amp;&amp; rm dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz
+
+ENTRYPOINT [&quot;dockerize&quot;, &quot;-timeout&quot;, &quot;5m&quot;, &quot;-wait&quot;, &quot;http://192.168.56.100:7000/cshop-monitor/prod/master&quot;, &quot;java&quot;, &quot;-Djava.security.egd=file:/dev/./urandom&quot;, &quot;-jar&quot;, &quot;/app.jar&quot;, &quot;--spring.profiles.active=prod&quot;]
+
+EXPOSE 7010
+</code></pre></div><blockquote><p>注意：这里指定了 --spring.profiles.active=prod，也就是需要创建一个 bootstrap-prod.yml 表示生产环境的配置文件。</p> <div class="language-yml extra-class"><pre class="language-yml"><code><span class="token key atrule">spring</span><span class="token punctuation">:</span>
+  <span class="token key atrule">application</span><span class="token punctuation">:</span>
+    <span class="token key atrule">name</span><span class="token punctuation">:</span> cshop<span class="token punctuation">-</span>monitor
+  <span class="token key atrule">cloud</span><span class="token punctuation">:</span>
+    <span class="token key atrule">config</span><span class="token punctuation">:</span>
+      <span class="token key atrule">uri</span><span class="token punctuation">:</span> http<span class="token punctuation">:</span>//192.168.56.100<span class="token punctuation">:</span><span class="token number">7000</span>
+      <span class="token key atrule">profile</span><span class="token punctuation">:</span> prod
+      <span class="token key atrule">label</span><span class="token punctuation">:</span> master
+      <span class="token key atrule">name</span><span class="token punctuation">:</span> $<span class="token punctuation">{</span>spring.application.name<span class="token punctuation">}</span>
+</code></pre></div></blockquote> <p>查看镜像：</p> <div class="language- extra-class"><pre class="language-text"><code>docker images
+REPOSITORY                           TAG                 IMAGE ID            CREATED             SIZE
+192.168.56.100:5000/cshop-monitor    latest      00ed647b2f7c        6 minutes ago       695 MB
+192.168.56.100:5000/cshop-config     latest      8c4adfcf7270        10 minutes ago      690 MB
+192.168.56.100:5000/cshop-register   latest      7d7d31ee4be0        24 minutes ago      690 MB
+</code></pre></div><p>在docker上通过命令行启动cshop-register：</p> <div class="language-bash extra-class"><pre class="language-bash"><code>docker run -d -p 8761:8761 --name<span class="token operator">=</span>cshop-register --net spring-cloud 192.168.56.100:5000/cshop-register
+</code></pre></div><p>在docker上通过命令行启动cshop-config：</p> <div class="language-bash extra-class"><pre class="language-bash"><code>docker run -d -p 7000:7000 --name<span class="token operator">=</span>cshop-config -e <span class="token string">&quot;EUREKA_INSTANCE_IP-ADDRESS=192.168.56.100&quot;</span> --net spring-cloud 192.168.56.100:5000/cshop-config
+</code></pre></div><blockquote><p>此时给 eureka 的客户端指定ip，否则注册到eureka上面是docker容器内网ip</p></blockquote> <p>等cshop-config启动成功之后，再在docker上通过命令行启动cshop-monitor：</p> <div class="language-bash extra-class"><pre class="language-bash"><code>docker run -d -p 7010:7010 --name<span class="token operator">=</span>cshop-monitor -e <span class="token string">&quot;EUREKA_INSTANCE_IP-ADDRESS=192.168.56.100&quot;</span> --net spring-cloud 192.168.56.100:5000/cshop-monitor
+</code></pre></div><p>在docker上通过命令行启动cshop-gateway：</p> <div class="language-bash extra-class"><pre class="language-bash"><code>docker run -d -p 7010:7010 --name<span class="token operator">=</span>cshop-gateway -e <span class="token string">&quot;EUREKA_INSTANCE_IP-ADDRESS=192.168.56.100&quot;</span> --net spring-cloud 192.168.56.100:5000/cshop-gateway
+</code></pre></div><h3 id="cshop"><a href="#cshop" aria-hidden="true" class="header-anchor">#</a> cshop</h3> <p>.gitlab-ci.yml只能放到仓库根路径下面，gitlab-ci才能自动发现并触发集成，故需要在根路径创建一个.gitlab-ci.yml：</p> <div class="language-yml extra-class"><pre class="language-yml"><code><span class="token key atrule">stages</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span> package
+  <span class="token punctuation">-</span> build
+  <span class="token punctuation">-</span> clean
+
+<span class="token key atrule">variables</span><span class="token punctuation">:</span>
+  <span class="token key atrule">DOCKER_HOST</span><span class="token punctuation">:</span> tcp<span class="token punctuation">:</span>//192.168.56.100<span class="token punctuation">:</span><span class="token number">2375</span>
+
+<span class="token key atrule">package</span><span class="token punctuation">:</span>
+  <span class="token key atrule">stage</span><span class="token punctuation">:</span> package
+  <span class="token key atrule">script</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> mvn clean package <span class="token punctuation">-</span>Dmaven.test.skip=true
+
+<span class="token key atrule">build</span><span class="token punctuation">:</span>
+  <span class="token key atrule">stage</span><span class="token punctuation">:</span> build
+  <span class="token key atrule">script</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> cd cshop<span class="token punctuation">-</span>basic
+    <span class="token punctuation">-</span> cd cshop<span class="token punctuation">-</span>register &amp;&amp; mvn dockerfile<span class="token punctuation">:</span>build <span class="token punctuation">-</span>Dmaven.test.skip=true &amp;&amp; cd ..
+    <span class="token punctuation">-</span> cd cshop<span class="token punctuation">-</span>config &amp;&amp; mvn dockerfile<span class="token punctuation">:</span>build <span class="token punctuation">-</span>Dmaven.test.skip=true &amp;&amp; cd ..
+    <span class="token punctuation">-</span> cd cshop<span class="token punctuation">-</span>monitor &amp;&amp; mvn dockerfile<span class="token punctuation">:</span>build <span class="token punctuation">-</span>Dmaven.test.skip=true &amp;&amp; cd ..
+
+<span class="token comment">#run:</span>
+<span class="token comment">#  stage: run</span>
+<span class="token comment">#  script:</span>
+<span class="token comment">#    - cd cshop-register &amp;&amp; docker-compose down</span>
+<span class="token comment">#    - docker-compose up -d &amp;&amp; cd ..</span>
+
+<span class="token key atrule">clean</span><span class="token punctuation">:</span>
+  <span class="token key atrule">stage</span><span class="token punctuation">:</span> clean
+  <span class="token key atrule">script</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> docker rmi $(docker images <span class="token punctuation">-</span>q <span class="token punctuation">-</span>f dangling=true)
+</code></pre></div><p><strong>异常</strong>：</p> <p>cshop-monitor出现异常：</p> <div class="language- extra-class"><pre class="language-text"><code> Calling [asyncError()] is not valid for a request with Async state [MUST_DISPATCH
+</code></pre></div><p>参考 https://blog.csdn.net/l1161558158/article/details/86569748 ，把tomcat换成jetty</p> <h2 id="jenkins持续交付"><a href="#jenkins持续交付" aria-hidden="true" class="header-anchor">#</a> Jenkins持续交付</h2> <p>使用Jenkins持续交付，需要将代码安装子模块拆分成一个个独立的项目，然后gitlib上创建姓名并上传代码到gitlab。</p> <p>还是以cshop-register为例：</p> <p>1、先创建一个标签</p> <p>2、在 Jenkins 中创建一个基于 Maven 的任务</p> <ul><li>构建项目</li> <li>查看构建日志</li> <li>增加参数化构建过程</li></ul> <p>这里使用了 Groovy 脚本来查询最近的 tags 版本，代码如下：</p> <div class="language-groovy extra-class"><pre class="language-groovy"><code><span class="token keyword">def</span> ver_keys <span class="token operator">=</span> <span class="token punctuation">[</span> <span class="token string">'bash'</span><span class="token punctuation">,</span> <span class="token string">'-c'</span><span class="token punctuation">,</span> <span class="token string">'cd /var/jenkins_home/workspace/cshop-register;git pull&gt;/dev/null; git remote prune origin &gt;/dev/null; git tag -l|sort -r |head -10 '</span> <span class="token punctuation">]</span>
+ver_keys<span class="token operator">.</span><span class="token function">execute</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">.</span>text<span class="token operator">.</span><span class="token function">tokenize</span><span class="token punctuation">(</span><span class="token string">'\n'</span><span class="token punctuation">)</span>
+</code></pre></div><ul><li>关闭源码管理</li> <li>增加构建步骤
+<ul><li>Execute Shell（本地执行 Shell 脚本）</li></ul></li></ul> <div class="language-text extra-class"><pre class="language-text"><code>echo $RELEASE_VERSION
+cd /var/jenkins_home/workspace/cshop-register
+git checkout $RELEASE_VERSION
+git pull origin $RELEASE_VERSION
+DOCKER_HOST=&quot;tcp://192.168.56.100:2375&quot; mvn clean package dockerfile:build -Dmaven.test.skip=true
+</code></pre></div><ul><li><p>Send files or execute commands over SSH（发送文件或执行远程命令）</p></li> <li><p>Source files：需要传输到远程目标服务器的文件</p></li></ul> <div class="language-text extra-class"><pre class="language-text"><code>`**/*.jar,docker/**`
+</code></pre></div><ul><li>Remove prefix：删除前缀。比如传输 <code>**/*.jar</code>，我们打包的 <code>.jar</code> 文件是在 <code>target</code> 目录下的，传输时会一并创建 <code>target</code> 目录，如果不希望创建 <code>target</code> 目录，则可以使用该参数屏蔽掉这些前缀文件夹。</li> <li>Remote directory：在远程目标服务器创建操作目录</li></ul> <div class="language-text extra-class"><pre class="language-text"><code>cshop-register
+</code></pre></div><ul><li>Exec command：在远程目标服务器执行控制台命令</li></ul> <div class="language-text extra-class"><pre class="language-text"><code>cd /usr/local/jenkins/cshop-register
+cp target/cshop-register-1.0.0-SNAPSHOT.jar docker
+docker build -t 192.168.56.100:5000/cshop-register:v1.0.0 .
+docker push 192.168.56.56:100/cshop-register:v1.0.0
+docker-compose down
+docker-compose up -d
+docker image prune -f
+</code></pre></div><ul><li><p>使用参数化构建项目</p></li> <li><p>查看构建日志</p></li></ul></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/wiki/spring-cloud-cshop/cshop-2-安装软件.html" class="prev">
+          安装软件
+        </a></span> <span class="next"><a href="/wiki/spring-cloud-cshop/cshop-4-功能模块.html">
+          功能模块
+        </a>
+        →
+      </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/wiki/assets/js/app.dd178f5a.js" defer></script><script src="/wiki/assets/js/2.9f273a62.js" defer></script><script src="/wiki/assets/js/55.5f207671.js" defer></script>
+  </body>
+</html>

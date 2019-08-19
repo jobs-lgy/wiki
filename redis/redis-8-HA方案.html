@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Redis HA 方案 | JavaChen Wiki</title>
+    <meta name="description" content="JavaChen Wiki">
+    <link rel="icon" href="/wiki/img/logo.ico">
+  <meta http-quiv="pragma" cotent="no-cache">
+  <meta http-quiv="pragma" cotent="no-cache,must-revalidate">
+  <meta http-quiv="expires" cotent="0">
+    
+    <link rel="preload" href="/wiki/assets/css/0.styles.bdf32acf.css" as="style"><link rel="preload" href="/wiki/assets/js/app.dd178f5a.js" as="script"><link rel="preload" href="/wiki/assets/js/2.9f273a62.js" as="script"><link rel="preload" href="/wiki/assets/js/50.c8825040.js" as="script"><link rel="prefetch" href="/wiki/assets/js/10.e389070d.js"><link rel="prefetch" href="/wiki/assets/js/11.19e9f97f.js"><link rel="prefetch" href="/wiki/assets/js/12.f95e0459.js"><link rel="prefetch" href="/wiki/assets/js/13.127730fd.js"><link rel="prefetch" href="/wiki/assets/js/14.34eed2f7.js"><link rel="prefetch" href="/wiki/assets/js/15.a8cf4000.js"><link rel="prefetch" href="/wiki/assets/js/16.6346731c.js"><link rel="prefetch" href="/wiki/assets/js/17.143af375.js"><link rel="prefetch" href="/wiki/assets/js/18.7d95703a.js"><link rel="prefetch" href="/wiki/assets/js/19.8726bd0b.js"><link rel="prefetch" href="/wiki/assets/js/20.2914a04f.js"><link rel="prefetch" href="/wiki/assets/js/21.ebd751e0.js"><link rel="prefetch" href="/wiki/assets/js/22.f6801be0.js"><link rel="prefetch" href="/wiki/assets/js/23.87ecfe73.js"><link rel="prefetch" href="/wiki/assets/js/24.cabcaf93.js"><link rel="prefetch" href="/wiki/assets/js/25.306828f5.js"><link rel="prefetch" href="/wiki/assets/js/26.59450304.js"><link rel="prefetch" href="/wiki/assets/js/27.44fddb85.js"><link rel="prefetch" href="/wiki/assets/js/28.4e15bea1.js"><link rel="prefetch" href="/wiki/assets/js/29.bed7cbfd.js"><link rel="prefetch" href="/wiki/assets/js/3.28138f41.js"><link rel="prefetch" href="/wiki/assets/js/30.36a67cca.js"><link rel="prefetch" href="/wiki/assets/js/31.dde8666e.js"><link rel="prefetch" href="/wiki/assets/js/32.148ea73a.js"><link rel="prefetch" href="/wiki/assets/js/33.61c937cc.js"><link rel="prefetch" href="/wiki/assets/js/34.eb7c4b0c.js"><link rel="prefetch" href="/wiki/assets/js/35.abb4ce3d.js"><link rel="prefetch" href="/wiki/assets/js/36.f03d0378.js"><link rel="prefetch" href="/wiki/assets/js/37.84491176.js"><link rel="prefetch" href="/wiki/assets/js/38.2a06b872.js"><link rel="prefetch" href="/wiki/assets/js/39.63965d3b.js"><link rel="prefetch" href="/wiki/assets/js/4.c0af9872.js"><link rel="prefetch" href="/wiki/assets/js/40.bf2e354a.js"><link rel="prefetch" href="/wiki/assets/js/41.bed53451.js"><link rel="prefetch" href="/wiki/assets/js/42.34d4f2f5.js"><link rel="prefetch" href="/wiki/assets/js/43.867c0e23.js"><link rel="prefetch" href="/wiki/assets/js/44.0201a314.js"><link rel="prefetch" href="/wiki/assets/js/45.d6f1a311.js"><link rel="prefetch" href="/wiki/assets/js/46.419d44e4.js"><link rel="prefetch" href="/wiki/assets/js/47.a3f8b595.js"><link rel="prefetch" href="/wiki/assets/js/48.574cc219.js"><link rel="prefetch" href="/wiki/assets/js/49.224dd6c4.js"><link rel="prefetch" href="/wiki/assets/js/5.c521f8b1.js"><link rel="prefetch" href="/wiki/assets/js/51.2dab614a.js"><link rel="prefetch" href="/wiki/assets/js/52.8382a180.js"><link rel="prefetch" href="/wiki/assets/js/53.bfab18a9.js"><link rel="prefetch" href="/wiki/assets/js/54.87a1d37c.js"><link rel="prefetch" href="/wiki/assets/js/55.5f207671.js"><link rel="prefetch" href="/wiki/assets/js/56.f0e8e082.js"><link rel="prefetch" href="/wiki/assets/js/57.c868e5c9.js"><link rel="prefetch" href="/wiki/assets/js/6.6a737c5b.js"><link rel="prefetch" href="/wiki/assets/js/7.48bba6b4.js"><link rel="prefetch" href="/wiki/assets/js/8.26532964.js"><link rel="prefetch" href="/wiki/assets/js/9.3c4a4032.js">
+    <link rel="stylesheet" href="/wiki/assets/css/0.styles.bdf32acf.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/wiki/" class="home-link router-link-active"><!----> <span class="site-name">JavaChen Wiki</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/wiki/" class="nav-link">主页</a></div><div class="nav-item"><a href="/wiki/docker/" class="nav-link">Docker</a></div><div class="nav-item"><a href="/wiki/elasticsearch/" class="nav-link">Elasticsearch</a></div><div class="nav-item"><a href="/wiki/hadoop/" class="nav-link">Hadoop</a></div><div class="nav-item"><a href="/wiki/interview/" class="nav-link">Interview</a></div><div class="nav-item"><a href="/wiki/rabbitMQ/" class="nav-link">RabbitMQ</a></div><div class="nav-item"><a href="/wiki/redis/" class="nav-link router-link-active">Redis</a></div><div class="nav-item"><a href="/wiki/spring-cloud-cshop/" class="nav-link">Spring-cloud-cshop</a></div><div class="nav-item"><a href="/wiki/about.html" class="nav-link">关于</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/wiki/" class="nav-link">主页</a></div><div class="nav-item"><a href="/wiki/docker/" class="nav-link">Docker</a></div><div class="nav-item"><a href="/wiki/elasticsearch/" class="nav-link">Elasticsearch</a></div><div class="nav-item"><a href="/wiki/hadoop/" class="nav-link">Hadoop</a></div><div class="nav-item"><a href="/wiki/interview/" class="nav-link">Interview</a></div><div class="nav-item"><a href="/wiki/rabbitMQ/" class="nav-link">RabbitMQ</a></div><div class="nav-item"><a href="/wiki/redis/" class="nav-link router-link-active">Redis</a></div><div class="nav-item"><a href="/wiki/spring-cloud-cshop/" class="nav-link">Spring-cloud-cshop</a></div><div class="nav-item"><a href="/wiki/about.html" class="nav-link">关于</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Redis</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/wiki/redis/" class="sidebar-link">Redis 概述</a></li><li><a href="/wiki/redis/redis-1-简介.html" class="sidebar-link">Redis 简介</a></li><li><a href="/wiki/redis/redis-2-安装和配置.html" class="sidebar-link">安装和配置</a></li><li><a href="/wiki/redis/redis-3-数据类型.html" class="sidebar-link">数据类型</a></li><li><a href="/wiki/redis/redis-4-命令.html" class="sidebar-link">命令</a></li><li><a href="/wiki/redis/redis-8-HA方案.html" class="active sidebar-link">Redis HA 方案</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/wiki/redis/redis-8-HA方案.html#概述" class="sidebar-link">概述</a></li><li class="sidebar-sub-header"><a href="/wiki/redis/redis-8-HA方案.html#redis-sentinel-集群部署" class="sidebar-link">Redis Sentinel 集群部署</a></li></ul></li><li><a href="/wiki/redis/redis-9-附录.html" class="sidebar-link">附录</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="redis-ha-方案"><a href="#redis-ha-方案" aria-hidden="true" class="header-anchor">#</a> Redis HA 方案</h1> <h2 id="概述"><a href="#概述" aria-hidden="true" class="header-anchor">#</a> 概述</h2> <p>HA(High Available，高可用性群集)机集群系统简称，是保证业务连续性的有效解决方案，一般有两个或两个以上的节点，且分为活动节点及备用节点。通常把正在执 行业务的称为活动节点，而作为活动节点的一个备份的则称为备用节点。当活动节点出现问题，导致正在运行的业务（任务）不能正常运行时，备用节点此时就会侦测到，并立即接续活动节点来执行业务。从而实现业务的不中断或短暂中断。</p> <p>Redis 一般以主/从方式部署（这里讨论的应用从实例主要用于备份，主实例提供读写）该方式要实现 HA 主要有如下几种方案：</p> <ul><li><strong>keepalived：</strong> 通过 keepalived 的虚拟 IP，提供主从的统一访问，在主出现问题时， 通过 keepalived 运行脚本将从提升为主，待主恢复后先同步后自动变为主，该方案的好处是主从切换后，应用程序不需要知道(因为访问的虚拟 IP 不变)，坏处是引入 keepalived 增加部署复杂性，在有些情况下会导致数据丢失</li> <li><strong>zookeeper：</strong> 通过 zookeeper 来监控主从实例， 维护最新有效的 IP， 应用通过 zookeeper 取得 IP，对 Redis 进行访问，该方案需要编写大量的监控代码</li> <li><strong>sentinel：</strong> 通过 Sentinel 监控主从实例，自动进行故障恢复，该方案有个缺陷：因为主从实例地址( IP &amp; PORT )是不同的，当故障发生进行主从切换后，应用程序无法知道新地址，故在 Jedis2.2.2 中新增了对 Sentinel 的支持，应用通过 <code>redis.clients.jedis.JedisSentinelPool.getResource()</code> 取得的 Jedis 实例会及时更新到新的主实例地址</li></ul> <p><img src="http://ww4.sinaimg.cn/large/006tNc79gy1g5585lv95gj30ne0fyq6a.jpg" alt="部署逻辑图"></p> <p><strong>注意：</strong> sentinel 是解决 HA 问题的，cluster 是解决主从复制问题的，不重复，并且经常一起用</p> <h2 id="redis-sentinel-集群部署"><a href="#redis-sentinel-集群部署" aria-hidden="true" class="header-anchor">#</a> Redis Sentinel 集群部署</h2> <p>Redis 集群可以在一组 redis 节点之间实现高可用性和 sharding。在集群中会有 1 个 master 和多个 slave 节点。当 master 节点失效时，应选举出一个 slave 节点作为新的 master。然而 Redis 本身(包括它的很多客户端)没有实现自动故障发现并进行主备切换的能力，需要外部的监控方案来实现自动故障恢复。</p> <p>Redis Sentinel 是官方推荐的高可用性解决方案。它是 Redis 集群的监控管理工具，可以提供节点监控、通知、自动故障恢复和客户端配置发现服务。</p> <p><img src="http://ww2.sinaimg.cn/large/006tNc79gy1g5586g3dyoj30ic07e403.jpg" alt="img"></p> <h3 id="搭建-redis-集群"><a href="#搭建-redis-集群" aria-hidden="true" class="header-anchor">#</a> 搭建 Redis 集群</h3> <p>搭建一主两从环境，docker-compose.yml 配置如下：</p> <div class="language-text extra-class"><pre class="language-text"><code>version: '3.1'
+services:
+  master:
+    image: redis
+    container_name: redis-master
+    ports:
+      - 6379:6379
+
+  slave1:
+    image: redis
+    container_name: redis-slave-1
+    ports:
+      - 6380:6379
+    command: redis-server --slaveof redis-master 6379
+
+  slave2:
+    image: redis
+    container_name: redis-slave-2
+    ports:
+      - 6381:6379
+    command: redis-server --slaveof redis-master 6379
+</code></pre></div><h3 id="搭建-sentinel-集群"><a href="#搭建-sentinel-集群" aria-hidden="true" class="header-anchor">#</a> 搭建 Sentinel 集群</h3> <p>我们至少需要创建三个 Sentinel 服务，docker-compose.yml 配置如下：</p> <div class="language-yml extra-class"><pre class="language-yml"><code><span class="token key atrule">version</span><span class="token punctuation">:</span> <span class="token string">'3.1'</span>
+<span class="token key atrule">services</span><span class="token punctuation">:</span>
+  <span class="token key atrule">sentinel1</span><span class="token punctuation">:</span>
+    <span class="token key atrule">image</span><span class="token punctuation">:</span> redis
+    <span class="token key atrule">container_name</span><span class="token punctuation">:</span> redis<span class="token punctuation">-</span>sentinel<span class="token punctuation">-</span><span class="token number">1</span>
+    <span class="token key atrule">ports</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> 26379<span class="token punctuation">:</span><span class="token number">26379</span>
+    <span class="token key atrule">command</span><span class="token punctuation">:</span> redis<span class="token punctuation">-</span>sentinel /usr/local/etc/redis/sentinel.conf
+    <span class="token key atrule">volumes</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> /data/sentinel/sentinel1.conf<span class="token punctuation">:</span>/usr/local/etc/redis/sentinel.conf
+
+  <span class="token key atrule">sentinel2</span><span class="token punctuation">:</span>
+    <span class="token key atrule">image</span><span class="token punctuation">:</span> redis
+    <span class="token key atrule">container_name</span><span class="token punctuation">:</span> redis<span class="token punctuation">-</span>sentinel<span class="token punctuation">-</span><span class="token number">2</span>
+    <span class="token key atrule">ports</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> 26380<span class="token punctuation">:</span><span class="token number">26379</span>
+    <span class="token key atrule">command</span><span class="token punctuation">:</span> redis<span class="token punctuation">-</span>sentinel /usr/local/etc/redis/sentinel.conf
+    <span class="token key atrule">volumes</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> /data/sentinel/sentinel2.conf<span class="token punctuation">:</span>/usr/local/etc/redis/sentinel.conf
+
+  <span class="token key atrule">sentinel3</span><span class="token punctuation">:</span>
+    <span class="token key atrule">image</span><span class="token punctuation">:</span> redis
+    <span class="token key atrule">container_name</span><span class="token punctuation">:</span> redis<span class="token punctuation">-</span>sentinel<span class="token punctuation">-</span><span class="token number">3</span>
+    <span class="token key atrule">ports</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> 26381<span class="token punctuation">:</span><span class="token number">26379</span>
+    <span class="token key atrule">command</span><span class="token punctuation">:</span> redis<span class="token punctuation">-</span>sentinel /usr/local/etc/redis/sentinel.conf
+    <span class="token key atrule">volumes</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> /data/sentinel/sentinel3.conf<span class="token punctuation">:</span>/usr/local/etc/redis/sentinel.conf
+</code></pre></div><h3 id="修改-sentinel-配置文件"><a href="#修改-sentinel-配置文件" aria-hidden="true" class="header-anchor">#</a> 修改 Sentinel 配置文件</h3> <p>/data/sentinel目录下需要三份 sentinel.conf 配置文件，分别为 <code>sentinel1.conf</code>，<code>sentinel2.conf</code>，<code>sentinel3.conf</code>，配置文件内容相同</p> <div class="language-text extra-class"><pre class="language-text"><code>port 26379
+dir /tmp
+# 自定义集群名，其中 127.0.0.1 为 redis-master 的 ip，6379 为 redis-master 的端口，2 为最小投票数（因为有 3 台 Sentinel 所以可以设置成 2）
+sentinel monitor mymaster 127.0.0.1 6379 2
+sentinel down-after-milliseconds mymaster 30000
+sentinel parallel-syncs mymaster 1
+sentinel failover-timeout mymaster 180000
+sentinel deny-scripts-reconfig yes
+</code></pre></div><h3 id="查看集群是否生效"><a href="#查看集群是否生效" aria-hidden="true" class="header-anchor">#</a> 查看集群是否生效</h3> <p>进入 Sentinel 容器，使用 Sentinel API 查看监控情况：</p> <div class="language-text extra-class"><pre class="language-text"><code>docker exec -it redis-sentinel-1 /bin/bash
+redis-cli -p 26379
+sentinel master mymaster
+sentinel slaves mymaster
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/wiki/redis/redis-4-命令.html" class="prev">
+          命令
+        </a></span> <span class="next"><a href="/wiki/redis/redis-9-附录.html">
+          附录
+        </a>
+        →
+      </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/wiki/assets/js/app.dd178f5a.js" defer></script><script src="/wiki/assets/js/2.9f273a62.js" defer></script><script src="/wiki/assets/js/50.c8825040.js" defer></script>
+  </body>
+</html>

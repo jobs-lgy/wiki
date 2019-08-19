@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>功能模块 | JavaChen Wiki</title>
+    <meta name="description" content="JavaChen Wiki">
+    <link rel="icon" href="/wiki/img/logo.ico">
+  <meta http-quiv="pragma" cotent="no-cache">
+  <meta http-quiv="pragma" cotent="no-cache,must-revalidate">
+  <meta http-quiv="expires" cotent="0">
+    
+    <link rel="preload" href="/wiki/assets/css/0.styles.bdf32acf.css" as="style"><link rel="preload" href="/wiki/assets/js/app.dd178f5a.js" as="script"><link rel="preload" href="/wiki/assets/js/2.9f273a62.js" as="script"><link rel="preload" href="/wiki/assets/js/56.f0e8e082.js" as="script"><link rel="prefetch" href="/wiki/assets/js/10.e389070d.js"><link rel="prefetch" href="/wiki/assets/js/11.19e9f97f.js"><link rel="prefetch" href="/wiki/assets/js/12.f95e0459.js"><link rel="prefetch" href="/wiki/assets/js/13.127730fd.js"><link rel="prefetch" href="/wiki/assets/js/14.34eed2f7.js"><link rel="prefetch" href="/wiki/assets/js/15.a8cf4000.js"><link rel="prefetch" href="/wiki/assets/js/16.6346731c.js"><link rel="prefetch" href="/wiki/assets/js/17.143af375.js"><link rel="prefetch" href="/wiki/assets/js/18.7d95703a.js"><link rel="prefetch" href="/wiki/assets/js/19.8726bd0b.js"><link rel="prefetch" href="/wiki/assets/js/20.2914a04f.js"><link rel="prefetch" href="/wiki/assets/js/21.ebd751e0.js"><link rel="prefetch" href="/wiki/assets/js/22.f6801be0.js"><link rel="prefetch" href="/wiki/assets/js/23.87ecfe73.js"><link rel="prefetch" href="/wiki/assets/js/24.cabcaf93.js"><link rel="prefetch" href="/wiki/assets/js/25.306828f5.js"><link rel="prefetch" href="/wiki/assets/js/26.59450304.js"><link rel="prefetch" href="/wiki/assets/js/27.44fddb85.js"><link rel="prefetch" href="/wiki/assets/js/28.4e15bea1.js"><link rel="prefetch" href="/wiki/assets/js/29.bed7cbfd.js"><link rel="prefetch" href="/wiki/assets/js/3.28138f41.js"><link rel="prefetch" href="/wiki/assets/js/30.36a67cca.js"><link rel="prefetch" href="/wiki/assets/js/31.dde8666e.js"><link rel="prefetch" href="/wiki/assets/js/32.148ea73a.js"><link rel="prefetch" href="/wiki/assets/js/33.61c937cc.js"><link rel="prefetch" href="/wiki/assets/js/34.eb7c4b0c.js"><link rel="prefetch" href="/wiki/assets/js/35.abb4ce3d.js"><link rel="prefetch" href="/wiki/assets/js/36.f03d0378.js"><link rel="prefetch" href="/wiki/assets/js/37.84491176.js"><link rel="prefetch" href="/wiki/assets/js/38.2a06b872.js"><link rel="prefetch" href="/wiki/assets/js/39.63965d3b.js"><link rel="prefetch" href="/wiki/assets/js/4.c0af9872.js"><link rel="prefetch" href="/wiki/assets/js/40.bf2e354a.js"><link rel="prefetch" href="/wiki/assets/js/41.bed53451.js"><link rel="prefetch" href="/wiki/assets/js/42.34d4f2f5.js"><link rel="prefetch" href="/wiki/assets/js/43.867c0e23.js"><link rel="prefetch" href="/wiki/assets/js/44.0201a314.js"><link rel="prefetch" href="/wiki/assets/js/45.d6f1a311.js"><link rel="prefetch" href="/wiki/assets/js/46.419d44e4.js"><link rel="prefetch" href="/wiki/assets/js/47.a3f8b595.js"><link rel="prefetch" href="/wiki/assets/js/48.574cc219.js"><link rel="prefetch" href="/wiki/assets/js/49.224dd6c4.js"><link rel="prefetch" href="/wiki/assets/js/5.c521f8b1.js"><link rel="prefetch" href="/wiki/assets/js/50.c8825040.js"><link rel="prefetch" href="/wiki/assets/js/51.2dab614a.js"><link rel="prefetch" href="/wiki/assets/js/52.8382a180.js"><link rel="prefetch" href="/wiki/assets/js/53.bfab18a9.js"><link rel="prefetch" href="/wiki/assets/js/54.87a1d37c.js"><link rel="prefetch" href="/wiki/assets/js/55.5f207671.js"><link rel="prefetch" href="/wiki/assets/js/57.c868e5c9.js"><link rel="prefetch" href="/wiki/assets/js/6.6a737c5b.js"><link rel="prefetch" href="/wiki/assets/js/7.48bba6b4.js"><link rel="prefetch" href="/wiki/assets/js/8.26532964.js"><link rel="prefetch" href="/wiki/assets/js/9.3c4a4032.js">
+    <link rel="stylesheet" href="/wiki/assets/css/0.styles.bdf32acf.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/wiki/" class="home-link router-link-active"><!----> <span class="site-name">JavaChen Wiki</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/wiki/" class="nav-link">主页</a></div><div class="nav-item"><a href="/wiki/docker/" class="nav-link">Docker</a></div><div class="nav-item"><a href="/wiki/elasticsearch/" class="nav-link">Elasticsearch</a></div><div class="nav-item"><a href="/wiki/hadoop/" class="nav-link">Hadoop</a></div><div class="nav-item"><a href="/wiki/interview/" class="nav-link">Interview</a></div><div class="nav-item"><a href="/wiki/rabbitMQ/" class="nav-link">RabbitMQ</a></div><div class="nav-item"><a href="/wiki/redis/" class="nav-link">Redis</a></div><div class="nav-item"><a href="/wiki/spring-cloud-cshop/" class="nav-link router-link-active">Spring-cloud-cshop</a></div><div class="nav-item"><a href="/wiki/about.html" class="nav-link">关于</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/wiki/" class="nav-link">主页</a></div><div class="nav-item"><a href="/wiki/docker/" class="nav-link">Docker</a></div><div class="nav-item"><a href="/wiki/elasticsearch/" class="nav-link">Elasticsearch</a></div><div class="nav-item"><a href="/wiki/hadoop/" class="nav-link">Hadoop</a></div><div class="nav-item"><a href="/wiki/interview/" class="nav-link">Interview</a></div><div class="nav-item"><a href="/wiki/rabbitMQ/" class="nav-link">RabbitMQ</a></div><div class="nav-item"><a href="/wiki/redis/" class="nav-link">Redis</a></div><div class="nav-item"><a href="/wiki/spring-cloud-cshop/" class="nav-link router-link-active">Spring-cloud-cshop</a></div><div class="nav-item"><a href="/wiki/about.html" class="nav-link">关于</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Spring-cloud-cshop</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/wiki/spring-cloud-cshop/" class="sidebar-link">项目简介</a></li><li><a href="/wiki/spring-cloud-cshop/cshop-1-技术架构.html" class="sidebar-link">技术架构</a></li><li><a href="/wiki/spring-cloud-cshop/cshop-2-安装软件.html" class="sidebar-link">安装软件</a></li><li><a href="/wiki/spring-cloud-cshop/cshop-3-准备开发环境.html" class="sidebar-link">准备开发环境</a></li><li><a href="/wiki/spring-cloud-cshop/cshop-4-功能模块.html" class="active sidebar-link">功能模块</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/wiki/spring-cloud-cshop/cshop-4-功能模块.html#用户管理" class="sidebar-link">用户管理</a></li><li class="sidebar-sub-header"><a href="/wiki/spring-cloud-cshop/cshop-4-功能模块.html#商品管理" class="sidebar-link">商品管理</a></li><li class="sidebar-sub-header"><a href="/wiki/spring-cloud-cshop/cshop-4-功能模块.html#订单管理" class="sidebar-link">订单管理</a></li><li class="sidebar-sub-header"><a href="/wiki/spring-cloud-cshop/cshop-4-功能模块.html#分布式文件系统" class="sidebar-link">分布式文件系统</a></li><li class="sidebar-sub-header"><a href="/wiki/spring-cloud-cshop/cshop-4-功能模块.html#配置nginx反向代理" class="sidebar-link">配置Nginx反向代理</a></li><li class="sidebar-sub-header"><a href="/wiki/spring-cloud-cshop/cshop-4-功能模块.html#动静分离架构" class="sidebar-link">动静分离架构</a></li><li class="sidebar-sub-header"><a href="/wiki/spring-cloud-cshop/cshop-4-功能模块.html#分布式session" class="sidebar-link">分布式session</a></li><li class="sidebar-sub-header"><a href="/wiki/spring-cloud-cshop/cshop-4-功能模块.html#跨域问题" class="sidebar-link">跨域问题</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="功能模块"><a href="#功能模块" aria-hidden="true" class="header-anchor">#</a> 功能模块</h1> <h2 id="用户管理"><a href="#用户管理" aria-hidden="true" class="header-anchor">#</a> 用户管理</h2> <h2 id="商品管理"><a href="#商品管理" aria-hidden="true" class="header-anchor">#</a> 商品管理</h2> <h3 id="分类和品牌"><a href="#分类和品牌" aria-hidden="true" class="header-anchor">#</a> 分类和品牌</h3> <p>商城的核心自然是商品，而商品多了以后，肯定要进行分类，并且不同的商品会有不同的品牌信息，其关系如图所示：</p> <p><img src="http://ww2.sinaimg.cn/large/006tNc79gy1g59sxv2splj30j40ijdgu.jpg" alt="img"></p> <ul><li>一个商品分类下有很多商品</li> <li>一个商品分类下有很多品牌</li> <li>而一个品牌，可能属于不同的分类</li> <li>一个品牌下也会有很多商品</li></ul> <h4 id="表结构"><a href="#表结构" aria-hidden="true" class="header-anchor">#</a> 表结构</h4> <p>tb_brand：</p> <div class="language-sql extra-class"><pre class="language-sql"><code><span class="token keyword">CREATE</span> <span class="token keyword">TABLE</span> <span class="token punctuation">`</span>tb_brand<span class="token punctuation">`</span> <span class="token punctuation">(</span>
+  <span class="token punctuation">`</span>id<span class="token punctuation">`</span> <span class="token keyword">bigint</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span> <span class="token keyword">AUTO_INCREMENT</span> <span class="token keyword">COMMENT</span> <span class="token string">'品牌id'</span><span class="token punctuation">,</span>
+  <span class="token punctuation">`</span>name<span class="token punctuation">`</span> <span class="token keyword">varchar</span><span class="token punctuation">(</span><span class="token number">50</span><span class="token punctuation">)</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span> <span class="token keyword">COMMENT</span> <span class="token string">'品牌名称'</span><span class="token punctuation">,</span>
+  <span class="token punctuation">`</span>image<span class="token punctuation">`</span> <span class="token keyword">varchar</span><span class="token punctuation">(</span><span class="token number">200</span><span class="token punctuation">)</span> <span class="token keyword">DEFAULT</span> <span class="token string">''</span> <span class="token keyword">COMMENT</span> <span class="token string">'品牌图片地址'</span><span class="token punctuation">,</span>
+  <span class="token punctuation">`</span>letter<span class="token punctuation">`</span> <span class="token keyword">char</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token keyword">DEFAULT</span> <span class="token string">''</span> <span class="token keyword">COMMENT</span> <span class="token string">'品牌的首字母'</span><span class="token punctuation">,</span>
+  <span class="token keyword">PRIMARY</span> <span class="token keyword">KEY</span> <span class="token punctuation">(</span><span class="token punctuation">`</span>id<span class="token punctuation">`</span><span class="token punctuation">)</span>
+<span class="token punctuation">)</span> <span class="token keyword">ENGINE</span><span class="token operator">=</span><span class="token keyword">InnoDB</span> <span class="token keyword">AUTO_INCREMENT</span><span class="token operator">=</span><span class="token number">325402</span> <span class="token keyword">DEFAULT</span> <span class="token keyword">CHARSET</span><span class="token operator">=</span>utf8 <span class="token keyword">COMMENT</span><span class="token operator">=</span><span class="token string">'品牌表，一个品牌下有多个商品（spu），一对多关系'</span><span class="token punctuation">;</span>
+</code></pre></div><p>tb_category：</p> <div class="language-sql extra-class"><pre class="language-sql"><code><span class="token keyword">CREATE</span> <span class="token keyword">TABLE</span> <span class="token punctuation">`</span>tb_category<span class="token punctuation">`</span> <span class="token punctuation">(</span>
+  <span class="token punctuation">`</span>id<span class="token punctuation">`</span> <span class="token keyword">bigint</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span> <span class="token keyword">AUTO_INCREMENT</span> <span class="token keyword">COMMENT</span> <span class="token string">'类目id'</span><span class="token punctuation">,</span>
+  <span class="token punctuation">`</span>name<span class="token punctuation">`</span> <span class="token keyword">varchar</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span> <span class="token keyword">COMMENT</span> <span class="token string">'类目名称'</span><span class="token punctuation">,</span>
+  <span class="token punctuation">`</span>parent_id<span class="token punctuation">`</span> <span class="token keyword">bigint</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span> <span class="token keyword">COMMENT</span> <span class="token string">'父类目id,顶级类目填0'</span><span class="token punctuation">,</span>
+  <span class="token punctuation">`</span>is_parent<span class="token punctuation">`</span> <span class="token keyword">tinyint</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span> <span class="token keyword">COMMENT</span> <span class="token string">'是否为父节点，0为否，1为是'</span><span class="token punctuation">,</span>
+  <span class="token punctuation">`</span>sort<span class="token punctuation">`</span> <span class="token keyword">int</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span> <span class="token keyword">COMMENT</span> <span class="token string">'排序指数，越小越靠前'</span><span class="token punctuation">,</span>
+  <span class="token keyword">PRIMARY</span> <span class="token keyword">KEY</span> <span class="token punctuation">(</span><span class="token punctuation">`</span>id<span class="token punctuation">`</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token keyword">KEY</span> <span class="token punctuation">`</span>key_parent_id<span class="token punctuation">`</span> <span class="token punctuation">(</span><span class="token punctuation">`</span>parent_id<span class="token punctuation">`</span><span class="token punctuation">)</span> <span class="token keyword">USING</span> <span class="token keyword">BTREE</span>
+<span class="token punctuation">)</span> <span class="token keyword">ENGINE</span><span class="token operator">=</span><span class="token keyword">InnoDB</span> <span class="token keyword">AUTO_INCREMENT</span><span class="token operator">=</span><span class="token number">1424</span> <span class="token keyword">DEFAULT</span> <span class="token keyword">CHARSET</span><span class="token operator">=</span>utf8 <span class="token keyword">COMMENT</span><span class="token operator">=</span><span class="token string">'商品类目表，类目和商品(spu)是一对多关系，类目与品牌是多对多关系'</span><span class="token punctuation">;</span>
+</code></pre></div><p>tb_category_brand</p> <div class="language-sql extra-class"><pre class="language-sql"><code><span class="token keyword">CREATE</span> <span class="token keyword">TABLE</span> <span class="token punctuation">`</span>tb_category_brand<span class="token punctuation">`</span> <span class="token punctuation">(</span>
+  <span class="token punctuation">`</span>category_id<span class="token punctuation">`</span> <span class="token keyword">bigint</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span> <span class="token keyword">COMMENT</span> <span class="token string">'商品类目id'</span><span class="token punctuation">,</span>
+  <span class="token punctuation">`</span>brand_id<span class="token punctuation">`</span> <span class="token keyword">bigint</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span> <span class="token keyword">COMMENT</span> <span class="token string">'品牌id'</span><span class="token punctuation">,</span>
+  <span class="token keyword">PRIMARY</span> <span class="token keyword">KEY</span> <span class="token punctuation">(</span><span class="token punctuation">`</span>category_id<span class="token punctuation">`</span><span class="token punctuation">,</span><span class="token punctuation">`</span>brand_id<span class="token punctuation">`</span><span class="token punctuation">)</span>
+<span class="token punctuation">)</span> <span class="token keyword">ENGINE</span><span class="token operator">=</span><span class="token keyword">InnoDB</span> <span class="token keyword">DEFAULT</span> <span class="token keyword">CHARSET</span><span class="token operator">=</span>utf8 <span class="token keyword">COMMENT</span><span class="token operator">=</span><span class="token string">'商品分类和品牌的中间表，两者是多对多关系'</span><span class="token punctuation">;</span>
+</code></pre></div><h4 id="实现逻辑"><a href="#实现逻辑" aria-hidden="true" class="header-anchor">#</a> 实现逻辑</h4> <p>1、商品分类</p> <p>商品分类有父子关系，所以需要用树来展示数据。</p> <p>添加：如果没有父节点，则是添加一个顶级根节点，parentId=0，直接保存；如果是某一个节点下面添加新节点，保存当节点之后，需要更新父节点is_parent字段为1。</p> <p>删除：如果是父节点，则需要先删除子节点；否则，直接删除。</p> <p>修改：主要是修改名称。</p> <p>2、品牌</p> <p>添加：添加品牌时候，需要设置分类，可以选择多个分类。</p> <p>修改：保存品牌信息，然后删除原来已经关联的品牌分类中间表，再重新添加品牌分类中间表。</p> <p>删除：删除品牌和品牌分类。</p> <h3 id="商品"><a href="#商品" aria-hidden="true" class="header-anchor">#</a> 商品</h3> <p>乐优商城是一个全品类的电商网站，因此商品的种类繁多，每一件商品，其属性又有差别。为了更准确描述商品及细分差别，抽象出两个概念：SPU和SKU，了解一下：</p> <h4 id="spu和sku"><a href="#spu和sku" aria-hidden="true" class="header-anchor">#</a> SPU和SKU</h4> <p>SPU：Standard Product Unit （标准产品单位） ，一组具有共同属性的商品集</p> <p>SKU：Stock Keeping Unit（库存量单位），SPU商品集因具体特性不同而细分的每个商品</p> <p>以图为例来看：</p> <p><img src="http://ww2.sinaimg.cn/large/006tNc79gy1g59sy7d930j31090methh.jpg" alt="img"></p> <ul><li>本页的 华为Mate10 就是一个商品集（SPU）</li> <li>因为颜色、内存等不同，而细分出不同的Mate10，如亮黑色128G版。（SKU）</li></ul> <p>可以看出：</p> <ul><li>SPU是一个抽象的商品集概念，为了方便后台的管理。</li> <li>SKU才是具体要销售的商品，每一个SKU的价格、库存可能会不一样，用户购买的是SKU而不是SPU</li></ul> <p>首先来看SPU，大家一起思考下SPU应该有哪些字段来描述？</p> <div class="language- extra-class"><pre class="language-text"><code>id:主键
+title：标题
+description：描述
+specification：规格
+packaging_list：包装
+after_service：售后服务
+comment：评价
+category_id：商品分类
+brand_id：品牌
+</code></pre></div><p>似乎并不复杂，但是大家仔细思考一下，商品的规格字段你如何填写？</p> <p>不同商品的规格不一定相同，数据库中要如何保存？</p> <p>再看下SKU，大家觉得应该有什么字段？</p> <div class="language- extra-class"><pre class="language-text"><code>id：主键
+spu_id：关联的spu
+price：价格
+images：图片
+stock：库存
+颜色？
+内存？
+硬盘？
+</code></pre></div><p>碰到难题了，不同的商品分类，可能属性是不一样的，比如手机有内存，衣服有尺码，我们是全品类的电商网站，这些不同的商品的不同属性，如何设计到一张表中？</p> <p>仔细查看每一种商品的规格你会发现：</p> <p>虽然商品规格千变万化，但是同一类商品（如手机）的规格是统一的，有图为证：</p> <blockquote><p>vivo的规格：</p></blockquote> <p><img src="http://ww4.sinaimg.cn/large/006tNc79gy1g59szhk9suj30fh0ggq3k.jpg" alt="img"></p> <blockquote><p>oppo的规格：</p></blockquote> <p><img src="http://ww3.sinaimg.cn/large/006tNc79gy1g59szxyghzj30dw0ha74z.jpg" alt="img"></p> <p>也就是说，商品的规格参数应该是与分类绑定的。<strong>每一个分类都有统一的规格参数模板，但不同商品其参数值可能不同</strong>。</p> <p>如下图所示：</p> <p><img src="http://ww1.sinaimg.cn/large/006tNc79gy1g59t06ujbfj30hc0bc0t7.jpg" alt="img"></p> <h4 id="sku的特有属性"><a href="#sku的特有属性" aria-hidden="true" class="header-anchor">#</a> SKU的特有属性</h4> <p>SPU中会有一些特殊属性，用来区分不同的SKU，我们称为SKU特有属性。如华为META10的颜色、内存属性。</p> <p>不同种类的商品，一个手机，一个衣服，其SKU属性不相同。</p> <p>同一种类的商品，比如都是衣服，SKU属性基本是一样的，都是颜色、尺码等。</p> <p>这样说起来，似乎SKU的特有属性也是与分类相关的？事实上，仔细观察你会发现，<strong>SKU的特有属性是商品规格参数的一部分</strong>：</p> <p><img src="http://ww4.sinaimg.cn/large/006tNc79gy1g59t0dedpyj30fv042jrw.jpg" alt="img"></p> <p>也就是说，我们没必要单独对SKU的特有属性进行设计，它可以看做是规格参数中的一部分。这样规格参数中的属性可以标记成两部分：</p> <ul><li>所有sku共享的规格属性（称为全局属性）</li> <li>每个sku不同的规格属性（称为特有属性）</li></ul> <p><img src="http://ww2.sinaimg.cn/large/006tNc79gy1g59t0kj4d5j30j40ijdgu.jpg" alt="img"></p> <p>打开一个搜索页，我们来看看过滤的条件：</p> <p><img src="http://ww4.sinaimg.cn/large/006tNc79gy1g59t0q6mk3j313207fdik.jpg" alt="img"></p> <p>你会发现，过滤条件中的屏幕尺寸、运行内存、网路、机身内存、电池容量、CPU核数等，在规格参数中都能找到：</p> <p><img src="http://ww4.sinaimg.cn/large/006tNc79gy1g59t0v7hg6j30dq0lcabb.jpg" alt="img"></p> <p>也就是说，规格参数中的数据，将来会有一部分作为搜索条件来使用。我们可以在设计时，将这部分属性标记出来，将来做搜索的时候，作为过滤条件。要注意的是，无论是SPU的全局属性，还是SKU的特有属性，都有可能作为搜索过滤条件的，并不冲突，而是有一个交集：</p> <p><img src="http://ww4.sinaimg.cn/large/006tNc79gy1g59t17gcdsj30ax08xjrf.jpg" alt="img"></p> <h4 id="spu和sku数据结"><a href="#spu和sku数据结" aria-hidden="true" class="header-anchor">#</a> SPU和SKU数据结</h4> <p>tb_spu表</p> <div class="language-sql extra-class"><pre class="language-sql"><code><span class="token keyword">CREATE</span> <span class="token keyword">TABLE</span> <span class="token punctuation">`</span>tb_spu<span class="token punctuation">`</span> <span class="token punctuation">(</span>
+  <span class="token punctuation">`</span>id<span class="token punctuation">`</span> <span class="token keyword">bigint</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span> <span class="token keyword">AUTO_INCREMENT</span> <span class="token keyword">COMMENT</span> <span class="token string">'spu id'</span><span class="token punctuation">,</span>
+  <span class="token punctuation">`</span>title<span class="token punctuation">`</span> <span class="token keyword">varchar</span><span class="token punctuation">(</span><span class="token number">255</span><span class="token punctuation">)</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span> <span class="token keyword">DEFAULT</span> <span class="token string">''</span> <span class="token keyword">COMMENT</span> <span class="token string">'标题'</span><span class="token punctuation">,</span>
+  <span class="token punctuation">`</span>sub_title<span class="token punctuation">`</span> <span class="token keyword">varchar</span><span class="token punctuation">(</span><span class="token number">255</span><span class="token punctuation">)</span> <span class="token keyword">DEFAULT</span> <span class="token string">''</span> <span class="token keyword">COMMENT</span> <span class="token string">'子标题'</span><span class="token punctuation">,</span>
+  <span class="token punctuation">`</span>cid1<span class="token punctuation">`</span> <span class="token keyword">bigint</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span> <span class="token keyword">COMMENT</span> <span class="token string">'1级类目id'</span><span class="token punctuation">,</span>
+  <span class="token punctuation">`</span>cid2<span class="token punctuation">`</span> <span class="token keyword">bigint</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span> <span class="token keyword">COMMENT</span> <span class="token string">'2级类目id'</span><span class="token punctuation">,</span>
+  <span class="token punctuation">`</span>cid3<span class="token punctuation">`</span> <span class="token keyword">bigint</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span> <span class="token keyword">COMMENT</span> <span class="token string">'3级类目id'</span><span class="token punctuation">,</span>
+  <span class="token punctuation">`</span>brand_id<span class="token punctuation">`</span> <span class="token keyword">bigint</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span> <span class="token keyword">COMMENT</span> <span class="token string">'商品所属品牌id'</span><span class="token punctuation">,</span>
+  <span class="token punctuation">`</span>saleable<span class="token punctuation">`</span> <span class="token keyword">tinyint</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span> <span class="token keyword">DEFAULT</span> <span class="token string">'1'</span> <span class="token keyword">COMMENT</span> <span class="token string">'是否上架，0下架，1上架'</span><span class="token punctuation">,</span>
+  <span class="token punctuation">`</span>valid<span class="token punctuation">`</span> <span class="token keyword">tinyint</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span> <span class="token keyword">DEFAULT</span> <span class="token string">'1'</span> <span class="token keyword">COMMENT</span> <span class="token string">'是否有效，0已删除，1有效'</span><span class="token punctuation">,</span>
+  <span class="token punctuation">`</span>create_time<span class="token punctuation">`</span> <span class="token keyword">datetime</span> <span class="token keyword">DEFAULT</span> <span class="token boolean">NULL</span> <span class="token keyword">COMMENT</span> <span class="token string">'添加时间'</span><span class="token punctuation">,</span>
+  <span class="token punctuation">`</span>last_update_time<span class="token punctuation">`</span> <span class="token keyword">datetime</span> <span class="token keyword">DEFAULT</span> <span class="token boolean">NULL</span> <span class="token keyword">COMMENT</span> <span class="token string">'最后修改时间'</span><span class="token punctuation">,</span>
+  <span class="token keyword">PRIMARY</span> <span class="token keyword">KEY</span> <span class="token punctuation">(</span><span class="token punctuation">`</span>id<span class="token punctuation">`</span><span class="token punctuation">)</span>
+<span class="token punctuation">)</span> <span class="token keyword">ENGINE</span><span class="token operator">=</span><span class="token keyword">InnoDB</span> <span class="token keyword">AUTO_INCREMENT</span><span class="token operator">=</span><span class="token number">208</span> <span class="token keyword">DEFAULT</span> <span class="token keyword">CHARSET</span><span class="token operator">=</span>utf8 <span class="token keyword">COMMENT</span><span class="token operator">=</span><span class="token string">'spu表，该表描述的是一个抽象的商品，比如 iphone8'</span><span class="token punctuation">;</span>
+</code></pre></div><p>但是这个表中没有商品的描述字段等附加信息</p> <p>进行垂直拆分，将SPU表中的详情放在另一张表中：tb_spu_detail</p> <div class="language-sql extra-class"><pre class="language-sql"><code><span class="token keyword">CREATE</span> <span class="token keyword">TABLE</span> <span class="token punctuation">`</span>tb_spu_detail<span class="token punctuation">`</span> <span class="token punctuation">(</span>
+  <span class="token punctuation">`</span>spu_id<span class="token punctuation">`</span> <span class="token keyword">bigint</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span>
+  <span class="token punctuation">`</span>description<span class="token punctuation">`</span> <span class="token keyword">text</span> <span class="token keyword">COMMENT</span> <span class="token string">'商品描述信息'</span><span class="token punctuation">,</span>
+  <span class="token punctuation">`</span>specifications<span class="token punctuation">`</span> <span class="token keyword">varchar</span><span class="token punctuation">(</span><span class="token number">3000</span><span class="token punctuation">)</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span> <span class="token keyword">DEFAULT</span> <span class="token string">''</span> <span class="token keyword">COMMENT</span> <span class="token string">'全部规格参数数据'</span><span class="token punctuation">,</span>
+  <span class="token punctuation">`</span>spec_template<span class="token punctuation">`</span> <span class="token keyword">varchar</span><span class="token punctuation">(</span><span class="token number">1000</span><span class="token punctuation">)</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span> <span class="token keyword">COMMENT</span> <span class="token string">'特有规格参数及可选值信息，json格式'</span><span class="token punctuation">,</span>
+  <span class="token punctuation">`</span>packing_list<span class="token punctuation">`</span> <span class="token keyword">varchar</span><span class="token punctuation">(</span><span class="token number">1000</span><span class="token punctuation">)</span> <span class="token keyword">DEFAULT</span> <span class="token string">''</span> <span class="token keyword">COMMENT</span> <span class="token string">'包装清单'</span><span class="token punctuation">,</span>
+  <span class="token punctuation">`</span>after_service<span class="token punctuation">`</span> <span class="token keyword">varchar</span><span class="token punctuation">(</span><span class="token number">1000</span><span class="token punctuation">)</span> <span class="token keyword">DEFAULT</span> <span class="token string">''</span> <span class="token keyword">COMMENT</span> <span class="token string">'售后服务'</span><span class="token punctuation">,</span>
+  <span class="token keyword">PRIMARY</span> <span class="token keyword">KEY</span> <span class="token punctuation">(</span><span class="token punctuation">`</span>spu_id<span class="token punctuation">`</span><span class="token punctuation">)</span>
+<span class="token punctuation">)</span> <span class="token keyword">ENGINE</span><span class="token operator">=</span><span class="token keyword">InnoDB</span> <span class="token keyword">DEFAULT</span> <span class="token keyword">CHARSET</span><span class="token operator">=</span>utf8<span class="token punctuation">;</span>
+</code></pre></div><p>因为这个表中的数据都比较大，所以为了不影响主表的查询效率，拆分出这张表。但是在这里需要详细介绍一下这两个字段：specifications和spec_template。</p> <p><strong>SPU中的规格参数</strong>
+一个分类下的所有SPU具有类似的规格参数。SPU下的SKU可能会有不同的规格参数，因此：</p> <p>SPU中保存全局的规格参数信息。</p> <p>SKU中保存特有规格参数。</p> <p>以手机为例，品牌、操作系统等肯定是全局属性，内存、颜色等肯定是特有属性。</p> <p>当确定了一个SPU，比如vivo的：x23</p> <p>全局属性举例：</p> <p>品牌：vivo
+型号：x21</p> <p>特有属性举例：</p> <p>颜色：[冰钻黑，宝石红，极光白，黑金，魅夜紫]
+内存：[6G]
+机身存储：[64G，128G]</p> <p><strong>specifications字段</strong></p> <p>此字段保存全部规格参数信息，所以是一个json格式：</p> <p>整体来看</p> <p><img src="http://ww2.sinaimg.cn/large/006tNc79gy1g59sud4udsj308s08ndfu.jpg" alt="img"></p> <p>整体看上去与规格参数表中的数据一样，也是一个数组，并且分组，每组下有多个参数 。</p> <p>展开来看</p> <p><img src="http://ww1.sinaimg.cn/large/006tNc79gy1g59suel8cqj30ea0euaag.jpg" alt="img"></p> <p>可以看到，与规格参数表中的模板相比，最大的区别就是，这里指定了具体的值，因为商品确定了，其参数值肯定也确定了。</p> <p><strong>特有属性</strong></p> <p>刚才看到的是全局属性，那么特有属性在这个字段中如何存储呢？</p> <p><img src="http://ww3.sinaimg.cn/large/006tNc79gy1g59suheuxvj308d09x0su.jpg" alt="img"></p> <p>特有属性也是有的，但是，注意看这里是不确定具体值的，因为特有属性只有在SKU中才能确定。这里只是保存了options，所有SKU属性的可选项。</p> <p>在哪里可以使用specifications字段呢？商品详情页的规格参数信息中：</p> <p><img src="http://ww4.sinaimg.cn/large/006tNc79gy1g59summkilj30hn0h5t9d.jpg" alt="img"></p> <p><strong>spec_template字段</strong></p> <p>既然specifications已经包含了所有的规格参数，那么为什么又多出了一个spec_template呢？里面又有哪些内容呢？</p> <p>来看数据格式：</p> <p><img src="http://ww2.sinaimg.cn/large/006tNc79gy1g59supodtkj308j09baa3.jpg" alt="img"></p> <p>可以看出，里面只保存了规格参数中的特有属性，而且格式进行了大大的简化，只有属性的key，和待选项。</p> <p>为什么要冗余保存一份？</p> <p>因为很多场景下我们只需要查询特有规格属性，如果放在一起，每次查询再去分离比较麻烦。</p> <p>比如，商品详情页展示可选的规格参数时：</p> <p><img src="http://ww3.sinaimg.cn/large/006tNc79gy1g59suthpl3j30ix0auwft.jpg" alt="img"></p> <p>tb_sku</p> <div class="language-sql extra-class"><pre class="language-sql"><code><span class="token keyword">CREATE</span> <span class="token keyword">TABLE</span> <span class="token punctuation">`</span>tb_sku<span class="token punctuation">`</span> <span class="token punctuation">(</span>
+  <span class="token punctuation">`</span>id<span class="token punctuation">`</span> <span class="token keyword">bigint</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span> <span class="token keyword">AUTO_INCREMENT</span> <span class="token keyword">COMMENT</span> <span class="token string">'sku id'</span><span class="token punctuation">,</span>
+  <span class="token punctuation">`</span>spu_id<span class="token punctuation">`</span> <span class="token keyword">bigint</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span> <span class="token keyword">COMMENT</span> <span class="token string">'spu id'</span><span class="token punctuation">,</span>
+  <span class="token punctuation">`</span>title<span class="token punctuation">`</span> <span class="token keyword">varchar</span><span class="token punctuation">(</span><span class="token number">255</span><span class="token punctuation">)</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span> <span class="token keyword">COMMENT</span> <span class="token string">'商品标题'</span><span class="token punctuation">,</span>
+  <span class="token punctuation">`</span>images<span class="token punctuation">`</span> <span class="token keyword">varchar</span><span class="token punctuation">(</span><span class="token number">1000</span><span class="token punctuation">)</span> <span class="token keyword">DEFAULT</span> <span class="token string">''</span> <span class="token keyword">COMMENT</span> <span class="token string">'商品的图片，多个图片以‘,’分割'</span><span class="token punctuation">,</span>
+  <span class="token punctuation">`</span>price<span class="token punctuation">`</span> <span class="token keyword">bigint</span><span class="token punctuation">(</span><span class="token number">15</span><span class="token punctuation">)</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span> <span class="token keyword">DEFAULT</span> <span class="token string">'0'</span> <span class="token keyword">COMMENT</span> <span class="token string">'销售价格，单位为分'</span><span class="token punctuation">,</span>
+  <span class="token punctuation">`</span>indexes<span class="token punctuation">`</span> <span class="token keyword">varchar</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">)</span> <span class="token keyword">COMMENT</span> <span class="token string">'特有规格属性在spu属性模板中的对应下标组合'</span><span class="token punctuation">,</span>
+  <span class="token punctuation">`</span>own_spec<span class="token punctuation">`</span> <span class="token keyword">varchar</span><span class="token punctuation">(</span><span class="token number">1000</span><span class="token punctuation">)</span> <span class="token keyword">COMMENT</span> <span class="token string">'sku的特有规格参数，json格式，反序列化时应使用linkedHashMap，保证有序'</span><span class="token punctuation">,</span>
+  <span class="token punctuation">`</span><span class="token keyword">enable</span><span class="token punctuation">`</span> <span class="token keyword">tinyint</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span> <span class="token keyword">DEFAULT</span> <span class="token string">'1'</span> <span class="token keyword">COMMENT</span> <span class="token string">'是否有效，0无效，1有效'</span><span class="token punctuation">,</span>
+  <span class="token punctuation">`</span>create_time<span class="token punctuation">`</span> <span class="token keyword">datetime</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span> <span class="token keyword">COMMENT</span> <span class="token string">'添加时间'</span><span class="token punctuation">,</span>
+  <span class="token punctuation">`</span>last_update_time<span class="token punctuation">`</span> <span class="token keyword">datetime</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span> <span class="token keyword">COMMENT</span> <span class="token string">'最后修改时间'</span><span class="token punctuation">,</span>
+  <span class="token keyword">PRIMARY</span> <span class="token keyword">KEY</span> <span class="token punctuation">(</span><span class="token punctuation">`</span>id<span class="token punctuation">`</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token keyword">KEY</span> <span class="token punctuation">`</span>key_spu_id<span class="token punctuation">`</span> <span class="token punctuation">(</span><span class="token punctuation">`</span>spu_id<span class="token punctuation">`</span><span class="token punctuation">)</span> <span class="token keyword">USING</span> <span class="token keyword">BTREE</span>
+<span class="token punctuation">)</span> <span class="token keyword">ENGINE</span><span class="token operator">=</span><span class="token keyword">InnoDB</span> <span class="token keyword">DEFAULT</span> <span class="token keyword">CHARSET</span><span class="token operator">=</span>utf8 <span class="token keyword">COMMENT</span><span class="token operator">=</span><span class="token string">'sku表,该表表示具体的商品实体,如黑色的64GB的iphone 8'</span><span class="token punctuation">;</span>
+</code></pre></div><p>还有一张表代表库存：</p> <div class="language-sql extra-class"><pre class="language-sql"><code><span class="token keyword">CREATE</span> <span class="token keyword">TABLE</span> <span class="token punctuation">`</span>tb_stock<span class="token punctuation">`</span> <span class="token punctuation">(</span>
+  <span class="token punctuation">`</span>sku_id<span class="token punctuation">`</span> <span class="token keyword">bigint</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span> <span class="token keyword">COMMENT</span> <span class="token string">'库存对应的商品sku id'</span><span class="token punctuation">,</span>
+  <span class="token punctuation">`</span>seckill_stock<span class="token punctuation">`</span> <span class="token keyword">int</span><span class="token punctuation">(</span><span class="token number">9</span><span class="token punctuation">)</span> <span class="token keyword">DEFAULT</span> <span class="token string">'0'</span> <span class="token keyword">COMMENT</span> <span class="token string">'可秒杀库存'</span><span class="token punctuation">,</span>
+  <span class="token punctuation">`</span>seckill_total<span class="token punctuation">`</span> <span class="token keyword">int</span><span class="token punctuation">(</span><span class="token number">9</span><span class="token punctuation">)</span> <span class="token keyword">DEFAULT</span> <span class="token string">'0'</span> <span class="token keyword">COMMENT</span> <span class="token string">'秒杀总数量'</span><span class="token punctuation">,</span>
+  <span class="token punctuation">`</span>stock<span class="token punctuation">`</span> <span class="token keyword">int</span><span class="token punctuation">(</span><span class="token number">9</span><span class="token punctuation">)</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span> <span class="token keyword">COMMENT</span> <span class="token string">'库存数量'</span><span class="token punctuation">,</span>
+  <span class="token keyword">PRIMARY</span> <span class="token keyword">KEY</span> <span class="token punctuation">(</span><span class="token punctuation">`</span>sku_id<span class="token punctuation">`</span><span class="token punctuation">)</span>
+<span class="token punctuation">)</span> <span class="token keyword">ENGINE</span><span class="token operator">=</span><span class="token keyword">InnoDB</span> <span class="token keyword">DEFAULT</span> <span class="token keyword">CHARSET</span><span class="token operator">=</span>utf8 <span class="token keyword">COMMENT</span><span class="token operator">=</span><span class="token string">'库存表，代表库存，秒杀库存等信息'</span><span class="token punctuation">;</span>
+</code></pre></div><p>问题：为什么要将库存独立一张表？</p> <p>因为库存字段写频率较高，而SKU的其它字段以读为主，因此将两张表分离，读写不会干扰。</p> <p>特别需要注意的是sku表中的indexes字段和own_spec字段。sku中应该保存特有规格参数的值，就在这两个字段中。</p> <h5 id="sku中的特有规格参数"><a href="#sku中的特有规格参数" aria-hidden="true" class="header-anchor">#</a> SKU中的特有规格参数</h5> <p><strong>indexes字段</strong></p> <p>在SPU表中，已经对特有规格参数及可选项进行了保存，结构如下（样例）：</p> <div class="language- extra-class"><pre class="language-text"><code>{
+    &quot;机身颜色&quot;: [
+        &quot;香槟金&quot;,
+        &quot;樱花粉&quot;,
+        &quot;磨砂黑&quot;
+    ],
+    &quot;内存&quot;: [
+        &quot;2GB&quot;,
+        &quot;3GB&quot;
+    ],
+    &quot;机身存储&quot;: [
+        &quot;16GB&quot;,
+        &quot;32GB&quot;
+    ]
+}
+</code></pre></div><p>这些特有属性如果排列组合，会产生12个不同的SKU，而不同的SKU，其属性就是上面备选项中的一个。</p> <p>比如：</p> <p>红米4X，香槟金，2GB内存，16GB存储</p> <p>红米4X，磨砂黑，2GB内存，32GB存储</p> <p>你会发现，每一个属性值，对应于SPU中options数组的一个选项，如果我们记录下角标，就是这样：</p> <p>红米4X，0,0,0</p> <p>红米4X，2,0,1</p> <p>既然如此，那么就可以将不同角标串联起来，作为SPU下不同SKU的标示。这就是indexes字段。</p> <p><img src="http://ww3.sinaimg.cn/large/006tNc79gy1g59suy7vpsj30kk0czjwy.jpg" alt="img"></p> <p>这个设计在商品详情页会特别有用</p> <p><img src="http://ww4.sinaimg.cn/large/006tNc79gy1g59sv1vzl4j30he05e0tb.jpg" alt="img"></p> <p>当用户点击选中一个特有属性，你就能根据 角标快速定位到sku。</p> <p>1.2.2.2 own_spec字段</p> <p>结构：</p> <p>{&quot;机身颜色&quot;:&quot;香槟金&quot;,&quot;内存&quot;:&quot;2GB&quot;,&quot;机身存储&quot;:&quot;16GB&quot;}
+保存的是特有属性的键值对。</p> <p>SPU中保存的是可选项，但不确定具体的值，而SKU中的保存的就是具体的键值对了。</p> <p>这样，在页面展示规格参数信息时，就可以根据key来获取值，用于显示。</p> <h4 id="规格参数表"><a href="#规格参数表" aria-hidden="true" class="header-anchor">#</a> 规格参数表</h4> <p>先看下规格参数表：</p> <div class="language-mysql extra-class"><pre class="language-text"><code>CREATE TABLE `tb_specification` (
+  `category_id` bigint(20) NOT NULL COMMENT '规格模板所属商品分类id',
+  `specifications` varchar(3000) NOT NULL DEFAULT '' COMMENT '规格参数模板，json格式',
+  PRIMARY KEY (`category_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='商品规格参数模板，json格式。';
+</code></pre></div><p>很奇怪是吧，只有两个字段。特别需要注意的是第二个字段：</p> <ul><li>specificatons：规格参数模板，json格式</li></ul> <p>为什么是一个json？我们看下规格参数的格式：</p> <p><img src="http://ww2.sinaimg.cn/large/006tNc79gy1g59t1n99hrj30nt0a7dfw.jpg" alt="img"></p> <p>如果按照传统数据库设计，这里至少需要3张表：</p> <ul><li>group：代表组，与商品分类关联</li> <li>param_key：属性名，与组关联，一对多</li> <li>param_value：属性备选值，与属性名关联，一对多</li></ul> <p>这样程序的复杂度大大增加，但是提高了数据的复用性。</p> <p>我们的解决方案是，采用json来保存整个规格参数模板，不需要额外的表，一个字符串就够了。</p> <p>json结构分析</p> <blockquote><p>先整体看一下：</p></blockquote> <p><img src="http://ww1.sinaimg.cn/large/006tNc79gy1g59t1zuokvj30cw07lglj.jpg" alt="img"></p> <ul><li>因为规格参数分为很多组，所以json最外层是一个数组。</li> <li>数组中是对象类型，每个对象代表一个组的数据，对象的属性包括：
+<ul><li>group：组的名称</li> <li>params：该组的所有属性</li></ul></li></ul> <blockquote><p>接下来是params：</p></blockquote> <p><img src="http://ww3.sinaimg.cn/large/006tNc79gy1g59t26prn5j30fj0gmt8p.jpg" alt="img"></p> <p>以<code>主芯片</code>这一组为例：</p> <ul><li>group：注明，这里是主芯片</li> <li>params：该组的所有规格属性，因为不止一个，所以是一个数组。这里包含四个规格属性：CPU品牌，CPU型号，CPU频率，CPU核数。每个规格属性都是一个对象，包含以下信息：
+<ul><li>k：属性名称</li> <li>searchable：是否作为搜索字段，将来在搜索页面使用，boolean类型</li> <li>global：是否是SPU全局属性，boolean类型。true为全局属性，false为SKU的特有属性</li> <li>options：属性值的可选项，数组结构。起约束作用，不允许填写可选项以外的值，比如CPU核数，有人添10000核岂不是很扯淡</li> <li>numerical：是否为数值，boolean类型，true则为数值，false则不是。为空也代表非数值</li> <li>unit：单位，如：克，毫米。如果是数值类型，那么就需要有单位，否则可以不填。</li></ul></li></ul> <p>上面的截图中所有属性都是全局属性，我们来看看内存，应该是特有属性：</p> <p><img src="http://ww2.sinaimg.cn/large/006tNc79gy1g59t2c0j57j30bz0b4747.jpg" alt="img"></p> <p>总结下：</p> <ul><li>规格参数分组，每组有多个参数</li> <li>参数的 <code>k</code>代表属性名称，没有值，具体的SPU才能确定值</li> <li>参数会有不同的属性：是否可搜索，是否是全局、是否是数值，这些都用boolean值进行标记：
+<ul><li>SPU下的多个SKU共享的参数称为全局属性，用<code>global</code>标记</li> <li>SPU下的多个SKU特有的参数称为特有属性</li> <li>如果参数是数值类型，用<code>numerical</code>标记，并且指定单位<code>unit</code></li> <li>如果参数可搜索，用<code>searchable</code>标记</li></ul></li></ul> <h4 id="页面实现"><a href="#页面实现" aria-hidden="true" class="header-anchor">#</a> 页面实现</h4> <p>1、新增商品</p> <p>商品的数据分为了4部分来填写：</p> <ul><li>基本信息：主要是一些简单的文本数据，包含了SPU和SpuDetail的部分数据，如
+<ul><li>商品分类：是SPU中的<code>cid1</code>，<code>cid2</code>，<code>cid3</code>属性</li> <li>品牌：是spu中的<code>brandId</code>属性，选择了商品分类，再显示关联的品牌，可以是下拉列表。</li> <li>标题：是spu中的<code>title</code>属性</li> <li>子标题：是spu中的<code>subTitle</code>属性</li> <li>售后服务：是SpuDetail中的<code>afterService</code>属性</li> <li>包装列表：是SpuDetail中的<code>packingList</code>属性</li></ul></li> <li>商品描述：是SpuDetail中的<code>description</code>属性，数据较多，所以单独放一个页面</li> <li>规格参数：商品规格信息，通用属性保存在SpuDetail中的<code>specifications</code>属性</li> <li>SKU属性：spu下的所有Sku信息，特有属性保存在Sku的ownSpec</li></ul> <p>通过查询某一分类对应的规格参数，然后将普通属性和特有属性分开。特有属性保存在specialSpecs中，普通属性保存在specifications中。</p> <p>当用户点击保存，就需要对页面的数据进行整理，然后提交到后台服务。</p> <p>现在页面包含了哪些信息呢？先与数据库对比，看看少什么</p> <p>goods：里面包含了SPU的几乎所有信息</p> <ul><li>title：标题</li> <li>subtitle：子标题，卖点</li> <li>categories：分类对象数组，需要进行整理 **</li> <li>brandId：品牌id</li> <li>spuDetail：商品详情
+<ul><li>packingList：包装清单</li> <li>afterService：售后服务</li> <li>description：商品描述</li> <li>缺少全局规格属性specifications **</li> <li>缺少特有规格属性模板spec_template **</li></ul></li> <li>skus：包含了sku列表的几乎所有信息
+<ul><li>price：价格，需要处理为以分为单位</li> <li>stock：库存</li> <li>enable：是否启用</li> <li>indexes：索引</li> <li>images：图片，数组，需要处理为字符串**</li> <li>缺少其它特有规格，ows_spec **</li> <li>缺少标题：需要根据spu的标题结合特有属性生成 **</li></ul></li> <li>specifications：全局规格参数的键值对信息</li> <li>specialSpec：特有规格参数信息</li></ul> <p>测试提交数据：</p> <p><img src="http://ww1.sinaimg.cn/large/006tNc79gy1g59sv74iqqj311z0aomy3.jpg" alt="img"></p> <p>参考文章</p> <p>https://blog.csdn.net/lyj2018gyq/article/category/7963560/3</p> <p>https://github.com/lyj8330328</p> <h2 id="订单管理"><a href="#订单管理" aria-hidden="true" class="header-anchor">#</a> 订单管理</h2> <h2 id="分布式文件系统"><a href="#分布式文件系统" aria-hidden="true" class="header-anchor">#</a> 分布式文件系统</h2> <p>FastDFS是一个开源的轻量级分布式文件系统，它对文件进行管理，功能包括：文件存储、文件同步、文件访问（文件上传、文件下载）等，解决了大容量存储和负载均衡的问题。特别适合以文件为载体的在线服务，如相册网站、视频网站等等。</p> <p>FastDFS为互联网量身定制，充分考虑了冗余备份、负载均衡、线性扩容等机制，并注重高可用、高性能等指标，使用FastDFS很容易搭建一套高性能的文件服务器集群提供文件上传、下载等服。</p> <p>FastDFS服务端有两个角色：跟踪器（tracker）和存储节点（storage）。跟踪器主要做调度工作，在访问上起负载均衡的作用。</p> <p>存储节点存储文件，完成文件管理的所有功能：就是这样的存储、同步和提供存取接口，FastDFS同时对文件的metadata进行管理。所谓文件的meta data就是文件的相关属性，以键值对（key valuepair）方式表示，如：width=1024，其中的key为width，value为1024。文件metadata是文件属性列表，可以包含多个键值对。</p> <p>跟踪器和存储节点都可以由一台或多台服务器构成。跟踪器和存储节点中的服务器均可以随时增加或下线而不会影响线上服务。其中跟踪器中的所有服务器都是对等的，可以根据服务器的压力情况随时增加或减少。</p> <p>为了支持大容量，存储节点（服务器）采用了分卷（或分组）的组织方式。存储系统由一个或多个卷组成，卷与卷之间的文件是相互独立的，所有卷的文件容量累加就是整个存储系统中的文件容量。一个卷可以由一台或多台存储服务器组成，一个卷下的存储服务器中的文件都是相同的，卷中的多台存储服务器起到了冗余备份和负载均衡的作用。</p> <p>在卷中增加服务器时，同步已有的文件由系统自动完成，同步完成后，系统自动将新增服务器切换到线上提供服务。</p> <p>当存储空间不足或即将耗尽时，可以动态添加卷。只需要增加一台或多台服务器，并将它们配置为一个新的卷，这样就扩大了存储系统的容量。</p> <p>FastDFS中的文件标识分为两个部分：卷名和文件名，二者缺一不可。</p> <h3 id="基于-docker-安装-fastdfs"><a href="#基于-docker-安装-fastdfs" aria-hidden="true" class="header-anchor">#</a> 基于 Docker 安装 FastDFS</h3> <p>所需安装包：</p> <ul><li>libfastcommon.tar.gz</li> <li>fastdfs-5.11.tar.gz</li> <li>nginx-1.13.6.tar.gz</li> <li>fastdfs-nginx-module_v1.16.tar.gz</li></ul> <h4 id="创建工作目录"><a href="#创建工作目录" aria-hidden="true" class="header-anchor">#</a> 创建工作目录</h4> <p>在 Linux 服务器上创建 <code>/data/docker/fastdfs/environmen</code> 目录</p> <p>说明：</p> <ul><li><code>/data/docker/fastdfs</code>：用于存放 <code>docker-compose.yml</code> 配置文件及 FastDFS 的数据卷</li> <li><code>/data/docker/fastdfs/environmen</code>：用于存放 <code>Dockerfile</code> 镜像配置文件及 FastDFS 所需环境</li></ul> <h4 id="docker-compose-yml"><a href="#docker-compose-yml" aria-hidden="true" class="header-anchor">#</a> docker-compose.yml</h4> <div class="language-text extra-class"><pre class="language-text"><code>version: '3.1'
+services:
+  fastdfs:
+    build: environment
+    restart: always
+    container_name: fastdfs
+    volumes:
+      - ./storage:/fastdfs/storage
+    network_mode: host
+</code></pre></div><h4 id="dockerfile"><a href="#dockerfile" aria-hidden="true" class="header-anchor">#</a> Dockerfile</h4> <div class="language-text extra-class"><pre class="language-text"><code>FROM ubuntu:xenial
+MAINTAINER topsale@vip.qq.com
+
+# 更新数据源
+WORKDIR /etc/apt
+RUN echo 'deb http://mirrors.aliyun.com/ubuntu/ xenial main restricted universe multiverse' &gt; sources.list
+RUN echo 'deb http://mirrors.aliyun.com/ubuntu/ xenial-security main restricted universe multiverse' &gt;&gt; sources.list
+RUN echo 'deb http://mirrors.aliyun.com/ubuntu/ xenial-updates main restricted universe multiverse' &gt;&gt; sources.list
+RUN echo 'deb http://mirrors.aliyun.com/ubuntu/ xenial-backports main restricted universe multiverse' &gt;&gt; sources.list
+RUN apt-get update
+
+# 安装依赖
+RUN apt-get install make gcc libpcre3-dev zlib1g-dev --assume-yes
+
+# 复制工具包
+ADD fastdfs-5.11.tar.gz /usr/local/src
+ADD fastdfs-nginx-module_v1.16.tar.gz /usr/local/src
+ADD libfastcommon.tar.gz /usr/local/src
+ADD nginx-1.13.6.tar.gz /usr/local/src
+
+# 安装 libfastcommon
+WORKDIR /usr/local/src/libfastcommon
+RUN ./make.sh &amp;&amp; ./make.sh install
+
+# 安装 FastDFS
+WORKDIR /usr/local/src/fastdfs-5.11
+RUN ./make.sh &amp;&amp; ./make.sh install
+
+# 配置 FastDFS 跟踪器
+ADD tracker.conf /etc/fdfs
+RUN mkdir -p /fastdfs/tracker
+
+# 配置 FastDFS 存储
+ADD storage.conf /etc/fdfs
+RUN mkdir -p /fastdfs/storage
+
+# 配置 FastDFS 客户端
+ADD client.conf /etc/fdfs
+
+# 配置 fastdfs-nginx-module
+ADD config /usr/local/src/fastdfs-nginx-module/src
+
+# FastDFS 与 Nginx 集成
+WORKDIR /usr/local/src/nginx-1.13.6
+RUN ./configure --add-module=/usr/local/src/fastdfs-nginx-module/src
+RUN make &amp;&amp; make install
+ADD mod_fastdfs.conf /etc/fdfs
+
+WORKDIR /usr/local/src/fastdfs-5.11/conf
+RUN cp http.conf mime.types /etc/fdfs/
+
+# 配置 Nginx
+ADD nginx.conf /usr/local/nginx/conf
+
+COPY entrypoint.sh /usr/local/bin/
+ENTRYPOINT [&quot;/usr/local/bin/entrypoint.sh&quot;]
+
+WORKDIR /
+EXPOSE 8888
+CMD [&quot;/bin/bash&quot;]
+</code></pre></div><h4 id="entrypoint-sh"><a href="#entrypoint-sh" aria-hidden="true" class="header-anchor">#</a> entrypoint.sh</h4> <div class="language-text extra-class"><pre class="language-text"><code>#!/bin/sh
+/etc/init.d/fdfs_trackerd start
+/etc/init.d/fdfs_storaged start
+/usr/local/nginx/sbin/nginx -g 'daemon off;'
+</code></pre></div><p>注：Shell 创建后是无法直接使用的，需要赋予执行的权限，使用 <code>chmod +x entrypoint.sh</code> 命令</p> <h4 id="各种配置文件说明"><a href="#各种配置文件说明" aria-hidden="true" class="header-anchor">#</a> 各种配置文件说明</h4> <h5 id="tracker-conf"><a href="#tracker-conf" aria-hidden="true" class="header-anchor">#</a> tracker.conf</h5> <p>FastDFS 跟踪器配置，容器中路径为：/etc/fdfs，修改为：</p> <div class="language-text extra-class"><pre class="language-text"><code>base_path=/fastdfs/tracker
+</code></pre></div><h5 id="storage-conf"><a href="#storage-conf" aria-hidden="true" class="header-anchor">#</a> storage.conf</h5> <p>FastDFS 存储配置，容器中路径为：/etc/fdfs，修改为：</p> <div class="language-text extra-class"><pre class="language-text"><code>base_path=/fastdfs/storage
+store_path0=/fastdfs/storage
+tracker_server=192.168.75.128:22122
+http.server_port=8888
+</code></pre></div><h5 id="client-conf"><a href="#client-conf" aria-hidden="true" class="header-anchor">#</a> client.conf</h5> <p>FastDFS 客户端配置，容器中路径为：/etc/fdfs，修改为：</p> <div class="language-text extra-class"><pre class="language-text"><code>base_path=/fastdfs/tracker
+tracker_server=192.168.75.128:22122
+</code></pre></div><h5 id="config"><a href="#config" aria-hidden="true" class="header-anchor">#</a> config</h5> <p>fastdfs-nginx-module 配置文件，容器中路径为：/usr/local/src/fastdfs-nginx-module/src，修改为：</p> <div class="language-text extra-class"><pre class="language-text"><code># 修改前
+CORE_INCS=&quot;$CORE_INCS /usr/local/include/fastdfs /usr/local/include/fastcommon/&quot;
+CORE_LIBS=&quot;$CORE_LIBS -L/usr/local/lib -lfastcommon -lfdfsclient&quot;
+
+# 修改后
+CORE_INCS=&quot;$CORE_INCS /usr/include/fastdfs /usr/include/fastcommon/&quot;
+CORE_LIBS=&quot;$CORE_LIBS -L/usr/lib -lfastcommon -lfdfsclient&quot;
+</code></pre></div><h5 id="mod-fastdfs-conf"><a href="#mod-fastdfs-conf" aria-hidden="true" class="header-anchor">#</a> mod_fastdfs.conf</h5> <p>fastdfs-nginx-module 配置文件，容器中路径为：/usr/local/src/fastdfs-nginx-module/src，修改为：</p> <div class="language-text extra-class"><pre class="language-text"><code>connect_timeout=10
+tracker_server=192.168.75.128:22122
+url_have_group_name = true
+store_path0=/fastdfs/storage
+</code></pre></div><h5 id="nginx-conf"><a href="#nginx-conf" aria-hidden="true" class="header-anchor">#</a> nginx.conf</h5> <p>Nginx 配置文件，容器中路径为：/usr/local/src/nginx-1.13.6/conf，修改为：</p> <div class="language-text extra-class"><pre class="language-text"><code>user  root;
+worker_processes  1;
+
+events {
+    worker_connections  1024;
+}
+
+http {
+    include       mime.types;
+    default_type  application/octet-stream;
+
+    sendfile        on;
+
+    keepalive_timeout  65;
+
+    server {
+        listen       8888;
+        server_name  localhost;
+
+        location ~/group([0-9])/M00 {
+            ngx_fastdfs_module;
+        }
+
+        error_page   500 502 503 504  /50x.html;
+        location = /50x.html {
+            root   html;
+        }
+    }
+}
+</code></pre></div><h4 id="启动容器"><a href="#启动容器" aria-hidden="true" class="header-anchor">#</a> 启动容器</h4> <div class="language-text extra-class"><pre class="language-text"><code>docker-compose up -d
+</code></pre></div><h4 id="测试上传"><a href="#测试上传" aria-hidden="true" class="header-anchor">#</a> 测试上传</h4> <p>交互式进入容器</p> <div class="language-text extra-class"><pre class="language-text"><code>docker exec -it fastdfs /bin/bash
+</code></pre></div><p>测试文件上传</p> <div class="language-text extra-class"><pre class="language-text"><code>/usr/bin/fdfs_upload_file /etc/fdfs/client.conf /usr/local/src/fastdfs-5.11/INSTALL
+</code></pre></div><p>服务器反馈上传地址</p> <div class="language-text extra-class"><pre class="language-text"><code>group1/M00/00/00/wKhLi1oHVMCAT2vrAAAeSwu9TgM3976771
+</code></pre></div><h4 id="测试-nginx-访问"><a href="#测试-nginx-访问" aria-hidden="true" class="header-anchor">#</a> 测试 Nginx 访问</h4> <div class="language-text extra-class"><pre class="language-text"><code>http://192.168.56.100:8888/group1/M00/00/00/wKhLi1oHVMCAT2vrAAAeSwu9TgM3976771
+</code></pre></div><h3 id="安装-fastdfs-java-客户端"><a href="#安装-fastdfs-java-客户端" aria-hidden="true" class="header-anchor">#</a> 安装 FastDFS Java 客户端</h3> <h4 id="从-github-克隆源码"><a href="#从-github-克隆源码" aria-hidden="true" class="header-anchor">#</a> 从 GitHub 克隆源码</h4> <div class="language-text extra-class"><pre class="language-text"><code>git clone https://github.com/happyfish100/fastdfs-client-java.git
+</code></pre></div><h4 id="在项目中添加依赖"><a href="#在项目中添加依赖" aria-hidden="true" class="header-anchor">#</a> 在项目中添加依赖</h4> <div class="language-xml extra-class"><pre class="language-xml"><code><span class="token comment">&lt;!-- FastDFS Begin --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>org.csource<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>fastdfs-client-java<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">&gt;</span></span>1.27-SNAPSHOT<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">&gt;</span></span>
+<span class="token comment">&lt;!-- FastDFS End --&gt;</span>
+</code></pre></div><h3 id="创建-fastdfs-工具类"><a href="#创建-fastdfs-工具类" aria-hidden="true" class="header-anchor">#</a> 创建 FastDFS 工具类</h3> <p>定义文件存储服务接口</p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">StorageService</span> <span class="token punctuation">{</span>
+    <span class="token comment">/**
+     * 上传文件
+     *
+     * @param data    文件的二进制内容
+     * @param extName 扩展名
+     * @return 上传成功后返回生成的文件id；失败，返回null
+     */</span>
+    <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">upload</span><span class="token punctuation">(</span><span class="token keyword">byte</span><span class="token punctuation">[</span><span class="token punctuation">]</span> data<span class="token punctuation">,</span> <span class="token class-name">String</span> extName<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">/**
+     * 删除文件
+     *
+     * @param fileId 被删除的文件id
+     * @return 删除成功后返回0，失败后返回错误代码
+     */</span>
+    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">delete</span><span class="token punctuation">(</span><span class="token class-name">String</span> fileId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>实现文件存储服务接口</p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">FastDFSStorageService</span> <span class="token keyword">implements</span> <span class="token class-name">StorageService</span><span class="token punctuation">,</span> <span class="token class-name">InitializingBean</span> <span class="token punctuation">{</span>
+    <span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token class-name">Logger</span> logger <span class="token operator">=</span> <span class="token class-name">LoggerFactory</span><span class="token punctuation">.</span><span class="token function">getLogger</span><span class="token punctuation">(</span><span class="token class-name">FastDFSStorageService</span><span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">private</span> <span class="token class-name">TrackerClient</span> trackerClient<span class="token punctuation">;</span>
+
+    <span class="token annotation punctuation">@Value</span><span class="token punctuation">(</span><span class="token string">&quot;${storage.fastdfs.tracker_server}&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> trackerServer<span class="token punctuation">;</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">upload</span><span class="token punctuation">(</span><span class="token keyword">byte</span><span class="token punctuation">[</span><span class="token punctuation">]</span> data<span class="token punctuation">,</span> <span class="token class-name">String</span> extName<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">TrackerServer</span> trackerServer <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+        <span class="token class-name">StorageServer</span> storageServer <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+        <span class="token class-name">StorageClient1</span> storageClient1 <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+        <span class="token keyword">try</span> <span class="token punctuation">{</span>
+            <span class="token class-name">NameValuePair</span><span class="token punctuation">[</span><span class="token punctuation">]</span> meta_list <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span> <span class="token comment">// new NameValuePair[0];</span>
+
+            trackerServer <span class="token operator">=</span> trackerClient<span class="token punctuation">.</span><span class="token function">getConnection</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>trackerServer <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                logger<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span><span class="token string">&quot;getConnection return null&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            storageServer <span class="token operator">=</span> trackerClient<span class="token punctuation">.</span><span class="token function">getStoreStorage</span><span class="token punctuation">(</span>trackerServer<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            storageClient1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">StorageClient1</span><span class="token punctuation">(</span>trackerServer<span class="token punctuation">,</span> storageServer<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token class-name">String</span> fileid <span class="token operator">=</span> storageClient1<span class="token punctuation">.</span><span class="token function">upload_file1</span><span class="token punctuation">(</span>data<span class="token punctuation">,</span> extName<span class="token punctuation">,</span> meta_list<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            logger<span class="token punctuation">.</span><span class="token function">debug</span><span class="token punctuation">(</span><span class="token string">&quot;uploaded file &lt;{}&gt;&quot;</span><span class="token punctuation">,</span> fileid<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">return</span> fileid<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">Exception</span> ex<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            logger<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span><span class="token string">&quot;Upload fail&quot;</span><span class="token punctuation">,</span> ex<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">return</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token keyword">finally</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>storageServer <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">try</span> <span class="token punctuation">{</span>
+                    storageServer<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">IOException</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>trackerServer <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">try</span> <span class="token punctuation">{</span>
+                    trackerServer<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">IOException</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+            storageClient1 <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">delete</span><span class="token punctuation">(</span><span class="token class-name">String</span> fileId<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token comment">//        System.out.println(&quot;deleting ....&quot;);</span>
+        <span class="token class-name">TrackerServer</span> trackerServer <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+        <span class="token class-name">StorageServer</span> storageServer <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+        <span class="token class-name">StorageClient1</span> storageClient1 <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+        <span class="token keyword">int</span> index <span class="token operator">=</span> fileId<span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span><span class="token string">'/'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">String</span> groupName <span class="token operator">=</span> fileId<span class="token punctuation">.</span><span class="token function">substring</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> index<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">try</span> <span class="token punctuation">{</span>
+            trackerServer <span class="token operator">=</span> trackerClient<span class="token punctuation">.</span><span class="token function">getConnection</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>trackerServer <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                logger<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span><span class="token string">&quot;getConnection return null&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            storageServer <span class="token operator">=</span> trackerClient<span class="token punctuation">.</span><span class="token function">getStoreStorage</span><span class="token punctuation">(</span>trackerServer<span class="token punctuation">,</span> groupName<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            storageClient1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">StorageClient1</span><span class="token punctuation">(</span>trackerServer<span class="token punctuation">,</span> storageServer<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">int</span> result <span class="token operator">=</span> storageClient1<span class="token punctuation">.</span><span class="token function">delete_file1</span><span class="token punctuation">(</span>fileId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">return</span> result<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">Exception</span> ex<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            logger<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span><span class="token string">&quot;Delete fail&quot;</span><span class="token punctuation">,</span> ex<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">return</span> <span class="token number">1</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token keyword">finally</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>storageServer <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">try</span> <span class="token punctuation">{</span>
+                    storageServer<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">IOException</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>trackerServer <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">try</span> <span class="token punctuation">{</span>
+                    trackerServer<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">IOException</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+            storageClient1 <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">afterPropertiesSet</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">Exception</span> <span class="token punctuation">{</span>
+        <span class="token class-name">File</span> confFile <span class="token operator">=</span> <span class="token class-name">File</span><span class="token punctuation">.</span><span class="token function">createTempFile</span><span class="token punctuation">(</span><span class="token string">&quot;fastdfs&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;.conf&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">PrintWriter</span> confWriter <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">PrintWriter</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">FileWriter</span><span class="token punctuation">(</span>confFile<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        confWriter<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;tracker_server=&quot;</span> <span class="token operator">+</span> trackerServer<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        confWriter<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">ClientGlobal</span><span class="token punctuation">.</span><span class="token function">init</span><span class="token punctuation">(</span>confFile<span class="token punctuation">.</span><span class="token function">getAbsolutePath</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        confFile<span class="token punctuation">.</span><span class="token function">delete</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">TrackerGroup</span> trackerGroup <span class="token operator">=</span> <span class="token class-name">ClientGlobal</span><span class="token punctuation">.</span>g_tracker_group<span class="token punctuation">;</span>
+        trackerClient <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">TrackerClient</span><span class="token punctuation">(</span>trackerGroup<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        logger<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span><span class="token string">&quot;Init FastDFS with tracker_server : {}&quot;</span><span class="token punctuation">,</span> trackerServer<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>文件存储服务工厂类</p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">StorageFactory</span> <span class="token keyword">implements</span> <span class="token class-name">FactoryBean</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">StorageService</span><span class="token punctuation">&gt;</span></span> <span class="token punctuation">{</span>
+
+    <span class="token annotation punctuation">@Autowired</span>
+    <span class="token keyword">private</span> <span class="token class-name">AutowireCapableBeanFactory</span> acbf<span class="token punctuation">;</span>
+
+    <span class="token comment">/**
+     * 存储服务的类型，目前仅支持fastdfs
+     */</span>
+    <span class="token annotation punctuation">@Value</span><span class="token punctuation">(</span><span class="token string">&quot;${storage.type}&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> type<span class="token punctuation">;</span>
+
+    <span class="token keyword">private</span> <span class="token class-name">Map</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">,</span> <span class="token class-name">Class</span><span class="token punctuation">&lt;</span><span class="token operator">?</span> <span class="token keyword">extends</span> <span class="token class-name">StorageService</span><span class="token punctuation">&gt;</span><span class="token punctuation">&gt;</span></span> classMap<span class="token punctuation">;</span>
+
+    <span class="token keyword">public</span> <span class="token class-name">StorageFactory</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        classMap <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">HashMap</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        classMap<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span><span class="token string">&quot;fastdfs&quot;</span><span class="token punctuation">,</span> <span class="token class-name">FastDFSStorageService</span><span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token class-name">StorageService</span> <span class="token function">getObject</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">Exception</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Class</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token operator">?</span> <span class="token keyword">extends</span> <span class="token class-name">StorageService</span><span class="token punctuation">&gt;</span></span> clazz <span class="token operator">=</span> classMap<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>type<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>clazz <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">RuntimeException</span><span class="token punctuation">(</span><span class="token string">&quot;Unsupported storage type [&quot;</span> <span class="token operator">+</span> type <span class="token operator">+</span> <span class="token string">&quot;], valid are &quot;</span> <span class="token operator">+</span> classMap<span class="token punctuation">.</span><span class="token function">keySet</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token class-name">StorageService</span> bean <span class="token operator">=</span> clazz<span class="token punctuation">.</span><span class="token function">newInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        acbf<span class="token punctuation">.</span><span class="token function">autowireBean</span><span class="token punctuation">(</span>bean<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        acbf<span class="token punctuation">.</span><span class="token function">initializeBean</span><span class="token punctuation">(</span>bean<span class="token punctuation">,</span> bean<span class="token punctuation">.</span><span class="token function">getClass</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getSimpleName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> bean<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token class-name">Class</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token operator">?</span><span class="token punctuation">&gt;</span></span> <span class="token function">getObjectType</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token class-name">StorageService</span><span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">isSingleton</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>配置文件存储服务工厂类</p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token annotation punctuation">@Configuration</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">FastDFSConfiguration</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Bean</span>
+    <span class="token keyword">public</span> <span class="token class-name">StorageFactory</span> <span class="token function">storageFactory</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">StorageFactory</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="创建-fastdfs-控制器"><a href="#创建-fastdfs-控制器" aria-hidden="true" class="header-anchor">#</a> 创建 FastDFS 控制器</h3> <p>增加云配置</p> <div class="language-yml extra-class"><pre class="language-yml"><code><span class="token key atrule">fastdfs.base.url</span><span class="token punctuation">:</span> http<span class="token punctuation">:</span>//192.168.75.128<span class="token punctuation">:</span>8888/
+<span class="token key atrule">storage</span><span class="token punctuation">:</span>
+  <span class="token key atrule">type</span><span class="token punctuation">:</span> fastdfs
+  <span class="token key atrule">fastdfs</span><span class="token punctuation">:</span>
+    <span class="token key atrule">tracker_server</span><span class="token punctuation">:</span> 192.168.75.128<span class="token punctuation">:</span><span class="token number">22122</span>
+</code></pre></div><p>控制器代码</p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token annotation punctuation">@CrossOrigin</span><span class="token punctuation">(</span>origins <span class="token operator">=</span> <span class="token string">&quot;*&quot;</span><span class="token punctuation">,</span> maxAge <span class="token operator">=</span> <span class="token number">3600</span><span class="token punctuation">)</span>
+<span class="token annotation punctuation">@RestController</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">UploadController</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Value</span><span class="token punctuation">(</span><span class="token string">&quot;${fastdfs.base.url}&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> FASTDFS_BASE_URL<span class="token punctuation">;</span>
+
+    <span class="token annotation punctuation">@Autowired</span>
+    <span class="token keyword">private</span> <span class="token class-name">StorageService</span> storageService<span class="token punctuation">;</span>
+
+    <span class="token comment">/**
+     * 文件上传
+     *
+     * @param dropFile    Dropzone
+     * @param editorFiles wangEditor
+     * @return
+     */</span>
+    <span class="token annotation punctuation">@RequestMapping</span><span class="token punctuation">(</span>value <span class="token operator">=</span> <span class="token string">&quot;upload&quot;</span><span class="token punctuation">,</span> method <span class="token operator">=</span> <span class="token class-name">RequestMethod</span><span class="token punctuation">.</span>POST<span class="token punctuation">)</span>
+    <span class="token keyword">public</span> <span class="token class-name">Map</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">,</span> <span class="token class-name">Object</span><span class="token punctuation">&gt;</span></span> <span class="token function">upload</span><span class="token punctuation">(</span><span class="token class-name">MultipartFile</span> dropFile<span class="token punctuation">,</span> <span class="token class-name">MultipartFile</span><span class="token punctuation">[</span><span class="token punctuation">]</span> editorFiles<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Map</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">,</span> <span class="token class-name">Object</span><span class="token punctuation">&gt;</span></span> result <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">HashMap</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment">// Dropzone 上传</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>dropFile <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            result<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span><span class="token string">&quot;fileName&quot;</span><span class="token punctuation">,</span> <span class="token function">writeFile</span><span class="token punctuation">(</span>dropFile<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token comment">// wangEditor 上传</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>editorFiles <span class="token operator">!=</span> <span class="token keyword">null</span> <span class="token operator">&amp;&amp;</span> editorFiles<span class="token punctuation">.</span>length <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span></span> fileNames <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+            <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token class-name">MultipartFile</span> editorFile <span class="token operator">:</span> editorFiles<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                fileNames<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token function">writeFile</span><span class="token punctuation">(</span>editorFile<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+
+            result<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span><span class="token string">&quot;errno&quot;</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            result<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span><span class="token string">&quot;data&quot;</span><span class="token punctuation">,</span> fileNames<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token keyword">return</span> result<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">/**
+     * 将图片写入指定目录
+     *
+     * @param multipartFile
+     * @return 返回文件完整路径
+     */</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> <span class="token function">writeFile</span><span class="token punctuation">(</span><span class="token class-name">MultipartFile</span> multipartFile<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">// 获取文件后缀</span>
+        <span class="token class-name">String</span> oName <span class="token operator">=</span> multipartFile<span class="token punctuation">.</span><span class="token function">getOriginalFilename</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">String</span> extName <span class="token operator">=</span> oName<span class="token punctuation">.</span><span class="token function">substring</span><span class="token punctuation">(</span>oName<span class="token punctuation">.</span><span class="token function">lastIndexOf</span><span class="token punctuation">(</span><span class="token string">&quot;.&quot;</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment">// 文件存放路径</span>
+        <span class="token class-name">String</span> url <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+        <span class="token keyword">try</span> <span class="token punctuation">{</span>
+            <span class="token class-name">String</span> uploadUrl <span class="token operator">=</span> storageService<span class="token punctuation">.</span><span class="token function">upload</span><span class="token punctuation">(</span>multipartFile<span class="token punctuation">.</span><span class="token function">getBytes</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> extName<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            url <span class="token operator">=</span> FASTDFS_BASE_URL <span class="token operator">+</span> uploadUrl<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">IOException</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token comment">// 返回文件完整路径</span>
+        <span class="token keyword">return</span> url<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="配置nginx反向代理"><a href="#配置nginx反向代理" aria-hidden="true" class="header-anchor">#</a> 配置Nginx反向代理</h2> <h3 id="配置虚拟主机"><a href="#配置虚拟主机" aria-hidden="true" class="header-anchor">#</a> 配置虚拟主机</h3> <p>nginx中的每个server就是一个反向代理配置，可以有多个server</p> <div class="language- extra-class"><pre class="language-text"><code>#user  nobody;
+worker_processes  1;
+
+events {
+    worker_connections  1024;
+}
+
+http {
+    include       mime.types;
+    default_type  application/octet-stream;
+    sendfile        on;
+   
+    keepalive_timeout  65;
+
+    gzip  on;
+    server {
+          listen       80;
+          server_name  www.cshop.com;
+
+          proxy_set_header Host $host; #转发时携带自身的host
+          proxy_set_header X-Forwarded-Server $host;
+          proxy_set_header X-Real-IP $remote_addr;
+          proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+          proxy_http_version 1.1;
+          proxy_set_header Connection &quot;&quot;;
+
+          location / {
+            proxy_pass http://127.0.0.1:9002;
+            proxy_connect_timeout 600;
+            proxy_read_timeout 600;
+          }
+     }
+    server {
+          listen       80;
+          server_name  admin.cshop.com;
+          
+          proxy_set_header X-Forwarded-Host $host;
+          proxy_set_header X-Forwarded-Server $host;
+          proxy_set_header X-Real-IP $remote_addr;
+          proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+          proxy_http_version 1.1;
+          proxy_set_header Connection &quot;&quot;;
+
+          location / {
+            proxy_pass http://127.0.0.1:9001;
+            proxy_connect_timeout 600;
+            proxy_read_timeout 600;
+          }
+     }
+    server {
+          listen       80;
+          server_name  api.cshop.com;
+
+          proxy_set_header X-Forwarded-Host $host;
+          proxy_set_header X-Forwarded-Server $host;
+          proxy_set_header X-Real-IP $remote_addr;
+          proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+          proxy_http_version 1.1;
+          proxy_set_header Connection &quot;&quot;;
+
+          location / {
+            proxy_pass http://192.168.56.100:7777; #网关的端口
+            proxy_connect_timeout 600;
+            proxy_read_timeout 600;
+          }
+      }
+}
+</code></pre></div><p>可以网关设置多个节点，配置负载均衡：</p> <div class="language- extra-class"><pre class="language-text"><code>		upstream  backServer{
+	    server 192.168.56.100:7777;
+	    server 192.168.56.100:7778;
+	    server 192.168.56.100:7779;
+	  }
+	  
+    server {
+          listen       80;
+          server_name  api.cshop.com;
+
+          proxy_set_header X-Forwarded-Host $host;
+          proxy_set_header X-Forwarded-Server $host;
+          proxy_set_header X-Real-IP $remote_addr;
+          proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+          proxy_http_version 1.1;
+          proxy_set_header Connection &quot;&quot;;
+
+          location / {
+            proxy_pass http://backServer; #网关的端口
+
+          }
+      }
+</code></pre></div><h3 id="测试"><a href="#测试" aria-hidden="true" class="header-anchor">#</a> 测试</h3> <p>访问：http://admin.cshop.com</p> <ol><li><p>浏览器准备发起请求，访问http://admin.cshop.com，但需要进行域名解析</p></li> <li><p>优先进行本地域名解析，因为我们修改了hosts，所以解析成功，得到地址：127.0.0.1</p></li> <li><p>请求被发往解析得到的ip，并且默认使用80端口：http://127.0.0.1:80</p> <p>本机的nginx一直监听80端口，因此捕获这个请求</p></li> <li><p>nginx中配置了反向代理规则，将admin.cshop.com代理到127.0.0.1:9001，因此请求被转发</p></li> <li><p>后台系统的webpack server监听的端口是9001，得到请求并处理，完成后将响应返回到nginx</p></li> <li><p>nginx将得到的结果返回到浏览器</p></li></ol> <h2 id="动静分离架构"><a href="#动静分离架构" aria-hidden="true" class="header-anchor">#</a> 动静分离架构</h2> <p>采用前后端分离的技术，把前端代码部署到nginx上</p> <div class="language- extra-class"><pre class="language-text"><code>#user  nobody;
+worker_processes  1;
+
+events {
+    worker_connections  1024;
+}
+
+http {
+    include       mime.types;
+    default_type  application/octet-stream;
+    sendfile        on;
+   
+    keepalive_timeout  65;
+
+    gzip  on;
+    server {
+          listen       80;
+          server_name  www.cshop.com;
+
+					location /resource/ {
+            alias /usr/local/Cellar/nginx/1.17.0/html/resource/;
+            index index.html index.htm;
+          }
+          
+          location / {
+            proxy_pass http://127.0.0.1:9002;
+            proxy_set_header X-Forwarded-Host $host;
+          	proxy_set_header X-Forwarded-Server $host;
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+            proxy_http_version 1.1;
+            proxy_set_header Connection &quot;&quot;;
+            
+            proxy_connect_timeout 600;
+            proxy_read_timeout 600;
+          }
+     }
+    server {
+          listen       80;
+          server_name  admin.cshop.com;
+          
+          proxy_set_header X-Forwarded-Host $host;
+          proxy_set_header X-Forwarded-Server $host;
+          proxy_set_header X-Real-IP $remote_addr;
+          proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+          proxy_http_version 1.1;
+          proxy_set_header Connection &quot;&quot;;
+
+          location / {
+            proxy_pass http://127.0.0.1:9001;
+            proxy_connect_timeout 600;
+            proxy_read_timeout 600;
+          }
+     }
+    server {
+          listen       80;
+          server_name  api.cshop.com;
+
+          proxy_set_header X-Forwarded-Host $host;
+          proxy_set_header X-Forwarded-Server $host;
+          proxy_set_header X-Real-IP $remote_addr;
+          proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+          proxy_http_version 1.1;
+          proxy_set_header Connection &quot;&quot;;
+
+          location / {
+            proxy_pass http://127.0.0.1:7777; #网关的端口
+            proxy_connect_timeout 600;
+            proxy_read_timeout 600;
+          }
+      }
+}
+</code></pre></div><p>将cshop-portal下面代码拷贝到/usr/local/Cellar/nginx/1.17.0/html/resource，重新加载nginx配置文件，浏览器中访问 http://www.cshop.com/resource/index.html</p> <p><strong>Nginx启用proxy_cache缓存</strong></p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment">#user  nobody;</span>
+worker_processes  1<span class="token punctuation">;</span>
+
+events <span class="token punctuation">{</span>
+    worker_connections  1024<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+http <span class="token punctuation">{</span>
+    include       mime.types<span class="token punctuation">;</span>
+    default_type  application/octet-stream<span class="token punctuation">;</span>
+    sendfile        on<span class="token punctuation">;</span>
+   
+    keepalive_timeout  65<span class="token punctuation">;</span>
+
+    <span class="token function">gzip</span>  on<span class="token punctuation">;</span>
+    <span class="token comment"># 声明一个cahce缓存节点内容</span>
+    proxy_cache_path /usr/local/Cellar/nginx/1.17.0/tmp_cache levels<span class="token operator">=</span>1:2 keys_zone<span class="token operator">=</span>tmp_cache:100m inactive<span class="token operator">=</span>7d max_size<span class="token operator">=</span>10g
+    
+    server <span class="token punctuation">{</span>
+          listen       80<span class="token punctuation">;</span>
+          server_name  www.cshop.com<span class="token punctuation">;</span>
+
+					location /resource/ <span class="token punctuation">{</span>
+            <span class="token function">alias</span> /usr/local/Cellar/nginx/1.17.0/html/resource/<span class="token punctuation">;</span>
+            index index.html index.htm<span class="token punctuation">;</span>
+          <span class="token punctuation">}</span>
+          
+          location / <span class="token punctuation">{</span>
+            proxy_pass http://127.0.0.1:9002<span class="token punctuation">;</span>
+            
+            <span class="token comment"># 声明一个cahce缓存节点内容</span>
+            proxy_cache tmp_cache<span class="token punctuation">;</span>
+            proxy_cache_key <span class="token variable">$url</span><span class="token punctuation">;</span>
+            proxy_cache_valid 200 206 302 304 7d<span class="token punctuation">;</span>
+            
+            proxy_set_header X-Forwarded-Host <span class="token variable">$host</span><span class="token punctuation">;</span>
+          	proxy_set_header X-Forwarded-Server <span class="token variable">$host</span><span class="token punctuation">;</span>
+            proxy_set_header X-Real-IP <span class="token variable">$remote_addr</span><span class="token punctuation">;</span>
+            proxy_set_header X-Forwarded-For <span class="token variable">$proxy_add_x_forwarded_for</span><span class="token punctuation">;</span>
+            proxy_http_version 1.1<span class="token punctuation">;</span>
+            proxy_set_header Connection <span class="token string">&quot;&quot;</span><span class="token punctuation">;</span>
+            
+            proxy_connect_timeout 600<span class="token punctuation">;</span>
+            proxy_read_timeout 600<span class="token punctuation">;</span>
+          <span class="token punctuation">}</span>
+     <span class="token punctuation">}</span>
+    server <span class="token punctuation">{</span>
+          listen       80<span class="token punctuation">;</span>
+          server_name  admin.cshop.com<span class="token punctuation">;</span>
+          
+          proxy_set_header X-Forwarded-Host <span class="token variable">$host</span><span class="token punctuation">;</span>
+          proxy_set_header X-Forwarded-Server <span class="token variable">$host</span><span class="token punctuation">;</span>
+          proxy_set_header X-Real-IP <span class="token variable">$remote_addr</span><span class="token punctuation">;</span>
+          proxy_set_header X-Forwarded-For <span class="token variable">$proxy_add_x_forwarded_for</span><span class="token punctuation">;</span>
+          proxy_http_version 1.1<span class="token punctuation">;</span>
+          proxy_set_header Connection <span class="token string">&quot;&quot;</span><span class="token punctuation">;</span>
+
+          location / <span class="token punctuation">{</span>
+            proxy_pass http://127.0.0.1:9001<span class="token punctuation">;</span>
+            proxy_connect_timeout 600<span class="token punctuation">;</span>
+            proxy_read_timeout 600<span class="token punctuation">;</span>
+          <span class="token punctuation">}</span>
+     <span class="token punctuation">}</span>
+    server <span class="token punctuation">{</span>
+          listen       80<span class="token punctuation">;</span>
+          server_name  api.cshop.com<span class="token punctuation">;</span>
+
+          proxy_set_header X-Forwarded-Host <span class="token variable">$host</span><span class="token punctuation">;</span>
+          proxy_set_header X-Forwarded-Server <span class="token variable">$host</span><span class="token punctuation">;</span>
+          proxy_set_header X-Real-IP <span class="token variable">$remote_addr</span><span class="token punctuation">;</span>
+          proxy_set_header X-Forwarded-For <span class="token variable">$proxy_add_x_forwarded_for</span><span class="token punctuation">;</span>
+          proxy_http_version 1.1<span class="token punctuation">;</span>
+          proxy_set_header Connection <span class="token string">&quot;&quot;</span><span class="token punctuation">;</span>
+
+          location / <span class="token punctuation">{</span>
+            proxy_pass http://127.0.0.1:10010<span class="token punctuation">;</span> <span class="token comment">#网关的端口</span>
+            proxy_connect_timeout 600<span class="token punctuation">;</span>
+            proxy_read_timeout 600<span class="token punctuation">;</span>
+          <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="分布式session"><a href="#分布式session" aria-hidden="true" class="header-anchor">#</a> 分布式session</h2> <p>在cshop-portal-web中设置，添加依赖：</p> <div class="language-xml extra-class"><pre class="language-xml"><code>	<span class="token comment">&lt;!--spring session 与redis应用基本环境配置，需要开启redis后才可以使用，不然启动Spring boot会报错 --&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>org.springframework.boot<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>spring-boot-starter-data-redis<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">&gt;</span></span>
+
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>org.springframework.session<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>spring-session-data-redis<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">&gt;</span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>org.apache.commons<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>commons-pool2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">&gt;</span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>redis.clients<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>jedis<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><p>添加redis配置：</p> <div class="language-yml extra-class"><pre class="language-yml"><code>spring
+	<span class="token key atrule">redis</span><span class="token punctuation">:</span>
+    <span class="token key atrule">host</span><span class="token punctuation">:</span> 192.168.56.100
+    <span class="token key atrule">port</span><span class="token punctuation">:</span> <span class="token number">6379</span>
+    <span class="token key atrule">password</span><span class="token punctuation">:</span> <span class="token number">123456</span>
+    <span class="token key atrule">jedis</span><span class="token punctuation">:</span>
+      <span class="token key atrule">pool</span><span class="token punctuation">:</span>
+        <span class="token key atrule">max-idle</span><span class="token punctuation">:</span> <span class="token number">100</span>
+        <span class="token key atrule">min-idle</span><span class="token punctuation">:</span> <span class="token number">10   </span>
+</code></pre></div><p>添加注解@EnableRedisHttpSession：</p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token annotation punctuation">@SpringBootApplication</span><span class="token punctuation">(</span>exclude <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token class-name">DataSourceAutoConfiguration</span><span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">,</span>
+        <span class="token class-name">DataSourceTransactionManagerAutoConfiguration</span><span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">,</span> <span class="token class-name">HibernateJpaAutoConfiguration</span><span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token annotation punctuation">@EnableEurekaClient</span>
+<span class="token annotation punctuation">@EnableFeignClients</span>
+<span class="token annotation punctuation">@EnableRedisHttpSession</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">AppWeb</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">SpringApplication</span><span class="token punctuation">.</span><span class="token function">run</span><span class="token punctuation">(</span><span class="token class-name">AppWeb</span><span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">,</span> args<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>负载均衡相关配置</p> <div class="language- extra-class"><pre class="language-text"><code>#user  nobody;
+worker_processes  1;
+
+#error_log  logs/error.log;
+#error_log  logs/error.log  notice;
+#error_log  logs/error.log  info;
+
+#pid        logs/nginx.pid;
+
+
+events {
+    worker_connections  1024;
+}
+
+
+http {
+    include       mime.types;
+    default_type  application/octet-stream;
+    sendfile      on;
+
+
+    keepalive_timeout  65;
+  
+    upstream  backServer{
+	    server 192.168.56.100:8080;
+	    server 192.168.56.100:8081;
+	  }
+    server {
+        listen       80;
+        server_name  shop.chsop.com;
+        location / {
+           proxy_pass http://backServer;
+            index  index.html index.htm;
+        }      
+    }
+}
+</code></pre></div><h2 id="跨域问题"><a href="#跨域问题" aria-hidden="true" class="header-anchor">#</a> 跨域问题</h2> <h3 id="什么是跨域"><a href="#什么是跨域" aria-hidden="true" class="header-anchor">#</a> 什么是跨域</h3> <p>跨域：浏览器对于javascript的同源策略的限制 。</p> <p>以下情况都属于跨域：</p> <table><thead><tr><th>跨域原因说明</th> <th>示例</th></tr></thead> <tbody><tr><td>域名不同</td> <td><code>www.jd.com</code> 与 <code>www.taobao.com</code></td></tr> <tr><td>域名相同，端口不同</td> <td><code>www.jd.com:8080</code> 与 <code>www.jd.com:8081</code></td></tr> <tr><td>二级域名不同</td> <td><code>item.jd.com</code> 与 <code>miaosha.jd.com</code></td></tr></tbody></table> <p>如果<strong>域名和端口都相同，但是请求路径不同</strong>，不属于跨域，如：</p> <p><code>www.jd.com/item</code></p> <p><code>www.jd.com/goods</code></p> <p>而我们从<code>manage.cshop.com</code>去访问<code>api.cshop.com</code>，这属于二级域名不同，跨域了。</p> <h3 id="为什么有跨域问题？"><a href="#为什么有跨域问题？" aria-hidden="true" class="header-anchor">#</a> 为什么有跨域问题？</h3> <p>跨域不一定会有跨域问题。</p> <p>因为跨域问题是浏览器对于ajax请求的一种安全限制：<strong>一个页面发起的ajax请求，只能是与当前页域名相同的路径</strong>，这能有效的阻止跨站攻击。</p> <p>因此：<strong>跨域问题 是针对ajax的一种限制</strong>。</p> <p>但是这却给我们的开发带来了不便，而且在实际生产环境中，肯定会有很多台服务器之间交互，地址和端口都可能不同，怎么办？</p> <h3 id="解决跨域问题的方案"><a href="#解决跨域问题的方案" aria-hidden="true" class="header-anchor">#</a> 解决跨域问题的方案</h3> <p>目前比较常用的跨域解决方案有3种：</p> <ul><li><p>Jsonp</p> <p>最早的解决方案，利用script标签可以跨域的原理实现。</p> <p>限制：</p> <ul><li>需要服务的支持</li> <li>只能发起GET请求</li></ul></li> <li><p>nginx反向代理</p> <p>思路是：利用nginx把跨域反向代理为不跨域，支持各种请求方式</p> <p>缺点：需要在nginx进行额外配置，语义不清晰</p></li> <li><p>CORS</p> <p>规范化的跨域请求解决方案，安全可靠。</p> <p>优势：</p> <ul><li>在服务端进行控制是否允许跨域，可自定义规则</li> <li>支持各种请求方式</li></ul> <p>缺点：</p> <ul><li>会产生额外的请求</li></ul></li></ul> <p>我们这里会采用<strong>cors的跨域方案</strong>。</p> <h3 id="cors解决跨域"><a href="#cors解决跨域" aria-hidden="true" class="header-anchor">#</a> cors解决跨域</h3> <h4 id="什么是cors"><a href="#什么是cors" aria-hidden="true" class="header-anchor">#</a> 什么是cors</h4> <p>CORS是一个W3C标准，全称是&quot;跨域资源共享&quot;（Cross-origin resource sharing）。</p> <p>它允许浏览器向跨源服务器，发出<a href="http://www.ruanyifeng.com/blog/2012/09/xmlhttprequest_level_2.html" target="_blank" rel="noopener noreferrer"><code>XMLHttpRequest</code><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>请求，从而克服了AJAX只能<a href="http://www.ruanyifeng.com/blog/2016/04/same-origin-policy.html" target="_blank" rel="noopener noreferrer">同源<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>使用的限制。</p> <p>CORS需要浏览器和服务器同时支持。目前，所有浏览器都支持该功能，IE浏览器不能低于IE10。</p> <ul><li><p>浏览器端：</p> <p>目前，所有浏览器都支持该功能（IE10以下不行）。整个CORS通信过程，都是浏览器自动完成，不需要用户参与。</p></li> <li><p>服务端：</p> <p>CORS通信与AJAX没有任何差别，因此你不需要改变以前的业务逻辑。只不过，浏览器会在请求中携带一些头信息，我们需要以此判断是否允许其跨域，然后在响应头中加入一些信息即可。这一般通过过滤器完成即可。</p></li></ul> <p>浏览器会将ajax请求分为两类，其处理方案略有差异：简单请求、特殊请求。</p> <h5 id="简单请求"><a href="#简单请求" aria-hidden="true" class="header-anchor">#</a> 简单请求</h5> <p>只要同时满足以下两大条件，就属于简单请求。：</p> <p>（1) 请求方法是以下三种方法之一：</p> <ul><li>HEAD</li> <li>GET</li> <li>POST</li></ul> <p>（2）HTTP的头信息不超出以下几种字段：</p> <ul><li>Accept</li> <li>Accept-Language</li> <li>Content-Language</li> <li>Last-Event-ID</li> <li>Content-Type：只限于三个值<code>application/x-www-form-urlencoded</code>、<code>multipart/form-data</code>、<code>text/plain</code></li></ul> <p>当浏览器发现发起的ajax请求是简单请求时，会在请求头中携带一个字段：<code>Origin</code>.</p> <p>Origin中会指出当前请求属于哪个域（协议+域名+端口）。服务会根据这个值决定是否允许其跨域。</p> <p>如果服务器允许跨域，需要在返回的响应头中携带下面信息：</p> <div class="language-http extra-class"><pre class="language-http"><code><span class="token header-name keyword">Access-Control-Allow-Origin:</span> http://manage.cshop.com
+<span class="token header-name keyword">Access-Control-Allow-Credentials:</span> true
+<span class="token header-name keyword">Content-Type:</span> text/html; charset=utf-8
+</code></pre></div><ul><li>Access-Control-Allow-Origin：可接受的域，是一个具体域名或者*（代表任意域名）</li> <li>Access-Control-Allow-Credentials：是否允许携带cookie，默认情况下，cors不会携带cookie，除非这个值是true</li></ul> <blockquote><p>有关cookie：</p></blockquote> <p>要想操作cookie，需要满足3个条件：</p> <ul><li>服务的响应头中需要携带Access-Control-Allow-Credentials并且为true。</li> <li>浏览器发起ajax需要指定withCredentials 为true</li> <li>响应头中的Access-Control-Allow-Origin一定不能为*，必须是指定的域名</li></ul> <h5 id="特殊请求"><a href="#特殊请求" aria-hidden="true" class="header-anchor">#</a> 特殊请求</h5> <p>不符合简单请求的条件，会被浏览器判定为特殊请求,，例如请求方式为PUT。</p> <blockquote><p>预检请求</p></blockquote> <p>特殊请求会在正式通信之前，增加一次HTTP查询请求，称为&quot;预检&quot;请求（preflight）。</p> <p>浏览器先询问服务器，当前网页所在的域名是否在服务器的许可名单之中，以及可以使用哪些HTTP动词和头信息字段。只有得到肯定答复，浏览器才会发出正式的<code>XMLHttpRequest</code>请求，否则就报错。</p> <p>一个“预检”请求的样板：</p> <div class="language-http extra-class"><pre class="language-http"><code><span class="token request-line"><span class="token property">OPTIONS</span> /cors HTTP/1.1</span>
+<span class="token header-name keyword">Origin:</span> http://manage.cshop.com
+<span class="token header-name keyword">Access-Control-Request-Method:</span> PUT
+<span class="token header-name keyword">Access-Control-Request-Headers:</span> X-Custom-Header
+<span class="token header-name keyword">Host:</span> api.leyou.com
+<span class="token header-name keyword">Accept-Language:</span> en-US
+<span class="token header-name keyword">Connection:</span> keep-alive
+<span class="token header-name keyword">User-Agent:</span> Mozilla/5.0...
+</code></pre></div><p>与简单请求相比，除了Origin以外，多了两个头：</p> <ul><li>Access-Control-Request-Method：接下来会用到的请求方式，比如PUT</li> <li>Access-Control-Request-Headers：会额外用到的头信息</li></ul> <blockquote><p>预检请求的响应</p></blockquote> <p>服务的收到预检请求，如果许可跨域，会发出响应：</p> <div class="language-http extra-class"><pre class="language-http"><code><span class="token response-status">HTTP/1.1 <span class="token property">200 OK</span></span>
+<span class="token header-name keyword">Date:</span> Mon, 01 Dec 2008 01:15:39 GMT
+<span class="token header-name keyword">Server:</span> Apache/2.0.61 (Unix)
+<span class="token header-name keyword">Access-Control-Allow-Origin:</span> http://manage.cshop.com
+<span class="token header-name keyword">Access-Control-Allow-Credentials:</span> true
+<span class="token header-name keyword">Access-Control-Allow-Methods:</span> GET, POST, PUT
+<span class="token header-name keyword">Access-Control-Allow-Headers:</span> X-Custom-Header
+<span class="token header-name keyword">Access-Control-Max-Age:</span> 1728000
+<span class="token header-name keyword">Content-Type:</span> text/html; charset=utf-8
+<span class="token header-name keyword">Content-Encoding:</span> gzip
+<span class="token header-name keyword">Content-Length:</span> 0
+<span class="token header-name keyword">Keep-Alive:</span> timeout=2, max=100
+<span class="token header-name keyword">Connection:</span> Keep-Alive
+<span class="token header-name keyword">Content-Type:</span> text/plain
+</code></pre></div><p>除了<code>Access-Control-Allow-Origin</code>和<code>Access-Control-Allow-Credentials</code>以外，这里又额外多出3个头：</p> <ul><li>Access-Control-Allow-Methods：允许访问的方式</li> <li>Access-Control-Allow-Headers：允许携带的头</li> <li>Access-Control-Max-Age：本次许可的有效时长，单位是秒，<strong>过期之前的ajax请求就无需再次进行预检了</strong></li></ul> <p>如果浏览器得到上述响应，则认定为可以跨域，后续就跟简单请求的处理是一样的了。</p> <h4 id="实现"><a href="#实现" aria-hidden="true" class="header-anchor">#</a> 实现</h4> <p>虽然原理比较复杂，但是前面说过：</p> <ul><li>浏览器端都有浏览器自动完成，我们无需操心</li> <li>服务端可以通过拦截器统一实现，不必每次都去进行跨域判定的编写。</li></ul> <h4 id="使用spring解决"><a href="#使用spring解决" aria-hidden="true" class="header-anchor">#</a> 使用Spring解决</h4> <p>事实上，SpringMVC已经帮我们写好了CORS的跨域过滤器：CorsFilter ,内部已经实现了刚才所讲的判定逻辑，我们直接用就好了。</p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token annotation punctuation">@Configuration</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">GlobalCorsConfig</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Bean</span>
+    <span class="token keyword">public</span> <span class="token class-name">CorsFilter</span> <span class="token function">corsFilter</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">//1.添加CORS配置信息</span>
+        <span class="token class-name">CorsConfiguration</span> config <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">CorsConfiguration</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">//1) 允许的域,不要写*，否则cookie就无法使用了</span>
+        config<span class="token punctuation">.</span><span class="token function">addAllowedOrigin</span><span class="token punctuation">(</span><span class="token string">&quot;http://manage.cshop.com&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">//2) 是否发送Cookie信息</span>
+        config<span class="token punctuation">.</span><span class="token function">setAllowCredentials</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">//3) 允许的请求方式</span>
+        config<span class="token punctuation">.</span><span class="token function">addAllowedMethod</span><span class="token punctuation">(</span><span class="token string">&quot;OPTIONS&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        config<span class="token punctuation">.</span><span class="token function">addAllowedMethod</span><span class="token punctuation">(</span><span class="token string">&quot;HEAD&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        config<span class="token punctuation">.</span><span class="token function">addAllowedMethod</span><span class="token punctuation">(</span><span class="token string">&quot;GET&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        config<span class="token punctuation">.</span><span class="token function">addAllowedMethod</span><span class="token punctuation">(</span><span class="token string">&quot;PUT&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        config<span class="token punctuation">.</span><span class="token function">addAllowedMethod</span><span class="token punctuation">(</span><span class="token string">&quot;POST&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        config<span class="token punctuation">.</span><span class="token function">addAllowedMethod</span><span class="token punctuation">(</span><span class="token string">&quot;DELETE&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        config<span class="token punctuation">.</span><span class="token function">addAllowedMethod</span><span class="token punctuation">(</span><span class="token string">&quot;PATCH&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">// 4）允许的头信息</span>
+        config<span class="token punctuation">.</span><span class="token function">addAllowedHeader</span><span class="token punctuation">(</span><span class="token string">&quot;*&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment">//2.添加映射路径，我们拦截一切请求</span>
+        <span class="token class-name">UrlBasedCorsConfigurationSource</span> configSource <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">UrlBasedCorsConfigurationSource</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        configSource<span class="token punctuation">.</span><span class="token function">registerCorsConfiguration</span><span class="token punctuation">(</span><span class="token string">&quot;/**&quot;</span><span class="token punctuation">,</span> config<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment">//3.返回新的CorsFilter.</span>
+        <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">CorsFilter</span><span class="token punctuation">(</span>configSource<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h4 id="使用nginx反向代理解决"><a href="#使用nginx反向代理解决" aria-hidden="true" class="header-anchor">#</a> 使用Nginx反向代理解决</h4> <p>以上跨域问题解决方案都需要服务器支持，当服务器无法设置 <code>header</code> 或提供 <code>callback</code> 时我们就可以采用 Nginx 反向代理的方式解决跨域问题。</p> <p>Nginx 配置跨域案例，在 <code>nginx.conf</code> 的 <code>location</code> 中增加如下配置：</p> <div class="language-text extra-class"><pre class="language-text"><code>add_header Access-Control-Allow-Origin *或域名;
+add_header Access-Control-Allow-Headers X-Requested-With;
+add_header Access-Control-Allow-Methods GET,POST,OPTIONS;
+</code></pre></div><p>如：</p> <div class="language-text extra-class"><pre class="language-text"><code>user  nginx;
+worker_processes  1;
+
+events {
+    worker_connections  1024;
+}
+
+http {
+    include       mime.types;
+    default_type  application/octet-stream;
+
+    sendfile        on;
+
+    keepalive_timeout  65;
+
+    server {
+        listen 80;
+        server_name www.cshop.com;
+        location / {
+            add_header Access-Control-Allow-Origin *;
+            add_header Access-Control-Allow-Headers X-Requested-With;
+            add_header Access-Control-Allow-Methods GET,POST,OPTIONS;
+
+            alias /usr/local/Cellar/nginx/1.17.0/html/resource/;
+            index index.jsp index.html index.htm;
+        }
+    }
+}
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/wiki/spring-cloud-cshop/cshop-3-准备开发环境.html" class="prev">
+          准备开发环境
+        </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/wiki/assets/js/app.dd178f5a.js" defer></script><script src="/wiki/assets/js/2.9f273a62.js" defer></script><script src="/wiki/assets/js/56.f0e8e082.js" defer></script>
+  </body>
+</html>
